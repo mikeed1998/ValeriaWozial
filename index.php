@@ -15,156 +15,176 @@
     <link rel="stylesheet" href="vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick-theme.css">
-    <style>
-        .header-sec_1 {
-            background-color: #FAFAFA;
-        }
-
-        .header-sec_2 {
-            background-color: #FFFFFF;
-        }
-
-        .alerta-descuentos {
-            color: #FFFFFF;
-            background-color: #000000;
-        }
-
-        .alert-custom {
-            border-radius: 0; /* Quita los bordes redondeados */
-            width: 100%; /* Ocupa todo el ancho del contenedor padre (col) */
-            margin: 0; /* Elimina el margen por defecto */
-        }
-
-        .medalla-color {
-            background-color: #000000;
-        }
-
-        .medalla-color:hover {
-            background-color: #FFFFFF;
-            color: #000000;
-            border: 1px solid #000000;
-        }
-
-        .navbar-nav .nav-link:hover {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
-
-        .link-grande {
-            text-decoration: none;
-            color: #000000;
-        }
-
-        .nav-grande:hover {
-            background-color: #000000;
-        }
-
-        .nav-grande:hover > .link-grande {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
-        
-        @media (min-width: 1800px) {
-            .header-sec_1--texto {
-
-            }
-
-            .header-sec_2--texto {
-
-            }
-        }
-
-        @media (min-width: 1400px) and (max-width: 1799px) {
-            
-        }
-
-        @media (min-width: 1200px) and (max-width: 1399px) {
-            
-        }
-
-        @media (min-width: 992px) and (max-width: 1199px) {
-            
-        }
-
-        @media (min-width: 768px) and (max-width: 991px) {
-            
-        }
-
-        @media (min-width: 576px) and (max-width: 767px) {
-            
-        }
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            
-        }
-
-        @media (min-width: 0px) and (max-width: 319px) {
-            
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="css/front/header.css">
+    <link rel="stylesheet" href="css/front/footer.css">
 </head>
 <body>
 
   
-
-    <header>
-        <div class="container-fluid">
+    <?=$header;?>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    
+    <footer>
+        <div class="container-fluid bg-black p-5">
             <div class="row">
-                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-block d-xl-block d-lg-block d-md-block d-sm-none d-none">
-                    <div class="row header-sec_1">
-                        <div class="col-11 mx-auto py-2">
+                <div class="col border border-white">
+                    <div class="row py-2">
+                        <div class="col-4 border-end border-white">
                             <div class="row">
-                                <div class="col-xxl-8 col-xl-8 col-lg-6"></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-6">
+                                <div class="col-9 mx-auto py-5">
                                     <div class="row">
-                                        <div class="col-4 text-center header-sec_1--texto">
-                                            Buscar
+                                        <div class="col-9 text-start text-white fs-3">
+                                            Necesitas ayuda? Escribenos
                                         </div>
-                                        <div class="col-4 text-center header-sec_1--texto border-start border-end border-dark">
-                                            Ayuda
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9 text-white">
+                                            Deja tu correo y tu comentario y un asesor se reportará contigo a la brevedad
                                         </div>
-                                        <div class="col-4 text-center header-sec_1--texto">
-                                            Iniciar sesión
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 text-white">
+                                            <div class="row py-2">
+                                                <div class="col-6 text-start">
+                                                    <input type="text" class="form-control fs-3 border border-white bg-black">
+                                                </div>
+                                                <div class="col-6 text-end">
+                                                    <input type="text" class="form-control fs-3 border border-white bg-black">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1">
+                                        <div class="col-12 text-white">
+                                            <div class="row py-2">
+                                                <div class="col text-start">
+                                                    <input type="text" class="form-control fs-3 border border-white bg-black">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row header-sec_2">
-                        <div class="col">
+                        <div class="col-8">
                             <div class="row">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 py-1 text-xxl-start text-xl-start text-lg-start text-md-center">
-                                    <img src="img/index/logo.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                                <div class="col">
                                     <div class="row">
-                                        <div class="col nav-grande py-3 d-flex justify-content-center align-items-center text-center header-sec_2--texto fw-bolder">
-                                            <a href="#/" class="link-grande">Calzado</a>
-                                        </div>
-                                        <div class="col nav-grande py-3 d-flex justify-content-center align-items-center text-center header-sec_2--texto fw-bolder">
-                                            <a href="#/" class="link-grande">Colección</a>
-                                        </div>
-                                        <div class="col nav-grande py-3 d-flex justify-content-center align-items-center text-center header-sec_2--texto fw-bolder">
-                                            <a href="#/" class="link-grande">Lanzamientos</a>
-                                        </div>
-                                        <div class="col nav-grande py-3 d-flex justify-content-center align-items-center text-center header-sec_2--texto fw-bolder">
-                                            <a href="#/" class="link-grande">Rebajas</a>
-                                        </div>
-                                        <div class="col py-3 d-flex justify-content-start align-items-center text-start header-sec_2--texto fw-bolder">
-                                            <a href="">
-                                                <div class="row">
-                                                    <div class="col position-relative">
-                                                        <img src="img/carrito/002-008.png" alt="" class="img-fluid">
-                                                        <div class="col position-absolute top-0 start-100 translate-middle-y">
-                                                            <span class="badge rounded-circle medalla-color p-2">+9</span>
+                                        <div class="col p-5 text-end text-white">
+                                            <div class="row">
+                                                <div class="col-6"></div>
+                                                <div class="col-6 aling-content-center justify-content-center">      
+                                                    <div class="row">
+                                                        <div class="col-9 fs-5 mt-1">
+                                                           ¡Hola Pau! / Cerrar sesión
+                                                        </div>
+                                                        <div class="col-3 text-start">
+                                                            <a href="">
+                                                                <div class="row">
+                                                                    <div class="col position-relative">
+                                                                        <img src="img/carrito/logo2.png" alt="" class="img-fluid">
+                                                                        <div class="col position-absolute top-0 start-50 translate-middle-y">
+                                                                            <span class="badge rounded-circle medalla-color-foot p-2">+9</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-11 mx-auto">
+                                            <div class="row">
+                                                <div class="col-6 text-white display-5">
+                                                    <div class="row">
+                                                        <div class="col py-1">
+                                                            Home
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-1">
+                                                            Rebajas
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-1">
+                                                            Contacto
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row mt-5">
+                                                        <div class="col-4"></div>
+                                                        <div class="col-8 text-secondary text-end mt-5 py-2">
+                                                            Avenida Lapizlazuli 2074 int3 Residencial Victoria, Guadalajara, Jalisco, México contacto@rfc.com 3338096501.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 py-3">
+                                            <div class="col-12 border-top border-white"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1 mb-2 text-white">
+                                        <div class="col-11 mx-auto">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            avido de privacidad
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            preguntas frecuentes
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            terminos y condiciones
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            envio y entrega
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            devoluciones
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            pagos
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="row">
+                                                        <div class="col fs-1 text-end">
+                                                            <a href="" style="text-decoration: none; color: #FFFFFF; margin-left: 1rem;">
+                                                                <i class="bi bi-whatsapp"></i>
+                                                            </a>
+                                                            <a href="" style="text-decoration: none; color: #FFFFFF; margin-left: 1rem;">
+                                                                <i class="bi bi-facebook"></i>
+                                                            </a>
+                                                            <a href="" style="text-decoration: none; color: #FFFFFF; margin-left: 1rem;">
+                                                                <i class="bi bi-instagram"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -172,77 +192,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-none d-xl-none d-lg-none d-md-none d-sm-block d-block">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col py-2 text-center">
-                                    <a class="navbar-brand" href="#"><img src="img/index/logo.png" alt="" class="img-fluid"></a>
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav mt-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Buscar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Ayuda</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Iniciar sesión</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Calzado</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Colección</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Lanzamientos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-center fs-5 active" aria-current="page" href="#">Rebajas</a>
-                                    </li>
-                                    <li class="nav-item mt-4 mb-2">
-                                        <a class="mt-4 mb-4" aria-current="page" href="#">
-                                            <div class="row">
-                                                <div class="col position-relative text-center">
-                                                    <img src="img/carrito/002-008.png" alt="" class="img-fluid">
-                                                    <div class="col position-absolute top-0 start-50 ms-3 translate-middle-y">
-                                                        <span class="badge rounded-circle medalla-color p-2">+9</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
             </div>
             <div class="row">
-                <div class="col px-0">
-                    <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert">
-                        <div class="row">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 text-center">
-                                30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
-                            </div>
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 text-center">
-                                30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
-                            </div>
-                        </div>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                <div class="col py-2 fs-5 text-center text-secondary">
+                    Valeria Bazante 2023 todos los derechos reservados diseño por Wozial
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <img src="img/footer/uve.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-    </header>
-
-    
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>

@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
     <!-- Summernote Editor WYSIWYG  -->
     <link rel="stylesheet" href="vendor/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="css/front/header.css">
+    <link rel="stylesheet" href="css/front/footer.css">
 </head>
 <body>
 
