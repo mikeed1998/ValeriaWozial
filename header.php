@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-block d-xl-block d-lg-block d-md-block d-sm-none d-none">
                         <div class="row header-sec_1">
-                            <div class="col-11 mx-auto py-2">
+                            <div class="col-11 mx-auto py-3">
                                 <div class="row">
                                     <div class="col-xxl-8 col-xl-8 col-lg-6"></div>
                                     <div class="col-xxl-4 col-xl-4 col-lg-6">
@@ -29,7 +29,9 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 py-1 text-xxl-start text-xl-start text-lg-start text-md-center">
+                                        <div class="col-11 mx-auto">
                                         <img src="img/index/logo.png" alt="" class="img-fluid">
+                                        </div>
                                     </div>
                                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                                         <div class="row">
@@ -46,7 +48,7 @@
                                                 <a href="#/" class="link-grande">Rebajas</a>
                                             </div>
                                             <div class="col py-3 d-flex justify-content-start align-items-center text-start header-sec_2--texto fw-bolder">
-                                                <a href="">
+                                                <a href="#/">
                                                     <div class="row">
                                                         <div class="col position-relative">
                                                             <img src="img/carrito/002-008.png" alt="" class="img-fluid">
@@ -119,10 +121,10 @@
                     <div class="col px-0">
                         <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert">
                             <div class="row">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 text-center">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
                                     30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
                                 </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 text-center">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
                                     30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
                                 </div>
                             </div>
