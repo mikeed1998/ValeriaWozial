@@ -7,7 +7,8 @@
                     <div class="col border border-white">
                         <div class="row py-2">
                             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 border-end border-white">
-                                <form action="datos.php" class="needs-validation" method="POST" enctype="multipart/from-data">
+                                <form action="datos.php" class="needs-validation" id="form-footer" method="POST" enctype="multipart/from-data">
+                                    <input type="hidden" name="tipoForm" value="footer">
                                     <div class="row">
                                         <div class="col-9 mx-auto py-5">
                                             <div class="row">
