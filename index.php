@@ -10,11 +10,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TITULO</title>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="vendor/bootstrap-5.3.2/css/bootstrap.css">
+    <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="vendor/fontawesome-free-6.5.1/css/all.css">
+    <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <!-- Sliders de Slick -->
     <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick-1.8.1/slick/slick-theme.css">
+    <!-- Animaciones de AOS -->
+    <link rel="stylesheet" href="vendor/aos-2.0/dist/aos.css">
+    <!-- Libreria de mapas Leaflet -->
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <!-- Summernote Editor WYSIWYG  -->
+    <link rel="stylesheet" href="vendor/summernote/summernote-lite.css">
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
     <style>
@@ -55,7 +65,78 @@
         .formulario-home > .form-control::placeholder {
             color: #000000;
         }
-                
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s; /* Transición para suavizar el efecto */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Efecto de escala al hacer hover */
+        }
+
+        .seccion-fotos {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+            transition: background 0.3s; /* Transición para suavizar el cambio de opacidad */
+        }
+
+        .card:hover .overlay {
+            background: rgba(0, 0, 0, 0.5); /* Overlay visible al hacer hover */
+        }
+
+        .card:hover .card-content .btn-bottom {
+            opacity: 1; /* Botón visible al hacer hover */
+        }
+
+        .card-content {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: #fff; /* Puedes ajustar el color del texto según tus necesidades */
+            text-align: center;
+            opacity: 1; /* Ajusta la opacidad inicial a 1 */
+            transition: opacity 0.3s; /* Transición para suavizar la aparición del botón */
+        }
+
+        .btn-bottom {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff; /* Puedes ajustar el color del botón según tus necesidades */
+            color: #000; /* Puedes ajustar el color del texto del botón según tus necesidades */
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            opacity: 0; /* Inicialmente invisible */
+            transition: opacity 0.3s; /* Transición para suavizar la aparición del botón */
+        }
+
+        .card:hover .btn-bottom {
+            opacity: 1; /* Botón visible al hacer hover */
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+
+        .card:hover .btn-bottom:hover {
+            background-color: #543543;
+            color: #FFFFFF;
+
+        }
+ 
         @media (min-width: 1800px) {
             .img-lanzamientos {
                 background-position: center center;
@@ -358,7 +439,22 @@
 
     <?=$header;?>
     
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row">
+            <div class="col px-0" data-aos="zoom-out">
+                <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert">
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                            30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                            30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col px-0">
                 <div id="carouselExampleCaptions" class="carousel slide">
@@ -407,7 +503,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5" data-aos="fade-up">
         <div class="row">
             <div class="col display-2 text-center">
                 LANZAMIENTOS
@@ -508,7 +604,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-up">
         <div class="row">
             <div class="col-11 p-4 mx-auto" style="background-color: #F0F0F0;">
                 <div class="row">
@@ -545,29 +641,38 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5" data-aos="fade-up">
         <div class="row">
             <div class="col-11 mx-auto">
                 <div class="row">
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
-                        <div class="card">
-                            <div class="seccion-fotos" style="
-                                background-image: url('img/index/fot1.png');
-                            "></div>
+                        <div class="card" data-aos="zoom-in">
+                            <div class="seccion-fotos" style="background-image: url('img/index/fot1.png');">
+                                <div class="overlay"></div>
+                                <div class="card-content">
+                                    <a href="#/" class="btn fs-4 btn-bottom">VER MÁS</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
-                        <div class="card">
-                            <div class="seccion-fotos" style="
-                                background-image: url('img/index/fot2.png');
-                            "></div>
+                        <div class="card" data-aos="zoom-in">
+                            <div class="seccion-fotos" style="background-image: url('img/index/fot2.png');">
+                                <div class="overlay"></div>
+                                <div class="card-content">
+                                    <a href="#/" class="btn fs-4 btn-bottom">VER MÁS</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
-                        <div class="card">
-                            <div class="seccion-fotos" style="
-                                background-image: url('img/index/fot3.png');
-                            "></div>
+                        <div class="card" data-aos="zoom-in">
+                            <div class="seccion-fotos" style="background-image: url('img/index/fot3.png');">
+                                <div class="overlay"></div>
+                                <div class="card-content">
+                                    <a href="#/" class="btn fs-4 btn-bottom">VER MÁS</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -575,7 +680,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5 mb-5 py-3">
+    <div class="container-fluid mt-5 mb-5 py-3" data-aos="fade-up">
         <form action="datos.php" class="needs-validation" method="POST" id="form-home" enctype="multipart/form-data">
             <input type="hidden" name="tipoForm" value="home">    
             <div class="row">
@@ -629,7 +734,7 @@
         </form>
     </div>
 
-    <div class="container-fluid mt-5" style="background-color: #F0F0F0;">
+    <div class="container-fluid mt-5" style="background-color: #F0F0F0;" data-aos="fade-up">
         <div class="row py-5">
             <div class="col-9 py-5 mx-auto">
                 <div class="row">
@@ -699,12 +804,23 @@
 
     <?=$footer;?>
 
+    <!-- JQuery -->
     <script src="js/jquery.js"></script>
+    <!-- Bootstrap -->
     <script src="vendor/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+    <!-- Iconos de Font Awesome -->
     <script src="vendor/fontawesome-free-6.5.1/js/all.js"></script>
+    <!-- Sliders de Slick -->
     <script src="vendor/slick-1.8.1/slick/slick.js"></script>
-    <script src="js/front/header.js"></script>
-    <script src="js/front/footer.js" type="text/javascript"></script>
+    <!-- Animaciones de AOS -->
+    <script src="vendor/aos-2.0/dist/aos.js"></script>
+    <!-- Libreria de mapas Leaflet -->
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <!-- Summernote Editor WYSIWYG  -->
+    <script src="vendor/summernote/summernote-lite.js"></script>
+    <script>
+        AOS.init(); // Inicializar libreria aos
+    </script>
     <script>
         $('.slider-lanzamientos').slick({
             dots: true,
