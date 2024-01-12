@@ -24,7 +24,7 @@
                                                 <div class="col-12 text-white">
                                                     <div class="row py-2">
                                                         <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto text-start">
-                                                            <input type="text" id="nombre" class="form-control fs-5 border border-white bg-black footer-input" placeholder="NOMBRE" required>
+                                                            <input type="text" id="nombre" class="form-control py-2 fs-5 border border-white bg-black footer-input" placeholder="NOMBRE" required>
                                                             <div class="valid-feedback">
                                                                 Correcto
                                                             </div>
@@ -33,7 +33,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto mt-xxl-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-3 mt-3 py-xxl-0 py-xl-2 py-lg-2 py-md-2 py-sm-2 py-2">
-                                                            <input type="number" id="whatsapp" class="form-control fs-5 border border-white bg-black footer-input" placeholder="WHATSAPP" required>
+                                                            <input type="number" id="whatsapp" class="form-control py-2 fs-5 border border-white bg-black footer-input" placeholder="WHATSAPP" required>
                                                             <div class="valid-feedback">
                                                                 Correcto
                                                             </div>
@@ -48,7 +48,7 @@
                                                 <div class="col-12 text-white">
                                                     <div class="row py-2">
                                                         <div class="col text-start">
-                                                            <input type="text" id="mensaje" class="form-control fs-5 border border-white bg-black footer-input" placeholder="MENSAJE" required>
+                                                            <input type="text" id="mensaje" class="form-control py-2 fs-5 border border-white bg-black footer-input" placeholder="MENSAJE" required>
                                                             <div class="valid-feedback">
                                                                 Correcto
                                                             </div>
@@ -63,7 +63,10 @@
                                                 <div class="col-12 text-white">
                                                     <div class="row py-2">
                                                         <div class="col text-start">
-                                                            <input type="submit" id="footer-enviar" class="form-control" value="ENVIAR">
+                                                            <input type="submit" id="footer-enviar" class="form-control py-2" value="ENVIAR">
+                                                            <div class="text-danger" id="error-enviar">
+                                                                Ingresa datos validos.
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -219,6 +222,11 @@
         </footer>
         
         <script>
+
+            var enviarBtn = document.getElementById(\'footer-enviar\');
+            var errorEnviar = document.getElementById(\'error-enviar\');
+            errorEnviar.style.display = \'none\';
+        
             document.getElementById(\'nombre\').addEventListener(\'input\', function () {
                 var nombreInput = this.value.trim();
                 var feedback = this.nextElementSibling;
@@ -227,10 +235,14 @@
                     this.classList.remove(\'is-invalid\');
                     this.classList.add(\'is-valid\');
                     feedback.textContent = \'Correcto\';
+                    enviarBtn.removeAttribute(\'disabled\');
+                    errorEnviar.style.display = \'none\';
                 } else {
                     this.classList.remove(\'is-valid\');
                     this.classList.add(\'is-invalid\');
                     feedback.textContent = \'Ingresa un nombre válido\';
+                    enviarBtn.setAttribute(\'disabled\', \'disabled\');
+                    errorEnviar.style.display = \'block\';
                 }
             });
             
@@ -244,10 +256,14 @@
                     this.classList.remove(\'is-invalid\');
                     this.classList.add(\'is-valid\');
                     feedback.textContent = \'Correcto\';
+                    enviarBtn.removeAttribute(\'disabled\');
+                    errorEnviar.style.display = \'none\';
                 } else {
                     this.classList.remove(\'is-valid\');
                     this.classList.add(\'is-invalid\');
                     feedback.textContent = \'Ingresa un número de teléfono válido con al menos \' + minDigits + \' dígitos\';
+                    enviarBtn.setAttribute(\'disabled\', \'disabled\'); 
+                    errorEnviar.style.display = \'block\';
                 }
             });
             
@@ -259,10 +275,14 @@
                     this.classList.remove(\'is-invalid\');
                     this.classList.add(\'is-valid\');
                     feedback.textContent = \'Correcto\';
+                    enviarBtn.removeAttribute(\'disabled\');
+                    errorEnviar.style.display = \'none\';
                 } else {
                     this.classList.remove(\'is-valid\');
                     this.classList.add(\'is-invalid\');
                     feedback.textContent = \'Ingresa un mensaje válido\';
+                    enviarBtn.setAttribute(\'disabled\', \'disabled\');
+                    errorEnviar.style.display = \'block\';
                 }
             });
         </script>
