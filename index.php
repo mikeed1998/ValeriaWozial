@@ -55,6 +55,14 @@
                 width: 100%;
                 height: 24.6875rem;
             }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 34rem;
+            }
         }
 
         @media (min-width: 1400px) and (max-width: 1799px) {
@@ -65,6 +73,14 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 18.125rem;
+            }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 28rem;
             }
         }
 
@@ -77,6 +93,14 @@
                 width: 100%;
                 height: 20.625rem;
             }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 22rem;
+            }
         }
 
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -87,6 +111,14 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 16.75rem;
+            }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 18rem;
             }
         }
 
@@ -99,6 +131,14 @@
                 width: 100%;
                 height: 19.375rem;
             }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 22rem;
+            }
         }
 
         @media (min-width: 576px) and (max-width: 767px) {
@@ -109,6 +149,14 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 14rem;
+            }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 28rem;
             }
         }
 
@@ -121,6 +169,14 @@
                 width: 100%;
                 height: 20rem;
             }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 22rem;
+            }
         }
 
         @media (min-width: 0px) and (max-width: 319px) {
@@ -131,6 +187,14 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 14.5rem;
+            }
+
+            .seccion-fotos {
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 14rem;
             }
         }
 
@@ -320,6 +384,36 @@
                             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 d-flex align-items-center mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-3">
                                 <img src="img/index/american_express.png" alt="" class="img-fluid mx-auto">
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-11 mx-auto">
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
+                        <div class="card">
+                            <div class="seccion-fotos" style="
+                                background-image: url('img/index/fot1.png');
+                            "></div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
+                        <div class="card">
+                            <div class="seccion-fotos" style="
+                                background-image: url('img/index/fot2.png');
+                            "></div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3">
+                        <div class="card">
+                            <div class="seccion-fotos" style="
+                                background-image: url('img/index/fot3.png');
+                            "></div>
                         </div>
                     </div>
                 </div>
