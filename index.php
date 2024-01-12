@@ -739,7 +739,7 @@
             <div class="col-9 py-5 mx-auto">
                 <div class="row">
                     <div class="col py-2 text-center titulo-colaboradores">
-                        COLABORADORES
+                        COLABORACIONES
                     </div>
                 </div>
                 <div class="row">
