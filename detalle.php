@@ -74,14 +74,9 @@
         .puntos.active,
         .anterior.active,
         .siguiente.active {
-            border: 1px solid #000000;
+            border: 2px solid #000000;
+            color: #000000;
             background-color: #FFFFFF;
-        }
-
-        .card {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s; /* Transición para suavizar el efecto */
         }
 
         .card:hover {
@@ -194,7 +189,7 @@
         $slides = 5;
     ?>
     
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="zoom-in">
         <div class="row">
             <div class="col-10 py-5 mx-auto">
                 <div class="row">
@@ -268,57 +263,57 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
-                                        <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                        <div class="card px-1 carta">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="1">
                                                 22mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="2">
                                                 23.5mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="3">
                                                 22mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="4">
                                                 23.5mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="5">
                                                 22mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="6">
                                                 23.5mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="7">
                                                 22mx
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-6 p-1">
                                         <div class="card px-1">
-                                            <button class="btn btn-outline border-0 fs-5 w-100">
+                                            <button class="btn btn-outline toggle-button talla border-0 fs-5 w-100" value="8">
                                                 23.5mx
                                             </button>
                                         </div>
@@ -337,15 +332,32 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="zoom-out">
             <div class="col-11 mx-auto fs-1">
                 PREFERENCIAS
             </div>
         </div>
-        <div class="row py-3">
+        <div class="row py-3" data-aos="zoom-out">
             <div class="col-11 mx-auto">
                 <div class="row">
                     <div class="slider-preferencias">
+                        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
+                            <div class="card border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('img/index/01_.png');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #01
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
                             <div class="card border-0 px-2">
                                 <div class="img-lanzamientos" style="
@@ -441,6 +453,7 @@
     </script>
     <script>
         $('.slider-preferencias').slick({
+            autoplay: true,
             dots: false,
             infinite: false,
             speed: 300,
@@ -506,6 +519,56 @@
             ]
             });
     </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        const cards = document.querySelectorAll('.card');
+
+        toggleButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const valorDelBoton = button.value;
+                console.log('Valor del botón: ' + valorDelBoton);
+
+                const group = button.getAttribute('data-group');
+                const buttonsInGroup = document.querySelectorAll('.toggle-button[data-group="' + group + '"]');
+                
+                buttonsInGroup.forEach(function (otherButton) {
+                    if (otherButton !== button) {
+                        otherButton.classList.remove('active');
+                    }
+                });
+
+                toggleButtons.forEach(function (otherToggleButton) {
+                    if (otherToggleButton !== button) {
+                        otherToggleButton.disabled = false;
+                    }
+                });
+
+                button.classList.toggle('active');
+                button.disabled = true;
+
+                cards.forEach(function (card) {
+                    card.classList.remove('border-black');
+                });
+
+                const carta = button.closest('.card');
+                carta.classList.toggle('border-black');
+            });
+
+            button.addEventListener('mouseup', function (event) {
+                if (!button.contains(event.target)) {
+                    toggleButtons.forEach(function (otherToggleButton) {
+                        otherToggleButton.disabled = false;
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const slider = document.querySelector('.slider');
