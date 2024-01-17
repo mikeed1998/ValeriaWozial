@@ -12,13 +12,13 @@
                                     <div class="col-xxl-4 col-xl-4 col-lg-6">
                                         <div class="row">
                                             <div class="col-4 text-center header-sec_1--texto">
-                                                Buscar
+                                                <a href="buscar.php" class="link-header">Buscar</a>
                                             </div>
                                             <div class="col-4 text-center header-sec_1--texto border-start border-end border-dark">
-                                                Ayuda
+                                                <a href="ayuda.php" class="link-header">Ayuda</a>
                                             </div>
                                             <div class="col-4 text-center header-sec_1--texto">
-                                                Iniciar sesión
+                                                <a href="iniciar_sesion.php" class="link-header">Iniciar Sesión</a>
                                             </div>
                                         </div>
                                     </div>
@@ -115,6 +115,21 @@
                                 </div>
                             </div>
                         </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col px-0" data-aos="zoom-out">
+                        <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert">
+                            <div class="row">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                                    30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
+                                </div>
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                                    30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                     </div>
                 </div>
             </div>

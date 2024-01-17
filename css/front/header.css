@@ -58,7 +58,15 @@
     color: #FFFFFF;
 }
 
+.link-header {
+    color: #000000;
+    text-decoration: none;
+}
 
+.link-header:hover {
+    color: #000000;
+    text-decoration: underline;
+}
 
 @media (min-width: 1800px) {
     .header-sec_1--texto {

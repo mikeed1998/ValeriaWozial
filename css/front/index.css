@@ -1,32 +1,404 @@
+.slick-dots li {
+    margin: 0 2rem;
+}
+
+.slick-dots {
+    margin-top: 50px;
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+    color: transparent;
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    margin-top: 5px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 20%;
+    display: inline-block;
+    height: 0.3rem;
+    width: 3.8rem;
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.formulario-home > .form-control {
+    background-color: #F5F5F5;
+    box-shadow: none;
+    border: 0;
+}
+
+.formulario-home > .form-control::placeholder {
+    color: #000000;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s; /* Transición para suavizar el efecto */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+.seccion-fotos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+    transition: background 0.3s; /* Transición para suavizar el cambio de opacidad */
+}
+
+.card:hover .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Overlay visible al hacer hover */
+}
+
+.card:hover .card-content .btn-bottom {
+    opacity: 1; /* Botón visible al hacer hover */
+}
+
+.card-content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff; /* Puedes ajustar el color del texto según tus necesidades */
+    text-align: center;
+    opacity: 1; /* Ajusta la opacidad inicial a 1 */
+    transition: opacity 0.3s; /* Transición para suavizar la aparición del botón */
+}
+
+.btn-bottom {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff; /* Puedes ajustar el color del botón según tus necesidades */
+    color: #000; /* Puedes ajustar el color del texto del botón según tus necesidades */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s; /* Transición para suavizar la aparición del botón */
+}
+
+.card:hover .btn-bottom {
+    opacity: 1; /* Botón visible al hacer hover */
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.card:hover .btn-bottom:hover {
+    background-color: #543543;
+    color: #FFFFFF;
+
+}
 
 @media (min-width: 1800px) {
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 24.6875rem;
+    }
 
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 34rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 1rem;
+        width: 11rem;
+        height: 11rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 5rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 1400px) and (max-width: 1799px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 18.125rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 28rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 0.9rem;
+        width: 10rem;
+        height: 10rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 4.5rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 20.625rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 0.7rem;
+        width: 9rem;
+        height: 9rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 4rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 16.75rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 18rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 0.7rem;
+        width: 9rem;
+        height: 9rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 3.5rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 19.375rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 22rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 0.8rem;
+        width: 10rem;
+        height: 10rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 3rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 14rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 28rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 1.2rem;
+        width: 18rem;
+        height: 18rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 2.5rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 1rem;
+        width: 14rem;
+        height: 14rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 1.6rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 319px) {
-    
+    .img-lanzamientos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 14.5rem;
+    }
+
+    .seccion-fotos {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 14rem;
+    }
+
+    .circulo-colaborador {
+        background-color: #000000;
+        border-radius: 100%;
+        font-size: 1rem;
+        width: 10rem;
+        height: 10rem;
+        color: #FFFFFF;
+    }
+
+    .titulo-colaboradores {
+        font-size: 1.2rem;
+    }
+
+    .texto-colaboradores {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
 }
