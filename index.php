@@ -97,7 +97,7 @@
                 <div class="row">
                     <div class="slider-lanzamientos">
                         <div class="col-3">
-                            <div class="card border-0 px-2">
+                            <div class="card bg-transparent border-0 px-2">
                                 <div class="img-lanzamientos" style="
                                     background-image: url('img/index/01_.png');
                                 "></div>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 px-2">
+                            <div class="card bg-transparent border-0 px-2">
                                 <div class="img-lanzamientos" style="
                                     background-image: url('img/index/02_.png');
                                 "></div>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 px-2">
+                            <div class="card bg-transparent border-0 px-2">
                                 <div class="img-lanzamientos" style="
                                     background-image: url('img/index/03_.png');
                                 "></div>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 px-2">
+                            <div class="card bg-transparent border-0 px-2">
                                 <div class="img-lanzamientos" style="
                                     background-image: url('img/index/04_.png');
                                 "></div>
@@ -165,7 +165,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 px-2">
+                            <div class="card bg-transparent border-0 px-2">
                                 <div class="img-lanzamientos" style="
                                     background-image: url('img/index/logo.png');
                                 "></div>
@@ -403,6 +403,67 @@
     <script src="vendor/summernote/summernote-lite.js"></script>
     <script>
         AOS.init(); // Inicializar libreria aos
+    </script>
+    <script>
+        
+        var modal = document.querySelector('.menu-modal');
+        modal.style.display = "none";
+        var inputCupon = document.querySelector('.input-cupon');
+        inputCupon.style.display = "block";
+
+        function activarModal() {
+            modal.style.display = "block";
+        }
+
+        function cerrarModal() {
+            modal.style.display = "none";
+        }
+
+        function cancelarCupon() {
+            inputCupon.style.display = "none";
+        }
+
+        function quitarCarrito(id) {
+            // Obtén el elemento con el ID específico
+            var elementoCarrito = document.getElementById("art-carrito-" + id);
+
+            // Oculta el elemento
+            if (elementoCarrito) {
+                elementoCarrito.style.display = "none";
+            }
+        }
+
+    </script>
+    <script>
+        
+        var modal_sm = document.querySelector('.menu-modal-sm');
+        modal_sm.style.display = "none";
+        var inputCuponsm = document.querySelector('.input-cupon-sm');
+        inputCuponsm.style.display = "block";
+
+        function activarModalsm() {
+            modal_sm.style.display = "block";
+        }
+
+        function cerrarModalsm() {
+            modal_sm.style.display = "none";
+        }
+
+        function cancelarCuponsm() {
+            inputCuponsm.style.display = "none";
+        }
+
+
+        function quitarCarritosm(id) {
+            // Obtén el elemento con el ID específico
+            var elementoCarritosm = document.getElementById("art-carrito-sm-" + id);
+
+            // Oculta el elemento
+            if (elementoCarritosm) {
+                elementoCarritosm.style.display = "none";
+            }
+        }
+
     </script>
     <script>
         $('.slider-lanzamientos').slick({

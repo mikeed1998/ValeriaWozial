@@ -172,7 +172,7 @@
                     <div class="col" data-aos="zoom-in-up">
                         <div class="row">
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -189,7 +189,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -206,7 +206,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -223,7 +223,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -257,7 +257,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -274,7 +274,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -308,7 +308,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -325,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -342,7 +342,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -359,7 +359,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -376,7 +376,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -393,7 +393,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -410,7 +410,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
@@ -427,7 +427,7 @@
                                 </div>
                             </div>
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                                <div class="card border-0 px-2">
+                                <div class="card bg-transparent border-0 px-2">
                                     <div class="img-lanzamientos" style="
                                         background-image: url('img/index/01_.png');
                                     "></div>
