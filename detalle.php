@@ -100,6 +100,17 @@
                 width: 100%;
                 height: 44rem;
             }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+           
         }
 
         @media (min-width: 1400px) and (max-width: 1799px) {
@@ -110,6 +121,23 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 18rem;
+            }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 42rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
 
@@ -122,6 +150,23 @@
                 width: 100%;
                 height: 20rem;
             }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 44rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
         }
 
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -132,6 +177,23 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 16rem;
+            }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 44rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
 
@@ -144,6 +206,23 @@
                 width: 100%;
                 height: 19rem;
             }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 44rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
         }
 
         @media (min-width: 576px) and (max-width: 767px) {
@@ -154,6 +233,23 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 21rem;
+            }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 36rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
 
@@ -166,6 +262,23 @@
                 width: 100%;
                 height: 21rem;
             }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 26rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
         }
 
         @media (min-width: 0px) and (max-width: 319px) {
@@ -176,6 +289,23 @@
                 border-radius: 0.2rem;
                 width: 100%;
                 height: 13rem;
+            }
+
+            .imagen-galeria {
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 18rem;
+            }
+
+            .prod-desc {
+                text-align: justify; 
+                line-height: 1; 
+                max-height: 10rem;
+                overflow: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
 
@@ -257,8 +387,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col py-3 text-decoration-justify fs-5" style="text-align: justify; line-height: 1;">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nemo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quo facilis eum! Recusandae, eos. Deleniti officia facere dicta ipsam ea!
+                                    <div class="col py-3 text-decoration-justify fs-5 prod-desc">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur iste odit natus quae dolorem tempora ipsam quasi neque ipsum aperiam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nulla facilis at doloremque illum recusandae impedit similique in, consequuntur officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nemo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quo facilis eum! Recusandae, eos. Deleniti officia facere dicta ipsam ea!
                                     </div>
                                 </div>
                                 <div class="row mt-3">
