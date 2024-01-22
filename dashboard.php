@@ -27,13 +27,210 @@
     <link rel="stylesheet" href="vendor/summernote/summernote-lite.css">
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
-    <link rel="stylesheet" href="css/front/iniciar_sesion.css">
+    <link rel="stylesheet" href="css/front/dashboard.css">
 </head>
 <body>
 
     <?=$header;?>
 
-    
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-4 border border-dark">
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6 mx-auto">
+                                <div class="row mt-5">
+                                    <div class="col text-center py-2 fs-2" style="background-color: #ECECEC;">
+                                        ¡Hola AnaPAU!
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col" style="height: 24rem; background-color: #F5F5F5;">
+                                        <div class="row pt-5">
+                                            <div class="col-9 mx-auto">
+                                                <div class="row">
+                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-pedidos">Pedidos</a></div>
+                                                    <div class="col-12"><hr class="m-0"></div>
+                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-cuenta">Mi cuenta</a></div>
+                                                    <div class="col-12"><hr class="m-0"></div>
+                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-direcciones">Direcciones</a></div>
+                                                    <div class="col-12"><hr class="m-0"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 px-0">
+                                        <a href="#/" class="btn btn-ooutline w-100 fs-5 rounded-0 py-3 dashboard-boton">CERRAR SESIÓN</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 border border-dark" id="dashboard-pedidos">
+                        <div class="row">
+                            <div class="col-10 mx-auto">
+                                <div class="row">
+                                    <div class="col-9 border">
+                                        <div class="row mt-5">
+                                            <div class="col py-2 px-5 fs-2">
+                                                PEDIDOS
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 border border-dark" id="dashboard-cuenta">
+                        <div class="row">
+                            <div class="col-10 mx-auto">
+                                <div class="row">
+                                    <div class="col-9 border">
+                                        <div class="row mt-5">
+                                            <div class="col py-2 px-5 fs-2">
+                                                MI CUENTA
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 border border-dark" id="dashboard-direcciones">
+                        <div class="row">
+                            <div class="col-10 mx-auto">
+                                <div class="row">
+                                    <div class="col-9  border">
+                                        <div class="row mt-5">
+                                            <div class="col py-2 px-5 fs-2">
+                                                DIRECCIONES
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-6 px-5">
+                                                <div class="card card-direccion p-3 rounded-0">
+                                                    <div class="row">
+                                                        <div class="col card-prederteminada text-end">
+                                                            Predeterminada
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col card-nombre text-start">
+                                                            Ana Paula Covarrubias
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2" style="text-align: justify;">
+                                                            Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2">
+                                                            +52 3338096501
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2">
+                                                            anapaula@wozial.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="row card-acciones">
+                                                        <div class="col-4"></div>
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-6 text-end">
+                                                                    <a href="#/" class="card-acciones_link">editar</a>
+                                                                </div>
+                                                                <div class="col-6 card-acciones_link">
+                                                                    <a href="#/" class="card-acciones_link">eliminar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 px-5">
+                                                <div class="card card-direccion p-3 rounded-0">
+                                                    <div class="row">
+                                                        <div class="col card-prederteminada text-end">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col card-nombre text-start">
+                                                            Ana Paula Covarrubias
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2" style="text-align: justify;">
+                                                            Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2">
+                                                            +52 3338096501
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2">
+                                                            anapaula@wozial.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="row card-acciones">
+                                                        <div class="col-4"></div>
+                                                        <div class="col-8">
+                                                            <div class="row">
+                                                                <div class="col-6 text-end">
+                                                                    <a href="#/" class="card-acciones_link">editar</a>
+                                                                </div>
+                                                                <div class="col-6 card-acciones_link">
+                                                                    <a href="#/" class="card-acciones_link">eliminar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-6 px-5">
+                                                <div class="card position-relative rounded-0" style="height: 24rem;">
+                                                    <div class="col-6 position-absolute top-50 start-50 translate-middle">
+                                                        <a href="#/" class="card-acciones_link">
+                                                            <div class="row">
+                                                                <div class="col text-center">
+                                                                    <i class="bi bi-plus-circle display-5"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12 text-center card-nombre">
+                                                                    Añadir nueva solución
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?=$footer;?>
 
@@ -53,6 +250,55 @@
     <script src="vendor/summernote/summernote-lite.js"></script>
     <script>
         AOS.init(); // Inicializar libreria aos
+    </script>
+    <script>
+        // Espera a que el DOM esté completamente cargado
+        $(document).ready(function () {
+            // Obtiene los enlaces y los divs por sus ids usando jQuery
+            var enlacePedidos = $("#opc-pedidos");
+            var enlaceCuenta = $("#opc-cuenta");
+            var enlaceDirecciones = $("#opc-direcciones");
+
+            var divPedidos = $("#dashboard-pedidos");
+            var divCuenta = $("#dashboard-cuenta");
+            var divDirecciones = $("#dashboard-direcciones");
+
+            // Función para ocultar todos los divs y restablecer estilos de enlaces
+            function ocultarTodos() {
+                divPedidos.hide();
+                divCuenta.hide();
+                divDirecciones.hide();
+
+                // Restablece los estilos de los enlaces
+                enlacePedidos.removeClass("activo");
+                enlaceCuenta.removeClass("activo");
+                enlaceDirecciones.removeClass("activo");
+            }
+
+            // Oculta por defecto los divs que no quieres mostrar al cargar la página
+            ocultarTodos();
+            divCuenta.show(); // Muestra por defecto el contenido de dashboard-cuenta
+            enlaceCuenta.addClass("activo"); // Establece el enlace como activo por defecto
+
+            // Agrega un event listener a cada enlace
+            enlacePedidos.on("click", function () {
+                ocultarTodos();
+                divPedidos.show();
+                enlacePedidos.addClass("activo");
+            });
+
+            enlaceCuenta.on("click", function () {
+                ocultarTodos();
+                divCuenta.show();
+                enlaceCuenta.addClass("activo");
+            });
+
+            enlaceDirecciones.on("click", function () {
+                ocultarTodos();
+                divDirecciones.show();
+                enlaceDirecciones.addClass("activo");
+            });
+        });
     </script>
     <script>
         
