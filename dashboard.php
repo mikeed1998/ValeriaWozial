@@ -42,20 +42,20 @@
                             <div class="col-3"></div>
                             <div class="col-6 mx-auto">
                                 <div class="row mt-5">
-                                    <div class="col text-center py-2 fs-2" style="background-color: #ECECEC;">
+                                    <div class="col card-nav_titulo text-center py-2">
                                         ¡Hola AnaPAU!
                                     </div>
                                 </div>
                                 <div class="row mt-3">
-                                    <div class="col" style="height: 24rem; background-color: #F5F5F5;">
+                                    <div class="col card-nav">
                                         <div class="row pt-5">
                                             <div class="col-9 mx-auto">
                                                 <div class="row">
-                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-pedidos">Pedidos</a></div>
+                                                    <div class="col-11 mx-auto"><a href="#/" class="btn btn-outline border-0 dashboard-link" id="opc-pedidos">Pedidos</a></div>
                                                     <div class="col-12"><hr class="m-0"></div>
-                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-cuenta">Mi cuenta</a></div>
+                                                    <div class="col-11 mx-auto"><a href="#/" class="btn btn-outline border-0 dashboard-link" id="opc-cuenta">Mi cuenta</a></div>
                                                     <div class="col-12"><hr class="m-0"></div>
-                                                    <div class="col-9 mx-auto"><a href="#/" class="btn btn-outline fs-3 border-0 dashboard-link" id="opc-direcciones">Direcciones</a></div>
+                                                    <div class="col-11 mx-auto"><a href="#/" class="btn btn-outline border-0 dashboard-link" id="opc-direcciones">Direcciones</a></div>
                                                     <div class="col-12"><hr class="m-0"></div>
                                                 </div>
                                             </div>
@@ -110,14 +110,14 @@
                         <div class="row">
                             <div class="col-10 mx-auto">
                                 <div class="row">
-                                    <div class="col-9  border">
+                                    <div class="col-10 border">
                                         <div class="row mt-5">
-                                            <div class="col py-2 px-5 fs-2">
+                                            <div class="col card-titulo py-2 fs-4 px-xxl-4">
                                                 DIRECCIONES
                                             </div>
                                         </div>
                                         <div class="row mt-3">
-                                            <div class="col-6 px-5">
+                                            <div class="col-6 px-xxl-4">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
                                                         <div class="col card-prederteminada text-end">
@@ -159,7 +159,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6 px-5">
+                                            <div class="col-6 px-xxl-4">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
                                                         <div class="col card-prederteminada text-end">
@@ -203,7 +203,7 @@
                                             </div>
                                         </div>
                                         <div class="row mt-4">
-                                            <div class="col-6 px-5">
+                                            <div class="col-6 px-xxl-4">
                                                 <div class="card position-relative rounded-0" style="height: 24rem;">
                                                     <div class="col-6 position-absolute top-50 start-50 translate-middle">
                                                         <a href="#/" class="card-acciones_link">
@@ -214,7 +214,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12 text-center card-nombre">
-                                                                    Añadir nueva solución
+                                                                    Añadir nueva dirección
                                                                 </div>
                                                             </div>
                                                         </a>

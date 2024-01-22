@@ -45,10 +45,67 @@
         margin-top: 6rem; 
         font-weight: 500;
     }
+
+    .dashboard-link {
+        font-size: 1.1rem;
+    }
+
+    .card-nav {
+        height: 22rem; 
+        background-color: #F5F5F5;
+    }
+
+    .card-nav_titulo {
+        background-color: #ECECEC;
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    .card-titulo {
+        font-size: 2rem;
+        height: 4rem;
+    }
 }
 
 @media (min-width: 1400px) and (max-width: 1799px) {
+    .card-direccion {
+        font-size: 0.9rem;
+        height: 22rem;
+    }
     
+    .card-prederteminada {
+        font-weight: 500;
+        height: 3.6rem;
+    }
+    
+    .card-nombre {
+        font-weight: 500;
+    }
+    
+    .card-acciones {
+        margin-top: 5.8rem; 
+        font-weight: 500;
+    }
+
+    .dashboard-link {
+        font-size: 1.1rem;
+    }
+
+    .card-nav {
+        height: 22rem; 
+        background-color: #F5F5F5;
+    }
+
+    .card-nav_titulo {
+        background-color: #ECECEC;
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    .card-titulo {
+        font-size: 2rem;
+        height: 4rem;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
