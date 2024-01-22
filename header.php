@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12 bg-white position-absolute top-0 end-0 shadow-lg menu-modal z-3" style="background-color: #FAFAFA;">
+                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12 position-absolute top-0 end-0 shadow-lg menu-modal z-3" style="background-color: #F0F0F0;">
                             <div class="row">
                                 <div class="col mx-auto py-2 text-end">
                                     <button class="btn btn-outline border-none" onclick="cerrarModal()"><i class="bi bi-x-lg fs-3"></i></button>
