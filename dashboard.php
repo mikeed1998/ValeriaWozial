@@ -28,6 +28,23 @@
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
     <link rel="stylesheet" href="css/front/dashboard.css">
+    <style>
+        .textog {
+            display: block;
+        }
+
+        .editart {
+            display: none;
+        }
+
+        .volverg {
+            display: none;
+        }
+        
+        .switchpreg {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -37,7 +54,7 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-12 mx-auto border border-dark">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-12 mx-auto">
                         <div class="row">
                             <div class="col-xxl-3 col-xl-3 col-lg-12"></div>
                             <div class="col-xxl-6 col-xl-6 col-lg-11 mx-auto">
@@ -49,7 +66,7 @@
                                 <div class="row mt-3">
                                     <div class="col card-nav">
                                         <div class="row pt-5">
-                                            <div class="col-12 mx-auto">
+                                            <div class="col-xxl-9 col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 mx-auto">
                                                 <div class="row">
                                                     <div class="col-11 mx-auto"><a href="#/" class="btn btn-outline border-0 dashboard-link" id="opc-pedidos">Pedidos</a></div>
                                                     <div class="col-12"><hr class="m-0"></div>
@@ -106,22 +123,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-direcciones">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto" id="dashboard-direcciones">
                         <div class="row">
                             <div class="col-xxl-10 col-xl-10 col-lg-11 mx-auto">
                                 <div class="row">
-                                    <div class="col-xxl-10 col-xl-10 col-lg-11 border">
+                                    <div class="col-xxl-10 col-xl-10 col-lg-11">
                                         <div class="row mt-5">
-                                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-9 col-11 mx-auto card-titulo py-2 px-xxl-4 px-xl-0 px-lg-3">
+                                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-7 col-sm-9 col-11 mx-auto card-titulo py-2 px-xxl-4 px-xl-2 px-lg-3">
                                                 DIRECCIONES
                                             </div>
                                         </div>
                                         <div class="row mt-3">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto mt-3 px-xxl-4 px-xl-0 px-lg-3">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-3 px-lg-3">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
-                                                        <div class="col card-prederteminada text-end">
+                                                        <div class="col card-prederteminada text-end" id="pre-1">
                                                             Predeterminada
+                                                        </div>
+                                                        <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-1">
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault">Dejar como predeterminada</label>
+                                                                <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -130,26 +153,36 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2 card-direccion_direccion">
+                                                        <div class="col py-2 card-direccion_direccion" id="textod-1">
                                                             Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col py-2">
-                                                            +52 3338096501
+                                                        <div class="col py-1 card-direccion_direccion editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputd-1">
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2">
+                                                        <div class="col py-2" id="textot-1">
+                                                            +52 3338096501
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputt-1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2" id="textoc-1">
                                                             anapaula@wozial.com
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputc-1">
                                                         </div>
                                                     </div>
                                                     <div class="row card-acciones">
-                                                        <div class="col-4"></div>
-                                                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                                                        <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"></div>
+                                                        <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
                                                             <div class="row">
                                                                 <div class="col-6 text-end">
-                                                                    <a href="#/" class="card-acciones_link">editar</a>
+                                                                    <a href="#/" class="card-acciones_link editarg" onclick="editar(1)" id="editarl-1">editar</a>
+                                                                    <a href="#/" class="card-acciones_link volverg" onclick="terminar(1)" id="volverl-1">Volver</a>
                                                                 </div>
                                                                 <div class="col-6 card-acciones_link">
                                                                     <a href="#/" class="card-acciones_link">eliminar</a>
@@ -159,11 +192,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-0 px-lg-3">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-3 px-lg-3">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
-                                                        <div class="col card-prederteminada text-end">
+                                                        <div class="col card-prederteminada text-end" id="pre-2">
                                                             
+                                                        </div>
+                                                        <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-2">
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault2">Dejar como predeterminada</label>
+                                                                <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -172,26 +211,36 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2 card-direccion_direccion">
+                                                        <div class="col py-2 card-direccion_direccion" id="textod-2">
                                                             Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col py-2">
-                                                            +52 3338096501
+                                                        <div class="col py-1 card-direccion_direccion editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputd-2">
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2">
+                                                        <div class="col py-2" id="textot-2">
+                                                            +52 3338096501
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputt-2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col py-2" id="textoc-2">
                                                             anapaula@wozial.com
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none" id="inputc-2">
                                                         </div>
                                                     </div>
                                                     <div class="row card-acciones">
-                                                        <div class="col-4"></div>
-                                                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                                                        <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"></div>
+                                                        <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
                                                             <div class="row">
                                                                 <div class="col-6 text-end">
-                                                                    <a href="#/" class="card-acciones_link">editar</a>
+                                                                    <a href="#/" class="card-acciones_link editarg" onclick="editar(2)" id="editarl-2">editar</a>
+                                                                    <a href="#/" class="card-acciones_link volverg" onclick="terminar(2)" id="volverl-2">Volver</a>
                                                                 </div>
                                                                 <div class="col-6 card-acciones_link">
                                                                     <a href="#/" class="card-acciones_link">eliminar</a>
@@ -203,7 +252,7 @@
                                             </div>
                                         </div>
                                         <div class="row mt-4">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-0 px-lg-3">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-1 px-lg-3">
                                                 <div class="card position-relative rounded-0" style="height: 24rem;">
                                                     <div class="col-6 position-absolute top-50 start-50 translate-middle">
                                                         <a href="#/" class="card-acciones_link">
@@ -250,6 +299,43 @@
     <script src="vendor/summernote/summernote-lite.js"></script>
     <script>
         AOS.init(); // Inicializar libreria aos
+    </script>
+    <script>
+        
+        function editar(indice) {
+            document.getElementById(`pre-${indice}`).style.display = 'none';
+            document.getElementById(`switchpre-${indice}`).style.display = 'block';
+
+            document.getElementById(`editarl-${indice}`).style.display = 'none';
+            document.getElementById(`volverl-${indice}`).style.display = 'block';
+            
+            document.getElementById(`textod-${indice}`).style.display = 'none';
+            document.getElementById(`textot-${indice}`).style.display = 'none';
+            document.getElementById(`textoc-${indice}`).style.display = 'none';
+
+            document.getElementById(`inputd-${indice}`).parentNode.style.display = 'block';
+            document.getElementById(`inputt-${indice}`).parentNode.style.display = 'block';
+            document.getElementById(`inputc-${indice}`).parentNode.style.display = 'block';
+            // document.getElementById(`input-${indice}`).value = document.getElementById(`texto-${indice}`).innerText;
+            // document.getElementById(`input-${indice}`).parentNode.style.display = 'block';
+        }
+
+        function terminar(indice) {
+            document.getElementById(`pre-${indice}`).style.display = 'block';
+            document.getElementById(`switchpre-${indice}`).style.display = 'none';
+
+            document.getElementById(`editarl-${indice}`).style.display = 'block';
+            document.getElementById(`volverl-${indice}`).style.display = 'none';
+
+            document.getElementById(`textod-${indice}`).style.display = 'block';
+            document.getElementById(`textot-${indice}`).style.display = 'block';
+            document.getElementById(`textoc-${indice}`).style.display = 'block';
+
+            document.getElementById(`inputd-${indice}`).parentNode.style.display = 'none';
+            document.getElementById(`inputt-${indice}`).parentNode.style.display = 'none';
+            document.getElementById(`inputc-${indice}`).parentNode.style.display = 'none';
+        }
+
     </script>
     <script>
         // Espera a que el DOM esté completamente cargado
