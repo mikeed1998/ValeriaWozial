@@ -37,10 +37,10 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="col-4 border border-dark">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-12 mx-auto border border-dark">
                         <div class="row">
-                            <div class="col-3"></div>
-                            <div class="col-6 mx-auto">
+                            <div class="col-xxl-3 col-xl-3 col-lg-12"></div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-11 mx-auto">
                                 <div class="row mt-5">
                                     <div class="col card-nav_titulo text-center py-2">
                                         ¡Hola AnaPAU!
@@ -49,7 +49,7 @@
                                 <div class="row mt-3">
                                     <div class="col card-nav">
                                         <div class="row pt-5">
-                                            <div class="col-9 mx-auto">
+                                            <div class="col-12 mx-auto">
                                                 <div class="row">
                                                     <div class="col-11 mx-auto"><a href="#/" class="btn btn-outline border-0 dashboard-link" id="opc-pedidos">Pedidos</a></div>
                                                     <div class="col-12"><hr class="m-0"></div>
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 border border-dark" id="dashboard-pedidos">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-pedidos">
                         <div class="row">
                             <div class="col-10 mx-auto">
                                 <div class="row">
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 border border-dark" id="dashboard-cuenta">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-cuenta">
                         <div class="row">
                             <div class="col-10 mx-auto">
                                 <div class="row">
@@ -106,18 +106,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 border border-dark" id="dashboard-direcciones">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-direcciones">
                         <div class="row">
-                            <div class="col-10 mx-auto">
+                            <div class="col-xxl-10 col-xl-10 col-lg-11 mx-auto">
                                 <div class="row">
-                                    <div class="col-10 border">
+                                    <div class="col-xxl-10 col-xl-10 col-lg-11 border">
                                         <div class="row mt-5">
-                                            <div class="col card-titulo py-2 fs-4 px-xxl-4">
+                                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-9 col-11 mx-auto card-titulo py-2 px-xxl-4 px-xl-0 px-lg-3">
                                                 DIRECCIONES
                                             </div>
                                         </div>
                                         <div class="row mt-3">
-                                            <div class="col-6 px-xxl-4">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto mt-3 px-xxl-4 px-xl-0 px-lg-3">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
                                                         <div class="col card-prederteminada text-end">
@@ -130,7 +130,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2" style="text-align: justify;">
+                                                        <div class="col py-2 card-direccion_direccion">
                                                             Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
                                                         </div>
                                                     </div>
@@ -146,7 +146,7 @@
                                                     </div>
                                                     <div class="row card-acciones">
                                                         <div class="col-4"></div>
-                                                        <div class="col-8">
+                                                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                             <div class="row">
                                                                 <div class="col-6 text-end">
                                                                     <a href="#/" class="card-acciones_link">editar</a>
@@ -159,7 +159,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6 px-xxl-4">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-0 px-lg-3">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
                                                         <div class="col card-prederteminada text-end">
@@ -172,7 +172,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col py-2" style="text-align: justify;">
+                                                        <div class="col py-2 card-direccion_direccion">
                                                             Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
                                                         </div>
                                                     </div>
@@ -188,7 +188,7 @@
                                                     </div>
                                                     <div class="row card-acciones">
                                                         <div class="col-4"></div>
-                                                        <div class="col-8">
+                                                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
                                                             <div class="row">
                                                                 <div class="col-6 text-end">
                                                                     <a href="#/" class="card-acciones_link">editar</a>
@@ -203,7 +203,7 @@
                                             </div>
                                         </div>
                                         <div class="row mt-4">
-                                            <div class="col-6 px-xxl-4">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-0 px-lg-3">
                                                 <div class="card position-relative rounded-0" style="height: 24rem;">
                                                     <div class="col-6 position-absolute top-50 start-50 translate-middle">
                                                         <a href="#/" class="card-acciones_link">
