@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="vendor/summernote/summernote-lite.css">
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
+    <link rel="stylesheet" href="css/front/pagos.css">
     <style>
 
         @media (min-width: 1800px) {

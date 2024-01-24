@@ -81,7 +81,7 @@
                                                 </div>
                                                 <div class="col-6 fs-3 text-end">
                                                     <button class="btn btn-outline" onclick="quitarCarrito(1)">
-                                                        <i class="bi bi-x-circle"></i>
+                                                        <i class="bi bi-x-circle fs-4"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -127,13 +127,13 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row fs-5">
-                                                                <div class="col-xxl-2 col-xl-2 col-lg-3 text-center text-decoration-line-through">
+                                                                <div class="col-xxl-3 col-xl-3 col-lg-3 text-center text-decoration-line-through">
                                                                     $4,800 
                                                                 </div>
-                                                                <div class="col-xxl-2 col-xl-2 col-lg-3 text-center">
+                                                                <div class="col-xxl-3 col-xl-3 col-lg-3 text-center">
                                                                     $4,320 
                                                                 </div>
-                                                                <div class="col-xxl-8 col-xl-8 col-lg-9">
+                                                                <div class="col-xxl-6 col-xl-6 col-lg-9">
                                                                     %10 de descuento 
                                                                 </div>
                                                             </div>
@@ -150,7 +150,7 @@
                                                 </div>
                                                 <div class="col-6 fs-3 text-end">
                                                     <button class="btn btn-outline" onclick="quitarCarrito(2)">
-                                                        <i class="bi bi-x-circle"></i>
+                                                        <i class="bi bi-x-circle fs-4"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -196,13 +196,13 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row fs-5">
-                                                                <div class="col-xxl-2 col-xl-2 col-lg-3 text-decoration-line-through">
+                                                                <div class="col-xxl-3 col-xl-3 col-lg-3 text-decoration-line-through">
                                                                     $4,800 
                                                                 </div>
-                                                                <div class="col-xxl-2 col-xl-2 col-lg-3">
+                                                                <div class="col-xxl-3 col-xl-3 col-lg-3">
                                                                     $4,320 
                                                                 </div>
-                                                                <div class="col-xxl-8 col-xl-8 col-lg-9">
+                                                                <div class="col-xxl-6 col-xl-6 col-lg-9">
                                                                     %10 de descuento 
                                                                 </div>
                                                             </div>

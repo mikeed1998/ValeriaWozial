@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="vendor/summernote/summernote-lite.css">
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
+    <link rel="stylesheet" href="css/front/faq.css">
     <style>
 
         .page-link_link, .page-link_icon {
