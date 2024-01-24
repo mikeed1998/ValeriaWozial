@@ -28,8 +28,9 @@
     <link rel="stylesheet" href="css/front/header.css">
     <link rel="stylesheet" href="css/front/footer.css">
     <link rel="stylesheet" href="css/front/index.css">
+    <link rel="stylesheet" href="css/fonts/fonts.css">
     <style>
-        
+
     </style>
 </head>
 <body>
@@ -88,7 +89,7 @@
 
     <div class="container-fluid mt-5" data-aos="fade-up">
         <div class="row">
-            <div class="col display-2 text-center">
+            <div class="col display-2 text-center" style="font-family: 'Sackers Gothic Light AT Regular', sans serif;">
                 LANZAMIENTOS
             </div>
         </div>
@@ -193,7 +194,7 @@
                 <div class="row">
                     <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row">
-                            <div class="col text-start fs-4">
+                            <div class="col text-start fs-4" style="font-family: 'Sackers Gothic Light AT Regular', sans serif;">
                                 COMPRA SEGURA
                             </div>
                         </div>
@@ -272,7 +273,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col py-2 display-1 text-center">
+                <div class="col py-2 display-1 text-center" style="font-family: 'Sackers Gothic Light AT Regular', sans serif;">
                     NEWSLETTER
                 </div>
             </div>
@@ -321,7 +322,7 @@
         <div class="row py-5">
             <div class="col-9 py-5 mx-auto">
                 <div class="row">
-                    <div class="col py-2 text-center titulo-colaboradores">
+                    <div class="col py-2 text-center titulo-colaboradores" style="font-family: 'Sackers Gothic Light AT Regular', sans serif;">
                         COLABORACIONES
                     </div>
                 </div>

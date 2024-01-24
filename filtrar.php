@@ -150,17 +150,21 @@
                 <div class="row py-3">
                     <div class="col">
                         <div class="row">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-9 col-11 mx-auto py-2 fs-2">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-9 col-11 mx-auto py-2 fs-2 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                 CALZADO / CATEGORÍA
                             </div>
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-9 col-11 mx-auto text-end">
-                                <button class="btn py-2 px-5 bg-black text-white fs-2">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-9 col-11 mx-auto text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
+                                <button class="btn py-2 px-5 bg-black text-white fs-4 rounded-0">
                                     <div class="row">
-                                        <div class="col-4 text-start">
-                                            FILTRAR
-                                        </div>
-                                        <div class="col-8 text-end">
-                                            <i class="bi bi-sliders"></i>
+                                        <div class="col text-center">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    F I L T R A R
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="bi bi-sliders"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </button>
@@ -178,10 +182,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -195,10 +199,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -212,10 +216,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -229,10 +233,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -246,10 +250,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -263,10 +267,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -280,10 +284,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -297,10 +301,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -314,10 +318,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -331,10 +335,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -348,10 +352,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -365,10 +369,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -382,10 +386,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -399,10 +403,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -416,10 +420,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
@@ -433,10 +437,10 @@
                                     "></div>
                                     <div class="card-body border-0">
                                         <div class="row">
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-start text-xl-start text-lg-start text-md-center text-sm-center text-center">
                                                 Calzado #01
                                             </div>
-                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-xxl-end text-xl-end text-lg-end text-md-center text-sm-center text-center">
                                                 $2,800
                                             </div>
                                         </div>
