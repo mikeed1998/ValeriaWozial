@@ -87,36 +87,256 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-pedidos">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto" id="dashboard-pedidos">
                         <div class="row">
                             <div class="col-10 mx-auto">
                                 <div class="row">
-                                    <div class="col-9 border">
+                                    <div class="col-12">
                                         <div class="row mt-5">
-                                            <div class="col py-2 px-5 fs-2">
+                                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-7 col-sm-9 col-11 mx-auto card-titulo py-2 px-xxl-4 px-xl-2 px-lg-3">
                                                 PEDIDOS
                                             </div>
                                         </div>
+
                                         <div class="row mt-3">
-                                            
+                                            <div class="col px-0">
+                                                <div class="card py-2" style="background-color: #F5F7FF;">
+                                                    <div class="row">
+                                                        <div class="col-11 mx-auto py-1 border rounded-pill bg-white">
+                                                            <div class="row">
+                                                                <div class="col-5">
+                                                                    <div class="card">
+                                                                        <small class="py-1 px-3" style="background-color: #F5F7FF;">
+                                                                            Num.p: ord_2usQgqe8yg2U9FmY4
+                                                                        </small>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2 py-1">
+                                                                    <small>Total: $230.00</small>
+                                                                </div>
+                                                                <div class="col-5 py-1">
+                                                                    <div class="row">
+                                                                        <div class="col mx-auto">
+                                                                            <div class="row">
+                                                                                <div class="col-8 text-end">
+                                                                                    <small>Aprobado y en proceso</small>
+                                                                                </div>
+                                                                                <div class="col-1">
+                                                                                    <i class="fa-solid fa-circle ms-3 my-auto aprobado"></i>
+                                                                                </div>
+                                                                                <div class="col-1">
+                                                                                    <div style="color: black;" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1"><i class="fa-solid fa-eye mx-3 botonopacity"  onclick="verPediso(1)"></i></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-xl">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles de la compra</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row p-2">
+                                                                <div class="col-12 py-1">
+                                                                    <div class="card shadow border-0 p-2 rounded-pill">
+                                                                        <div class="row">
+                                                                            <div class="col-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-6">
+                                                                                        <img src="img/index/american_express.png" alt="" class="img-fluid" style="width: 5rem; height: 2rem;">
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        Producto 1
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3 text-center">
+                                                                                <div class="row">
+                                                                                    <div class="col-10 text-end">
+                                                                                        Cantidad: 1
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3 text-center">
+                                                                                Precio Unidad: 130
+                                                                            </div>
+                                                                            <div class="col-3 text-end">
+                                                                                <a href="#/"><i class="fa-solid fa-eye mx-3 botonopacity"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 py-1">
+                                                                    <div class="card shadow border-0 p-2 rounded-pill">
+                                                                        <div class="row">
+                                                                            <div class="col-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-6">
+                                                                                        <div style="
+                                                                                            background-image: url('img/index/logo.png');
+                                                                                            background-size: cover;
+                                                                                            background-position: center center;
+                                                                                            background-repeat: no-repeat;
+                                                                                            width: 5rem; 
+                                                                                            height: 2rem;
+                                                                                        "></div>
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        Producto 1
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3 text-center">
+                                                                                <div class="row">
+                                                                                    <div class="col-10 text-end">
+                                                                                        Cantidad: 1
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3 text-center">
+                                                                                Precio Unidad: 130
+                                                                            </div>
+                                                                            <div class="col-3 text-end">
+                                                                                <a href="#/"><i class="fa-solid fa-eye mx-3 botonopacity"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-3 p-2">
+                                                                <div class="col">
+                                                                    <div class="card shadow border-0 p-4" style="border-top-left-radius: 32px; border-bottom-left-radius: 32px; border-top-right-radius: 32px; border-bottom-right-radius: 32px;">
+                                                                        <div class="row">
+                                                                            <div class="col py-2 fs-5">
+                                                                                Resumen de la compra
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row my-3">
+                                                                            <div class="col">
+                                                                                <div class="card border-0 py-3" style="border-top-left-radius: 32px; border-bottom-left-radius: 32px; border-top-right-radius: 32px; border-bottom-right-radius: 32px; background-color: #F5F7FF;">
+                                                                                    <div class="row px-5">
+                                                                                        <div class="col-4 text-start">
+                                                                                            Nombre
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            Cantidad
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            Precio
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row px-5 py-1">
+                                                                                        <div class="col-12 border-top border-dark border-2"></div>
+                                                                                        <div class="col-4 text-start">
+                                                                                            Producto 1
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            1
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            $1200
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row px-5 py-1">
+                                                                                        <div class="col-12 border-top border-dark border-2"></div>
+                                                                                        <div class="col-4 text-start">
+                                                                                            Producto 1
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            1
+                                                                                        </div>
+                                                                                        <div class="col-4 text-end">
+                                                                                            $1200
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col fs-5">
+                                                                            <div class="row">
+                                                                                    <div class="col-6 text-start">
+                                                                                        Envio
+                                                                                    </div>
+                                                                                    <div class="col-6 text-end">
+                                                                                        $100
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col fs-4 fw-bolder">
+                                                                                <div class="row">
+                                                                                    <div class="col-6 text-start">
+                                                                                        Total
+                                                                                    </div>
+                                                                                    <div class="col-6 text-end">
+                                                                                        $230
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Salir</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto border border-dark" id="dashboard-cuenta">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-11 col-sm-11 col-12 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 mx-auto" id="dashboard-cuenta">
                         <div class="row">
                             <div class="col-10 mx-auto">
                                 <div class="row">
-                                    <div class="col-9 border">
+                                    <div class="col-12">
                                         <div class="row mt-5">
-                                            <div class="col py-2 px-5 fs-2">
+                                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-7 col-sm-9 col-11 mx-auto card-titulo py-2 px-xxl-4 px-xl-2 px-lg-3">
                                                 MI CUENTA
                                             </div>
                                         </div>
                                         <div class="row mt-3">
-                                            
+                                            <div class="col px-0">
+                                                <div class="card p-3">
+                                                    <div class="row">
+                                                        <div class="col py-2 text-center">
+                                                            Información básica
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <label for="nombre" class="form-control-label">Nombre(s)</label>
+                                                            <input type="text" id="nombre" class="form-control shadow-none">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="apellido" class="form-control-label">Apellido(s)</label>
+                                                            <input type="text" id="apellido" class="form-control shadow-none">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-6">
+                                                            <label for="telefono" class="form-control-label">Telefono</label>
+                                                            <input type="text" id="telefono" class="form-control shadow-none">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +475,7 @@
                                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-1 px-lg-3">
                                                 <div class="card position-relative rounded-0" style="height: 24rem;">
                                                     <div class="col-6 position-absolute top-50 start-50 translate-middle">
-                                                        <a href="#/" class="card-acciones_link">
+                                                        <a href="#/" class="card-acciones_link" data-bs-toggle="modal" data-bs-target="#staticBackdrop-direccion">
                                                             <div class="row">
                                                                 <div class="col text-center">
                                                                     <i class="bi bi-plus-circle display-5"></i>
@@ -283,6 +503,76 @@
 
     <?=$footer;?>
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop-direccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-direccion" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="staticBackdropLabel-direccion">Nueva dirección de envio</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-11 mx-auto">
+                            <div class="row">
+                                <div class="col-6 py-2">
+                                    <label for="nombre_user">Nombre de quien recibe</label>
+                                    <input required type="text" id="nombre_user" value="Nombre de Usuario" class="form-control shadow-none" disabled>
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="calle_user">Calle</label>
+                                    <input required type="text" id="calle_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="numext_user">Número exterior</label>
+                                    <input required type="number" id="numext_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="numint_user">Número interior</label>
+                                    <input required type="number" id="numint_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="calles_user">Entre calles</label>
+                                    <input required type="text" id="calles_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="colonia_user">Colonia</label>
+                                    <input required type="text" id="colonia_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="codiogp_user">Código Postal</label>
+                                    <input required type="number" id="codiogp_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-6 py-2">
+                                    <label for="municipio_user">Municipio</label>
+                                    <input required type="text" id="municipio_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-4 py-2">
+                                    <label for="estado_user">Estado</label>
+                                    <input required type="text" id="estado_user" class="form-control shadow-none">
+                                </div>
+                                <div class="col-4 py-2">
+                                    <label for="pais_user">País</label>
+                                    <input required type="text" id="estado_user" class="form-control shadow-none" value="México" disabled>
+                                </div>
+                                <div class="col-4 d-flex align-items-center py-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="chkPred">
+                                    <label class="form-check-label " for="chkPred">
+                                        Dejar como mi dirección prederteminada
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Agregar nueva dirección</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- JQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap -->
@@ -470,3 +760,6 @@
     </script>
 </body>
 </html>
+
+
+
