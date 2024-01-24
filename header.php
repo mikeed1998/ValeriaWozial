@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12 position-absolute top-0 end-0 shadow-lg menu-modal z-3" style="background-color: #F0F0F0;">
+                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12 position-absolute top-0 end-0 shadow-lg menu-modal z-3" style="background-color: #F0F0F0; display: none;">
                             <div class="row">
                                 <div class="col mx-auto py-2 text-end">
                                     <button class="btn btn-outline border-none" onclick="cerrarModal()"><i class="bi bi-x-lg fs-3"></i></button>
@@ -266,7 +266,7 @@
                         </div>
                     </div>
                     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-none d-xl-none d-lg-none d-md-none d-sm-block d-block position-relative">
-                        <div class="col-md-12 col-sm-12 col-12 bg-white position-absolute top-0 end-0 shadow-lg menu-modal-sm z-3" style="background-color: #FAFAFA;">
+                        <div class="col-md-12 col-sm-12 col-12 bg-white position-absolute top-0 end-0 shadow-lg menu-modal-sm z-3" style="background-color: #FAFAFA; display: none;">
                             <div class="row">
                                 <div class="col mx-auto py-2 text-end">
                                     <button class="btn btn-outline border-none" onclick="cerrarModalsm()"><i class="bi bi-x-lg fs-3"></i></button>
