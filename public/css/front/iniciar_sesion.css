@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Sackers Gothic Light AT Regular';
+    src: url('../../vendor/fonts/Sackers_Gothic_Light_AT_Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../../vendor/fonts/Futura_Std_Book.otf') format('opentype');
+}
+
+body {
+    font-family: 'Futura Std Book', sans-serif;
+    font-weight: 400;
+}
+
+
+.fondo-contenedor {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-left: 26px;
+    height: 60rem;
+    width: 100%;
+}
+
+.carta-sesion {
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.input-sesion {
+    border-radius: 0;
+    border-bottom: 1px solid #9E9797;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.input-sesion:focus {
+    background-color: transparent;
+}
+
+.input-sesion::placeholder {
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (min-width: 1800px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.8rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1799px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.8rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.6rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.6rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.6rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.4rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2.2rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 319px) {
+    .carta-sesion_titulo {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    
+    .carta-sesion_texto {
+        height: 7rem;
+        font-size: 1rem;
+    }
+}
