@@ -3,8 +3,17 @@
 @section('title', 'Iniciar Sesión')
 
 @section('content')
+
+
+
+
+{{-- 
 <div class="container">
-	<div class="row justify-content-center py-5">
+	<div class="row justify-content-center py-5"> --}}
+
+
+
+
 		{{-- <div class="col-md-8">
 			@if (session('status'))
 			<div class="alert alert-primary text-center" role="alert">
@@ -69,7 +78,7 @@
 			</div>
 		</div> --}}
 
-		<div class="col-md-5 mb-5">
+		{{-- <div class="col-md-5 mb-5">
 			<div class="card mb-5 py-5 px-4" style="border-radius:26px; box-shadow:1px 1px 10px rgba(0, 0, 0, 0.119); border:none;">
 				<div class="row">
 					<div class="col-12">
@@ -128,5 +137,5 @@
 		</div>
 
 	</div>
-</div>
+</div> --}}
 @endsection

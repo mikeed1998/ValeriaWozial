@@ -59,6 +59,13 @@ class HomeController extends Controller
         return view('dashboard.home',compact('usuario'));
     }
 
+	public function miPerfil()
+    {
+		$userId = Auth::id();
+		$usuario = User::find($userId);
+        return view('dashboard.dashboard',compact('usuario'));
+    }
+
 	public function dEnvios(){
 		$userId = Auth::id();
 		$usuario = User::find($userId);

@@ -357,6 +357,7 @@ Route::post('/formularioContac', 'FrontController@mailcontact')->name('formulari
 
 Auth::routes();
 
+Route::get('/miPerfil', 'HomeController@miPerfil')->name('miPerfil');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/denvios', 'HomeController@dEnvios')->name('denvios');
 Route::get('/pedidos', 'HomeController@pedidos')->name('pedidos');

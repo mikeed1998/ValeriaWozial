@@ -80,26 +80,26 @@ class FrontController extends Controller
 	}
 
 	public function producto($id) {
-		$categorias = PFCategoriaProducto::all();
-		$producto = PFProducto::find($id);
-		$productos = PFProducto::all();
-		$producto_p = PFPresentacionProducto::all();
-		$galeria = PFGaleria::all();
-		$config = Configuracion::find(1);
-		$presentacion = PFPresentacionProducto::all();
+		// $categorias = PFCategoriaProducto::all();
+		// $producto = PFProducto::find($id);
+		// $productos = PFProducto::all();
+		// $producto_p = PFPresentacionProducto::all();
+		// $galeria = PFGaleria::all();
+		// $config = Configuracion::find(1);
+		// $presentacion = PFPresentacionProducto::all();
 
-		$gale = [];
-		foreach($galeria as $ga) {
-			if($ga->producto == $id) {
-				array_push($gale, $ga);
-			}
-		}
+		// $gale = [];
+		// foreach($galeria as $ga) {
+		// 	if($ga->producto == $id) {
+		// 		array_push($gale, $ga);
+		// 	}
+		// }
 
 		// dd($gale);
 
 		$pagina = 'producto_detalle';
 
-		return view('front.tienda_detalle', compact('id', 'pagina', 'presentacion', 'producto', 'categorias', 'productos', 'producto_p', 'gale', 'config'));
+		return view('front.tienda_detalle', compact('id', 'pagina'));
 	}
 
 	public function soluciones() {
@@ -156,6 +156,10 @@ class FrontController extends Controller
 		$elements = Elemento::where('seccion',4)->get();
 
 		return view('front.contacto', compact('pagina', 'elements', 'config', 'config'));
+	}
+
+	public function dashboard() {
+		return view('front.dashboard');
 	}
 
 

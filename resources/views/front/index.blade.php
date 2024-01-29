@@ -261,17 +261,17 @@
                 <div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 py-3 mx-auto">
                     <div class="row">
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-11 col-11 formulario-home mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-3">
-                            <input type="text" id="home_nombre" name="home_nombre" class="form-control py-3 fs-5" placeholder="Nombre:" required>
+                            <input type="text" id="home_nombre" name="home_nombre" class="form-control shadow-none py-3 fs-5" placeholder="Nombre:" required>
                             <div class="datos-ok text-success"></div>
                             <div class="datos-error text-danger"></div>
                         </div>
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-11 col-11 formulario-home mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-3">
-                            <input type="email" id="home_correo" name="home_correo" class="form-control py-3 fs-5" placeholder="Correo:" title="Formato de correo: nombre@dominio.com" required>
+                            <input type="email" id="home_correo" name="home_correo" class="form-control shadow-none py-3 fs-5" placeholder="Correo:" title="Formato de correo: nombre@dominio.com" required>
                             <div class="datos-ok text-success"></div>
                             <div class="datos-error text-danger"></div>
                         </div>
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-11 col-11 formulario-home mx-auto mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-3">
-                            <input type="number" id="home_whatsapp" name="home_whatsapp" class="form-control py-3 fs-5" placeholder="Whatsapp:" required>
+                            <input type="number" id="home_whatsapp" name="home_whatsapp" class="form-control shadow-none py-3 fs-5" placeholder="Whatsapp:" required>
                             <div class="datos-ok text-success"></div>
                             <div class="datos-error text-danger"></div>
                         </div>
