@@ -1,0 +1,48 @@
+
+@font-face {
+    font-family: 'Sackers Gothic Light AT Regular';
+    src: url('../../vendor/fonts/Sackers_Gothic_Light_AT_Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../../vendor/fonts/Futura_Std_Book.otf') format('opentype');
+}
+
+body {
+    font-family: 'Futura Std Book', sans-serif;
+    font-weight: 400;
+}
+
+
+@media (min-width: 1800px) {
+
+}
+
+@media (min-width: 1400px) and (max-width: 1799px) {
+    
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+}
+
+@media (min-width: 0px) and (max-width: 319px) {
+    
+}
