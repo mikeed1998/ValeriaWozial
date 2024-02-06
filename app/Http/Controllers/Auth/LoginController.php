@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -33,15 +34,13 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('guest')->except('logout');
     }
 
-		public function showLoginForm()
-    {
-        // Get URLs
-       
+	public function showLoginForm() {
+        
+        // Get URLs 
         $urlPrevious = url()->previous();
         $urlBase = url()->to('/');
 
@@ -53,5 +52,12 @@ class LoginController extends Controller
         $pagina = 'login';
 
         return view('auth.login', compact('pagina'));
+    }
+
+    // Método para cerrar sesión
+    public function logout(Request $request) {
+        $this->guard()->logout();
+        $request->session()->invalidate();
+        return $this->loggedOut($request) ?: redirect()->route('front.index');
     }
 }

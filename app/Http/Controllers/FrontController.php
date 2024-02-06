@@ -258,6 +258,16 @@ class FrontController extends Controller
 		return view('front.metodos_pago', compact('metodos_pago', 'pagina', 'config'));
 	}
 
+	public function invitado(Request $request) {
+		$correo = $request->input('emailInvitado');
+	
+		if (!preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $correo)) {
+			return redirect()->route('login');
+		}
+	
+		return redirect()->route('front.index');
+	}
+
 	// public function tienda(Request $request){
 	// 	$elements = Elemento::where('seccion',2)->get();
 		// $categoria = $request->get('categoria');

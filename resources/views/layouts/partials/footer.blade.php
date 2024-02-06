@@ -112,12 +112,12 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-5 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-4 text-start mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto">
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 text-end col-5 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-4 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto">
                                                         <a href="{{url('miCarrito')}}">
                                                             <div class="row">
                                                                 <div class="col position-relative">
                                                                     <img src="{{ asset('img/photos/carrito/logo2.png') }}" alt="" class="img-fluid text-start">
-                                                                    <div class="col-6 border position-absolute py-2 top-0 start-100 translate-middle bg-dark text-white rounded-circle">
+                                                                    <div class="col-4 position-absolute top-0 start-100 translate-middle bg-white text-center text-dark rounded-circle">
                                                                         
                                                                         @if(session('carrito'))
                                                                             @php
@@ -128,6 +128,8 @@
                                                                             @else
                                                                                 {{ $cuenta }}
                                                                             @endif
+                                                                        @else
+                                                                            <small>+9</small>
                                                                         @endif
                                                                     </div>
                                                                 </div>

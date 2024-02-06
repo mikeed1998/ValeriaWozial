@@ -3,90 +3,130 @@
 @section('title', 'Iniciar Sesión')
 
 @section('styleExtras')
-	<link rel="stylesheet" href="{{ asset('css/front/iniciar_sesion.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/front/iniciar_sesion.css') }}">
 @endsection
 
 @section('content')
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col position-relative fondo-contenedor shadow-lg" style="background-image: url('{{ asset('img/photos/index/slider.png') }}');">
-			<div class="col-xxl-9 col-xl-10 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto py-5 carta-sesion position-absolute mt-4 top-50 start-50 translate-middle">
-				<div class="row">
-					<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-10 col-11 mx-auto">
-						<div class="row">
-							<div class="col-xxl-3 col-xl-3 col-lg-3 "></div>
-							<div class="col-xxl-9 col-xl-9 col-lg-9">
-								<div class="row">
-									<div class="col mt-5 text-center carta-sesion_titulo">
-										INICIA SESIÓN
-									</div>
-								</div>
-								<div class="row">
-									<div class="col text-center fs-5 carta-sesion_texto">
-										Registrarse para comprar hace que se más sencillo comprobar y ver los pedidos
-									</div>
-								</div>
-								<div class="row">
-									<div class="col py-3">
-										<input type="email" class="form-control fs-4 input-sesion shadow-none" placeholder="Email * *">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
-										<input type="submit" class="btn btn-outline py-3 w-100 fs-5 bg-black text-white rounded-0" value="INICIAR SESIÓN">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
-										<a href="#/" class="btn btn-outline py-3 w-100 fs-5 bg-transparent text-dark rounded-0">REGISTRO</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-10 col-11 mx-auto">
-						<form method="POST" action="{{ route('login') }}" id="invitado">
-							@csrf
-							<div class="row">
-								<div class="col-xxl-9 col-xl-9 col-lg-9 mx-auto">
-									<div class="row">
-										<div class="col mt-5 text-center carta-sesion_titulo">
-											CONTINUA COMO INVITADO
-										</div>
-									</div>
-									<div class="row">
-										<div class="col text-center fs-5 carta-sesion_texto">
-										</div>
-									</div>
-									<div class="row">
-										<div class="col py-3">
-											{{-- <input type="email" class="form-control fs-4 " placeholder="Email * *"> --}}
-											<input id="email" type="email" placeholder="Email * *" class="form-control fs-4 input-sesion shadow-none @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-											
-											@error('email')
-											<span class="invalid-feedback" role="alert">
-												<strong>{{ $message }}</strong>
-											</span>
-											@enderror
+<style>
+	input:focus {
+		background-color: transparent;
+	}
+</style>
 
-											<input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" value="12345678">
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
-											<input type="submit" class="btn btn-outline py-3 w-100 fs-5 bg-black text-white rounded-0" value="CONTINUAR">
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col position-relative fondo-contenedor shadow-lg" style="background-image: url('{{ asset('img/photos/index/slider.png') }}');">
+            <div class="col-xxl-9 col-xl-10 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto py-5 carta-sesion position-absolute mt-4 top-50 start-50 translate-middle">
+                <div class="row">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-10 col-11 mx-auto">
+                        <form method="POST" action="{{ route('login') }}" id="miembroForm">
+                            @csrf
+                            <div class="row">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3"></div>
+                                <div class="col-xxl-9 col-xl-9 col-lg-9">
+                                    <div class="row">
+                                        <div class="col mt-5 text-center carta-sesion_titulo">
+                                            INICIA SESIÓN
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center fs-5 carta-sesion_texto">
+                                            Registrarse para comprar hace que se más sencillo comprobar y ver los pedidos
+                                        </div>
+                                    </div>
+                                    <div id="elementosInicialesMiembro">
+                                        <div class="row">
+                                            <div class="col py-3">
+                                                <input id="emailInputMiembro" type="email" name="email" class="form-control fs-4 bg-transparent input-sesion shadow-none rounded-0" placeholder="Email * *" style="border-bottom: 1px solid black; border-top: 0; border-right: 0; border-left: 0;">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
+                                                <button id="continuarBtnMiembro" type="button" class="btn btn-outline py-3 w-100 fs-5 bg-black text-white rounded-0">CONTINUAR</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="elementosFinalesMiembro" style="display: none;">
+                                        <div class="row">
+                                            <div class="col py-3">
+                                                <input id="passwordMiembro" type="password" name="password" class="form-control fs-4 bg-transparent input-sesion shadow-none rounded-0" placeholder="Contraseña * *" style="border-bottom: 1px solid black; border-top: 0; border-right: 0; border-left: 0;">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
+                                                <button id="subirBtnMiembro" type="submit" class="btn btn-outline py-3 w-100 fs-5 bg-black text-white rounded-0">INICIAR SESIÓN</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
+                                            <a href="#/" class="btn btn-outline py-3 w-100 fs-5 bg-transparent text-dark rounded-0">REGISTRO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-10 col-11 mx-auto">
+                        <form method="POST" action="{{ route('front.invitado') }}" id="invitadoForm">
+                            @csrf
+                            <div class="row">
+                                <div class="col-xxl-9 col-xl-9 col-lg-9 mx-auto">
+                                    <div class="row">
+                                        <div class="col mt-5 text-center carta-sesion_titulo">
+                                            CONTINUA COMO INVITADO
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center fs-5 carta-sesion_texto">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col py-3">
+											<input type="email" id="emailInvitado" name="emailInvitado" class="form-control fs-4 input-sesion shadow-none bg-transparent rounded-0" placeholder="Email * *" style="border-bottom: 1px solid black; border-top: 0; border-right: 0; border-left: 0;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-9 col-md-9 col-sm-12 col-12 mx-auto">
+                                            <button type="submit" class="btn btn-outline py-3 w-100 fs-5 bg-black text-white rounded-0">CONTINUAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section('jsLibExtras')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+			var emailInputMiembro = document.getElementById('emailInputMiembro');
+			var continuarBtnMiembro = document.getElementById('continuarBtnMiembro');
+			var elementosInicialesMiembro = document.getElementById('elementosInicialesMiembro');
+			var elementosFinalesMiembro = document.getElementById('elementosFinalesMiembro');
+
+			continuarBtnMiembro.addEventListener('click', function(event) {
+				var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				if (emailRegex.test(emailInputMiembro.value)) {
+					elementosFinalesMiembro.style.display = 'block';
+					elementosInicialesMiembro.style.display = 'none';
+				} else {
+					elementosFinalesMiembro.style.display = 'none';
+					event.preventDefault();
+				}
+			});
+
+			var emailInvitado = document.getElementById('emailInvitado');
+			var passwordInvitado = document.getElementById('passwordInvitado');
+		});
+    </script>
+
+@endsection
 
 
 {{-- 

@@ -14,7 +14,26 @@
                             <div class="col-xxl-4 col-xl-4 col-lg-6">
                                 <div class="row">
                                     <div class="col-4 text-center header-sec_1--texto">
-                                        <a href="buscar.php" class="link-header">Buscar</a>
+                                        <a href="#/" id="link-buscar" class="link-header">Buscar</a>
+                                        <div class="row" id="barra-busqueda" style="display: none;">
+                                            <div class="col-10 position-relative">
+                                                <form action="" method="POST">
+                                                    @csrf
+                                                    <input type="text" class="form-control shadow-none w-100" placeholder="Buscar...">
+                                                    <div class="col-3 position-absolute top-50 start-100 translate-middle">
+                                                        <button type="submit" class="btn btn-outline shadow-none form-control w-100 text-white bg-dark rounded-0">
+                                                            <i class="bi bi-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('#link-buscar').click(function() {
+                                                $('#barra-busqueda').show();
+                                                $('#link-buscar').hide();
+                                            });
+                                        </script>
                                     </div>
                                     <div class="col-4 text-center header-sec_1--texto border-start border-end border-dark">
                                         <a href="ayuda.php" class="link-header">Ayuda</a>
@@ -56,12 +75,11 @@
                                         <a href="#/" class="link-grande">Rebajas</a>
                                     </div>
                                     <div class="col py-3 d-flex justify-content-start align-items-center text-start header-sec_2--texto fw-bolder">
-                                        <a href="{{url('miCarrito')}}">
+                                        <button class="btn btn-outline" onclick="activarModal()">
                                             <div class="row">
                                                 <div class="col position-relative">
                                                     <img src="{{ asset('img/photos/carrito/002-008.png') }}" alt="" class="img-fluid text-start">
-                                                    <div class="col-6 border position-absolute py-2 top-0 start-100 translate-middle bg-dark text-white rounded-circle">
-                                                        
+                                                    <div class="col-6 position-absolute top-0 start-100 translate-middle text-white text-center bg-dark rounded-circle">
                                                         @if(session('carrito'))
                                                             @php
                                                                 $cuenta = count(session('carrito'));
@@ -71,11 +89,34 @@
                                                             @else
                                                                 {{ $cuenta }}
                                                             @endif
+                                                        @else
+                                                            <small>+9</small>
                                                         @endif
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </button>
+                                        {{-- <a href="{{url('miCarrito')}}">
+                                            <div class="row">
+                                                <div class="col position-relative">
+                                                    <img src="{{ asset('img/photos/carrito/002-008.png') }}" alt="" class="img-fluid text-start">
+                                                    <div class="col-6 position-absolute top-0 start-100 translate-middle text-white text-center bg-dark rounded-circle">
+                                                        @if(session('carrito'))
+                                                            @php
+                                                                $cuenta = count(session('carrito'));
+                                                            @endphp
+                                                            @if($cuenta > 9)
+                                                                +9
+                                                            @else
+                                                                {{ $cuenta }}
+                                                            @endif
+                                                        @else
+                                                            <small>+9</small>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a> --}}
                                         {{-- <button class="btn" onclick="activarModal()">
                                             <div class="row">
                                                 <div class="col position-relative">
@@ -277,9 +318,12 @@
                                     </div>
                                     <div class="row py-1">
                                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                                            <button id="comprar" class="btn w-100 border border-dark shadow-none fs-5 py-2 text-white bg-black text-center">
+                                            {{-- <button id="comprar" class="btn w-100 border border-dark shadow-none fs-5 py-2 text-white bg-black text-center">
                                                 COMPRAR
-                                            </button>
+                                            </button> --}}
+                                            <a href="{{ route('miCarrito') }}" class="btn w-100 border border-dark shadow-none fs-5 py-2 text-white bg-black text-center">
+                                                COMPRAR
+                                            </a>
                                         </div>
                                         <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                                             <button id="comprar_invitado" class="btn w-100 border border-dark shadow-none fs-5 py-2 text-white bg-black text-center">

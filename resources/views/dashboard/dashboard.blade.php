@@ -569,7 +569,8 @@ body {
                             </div>
                             <div class="row mt-3">
                                 <div class="col-12 px-0">
-                                    <form action="{{ route('logout') }}" method="POST" id="cerrar-sesion">
+                                    <form method="POST" action="{{ route('logout') }}" id="cerrar-sesion">
+                                        @csrf
                                         <button type="submit" class="btn btn-ooutline w-100 fs-5 rounded-0 py-3 dashboard-boton">CERRAR SESIÓN</button>
                                     </form>
                                 </div>

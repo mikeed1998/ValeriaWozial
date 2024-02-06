@@ -36,6 +36,7 @@ Route::name('front.')->group(function(){
 	Route::get('envio_entrega', 'FrontController@envio_entrega')->name('envio_entrega');
 	Route::get('devoluciones', 'FrontController@devoluciones')->name('devoluciones');
 	Route::get('metodos_pago', 'FrontController@metodos_pago')->name('metodos_pago');
+	Route::post('invitado', 'FrontController@invitado')->name('invitado');
 	// Route::get('politicas', 'FrontController@politicas')->name('politicas');
 
 	// Route::get('productos/{product?}', 'FrontController@details')->name('details');
@@ -55,9 +56,9 @@ Route::namespace("Admin")->prefix('admin')->group(function(){
 		Route::namespace('Auth')->group(function(){
 			Route::get('/login', 'LoginController@showLoginForm')->name('login');
 			Route::post('/login', 'LoginController@login');
-			Route::post('logout', 'LoginController@logout')->name('logout');
+			Route::post('/logout', 'LoginController@logout')->name('logout');
 		});
-		
+		 
 	});
 
 
