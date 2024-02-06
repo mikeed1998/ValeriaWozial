@@ -46,6 +46,23 @@
 		@yield('jsLibExtras')
 		@yield('cssExtras')
 		@yield('styleExtras')
+
+		<style>
+			@font-face {
+				font-family: 'Sackers Gothic Light AT Regular';
+				src: url('../../vendor/fonts/Sackers_Gothic_Light_AT_Regular.otf') format('opentype');
+			}
+
+			@font-face {
+				font-family: 'Futura Std Book';
+				src: url('../../vendor/fonts/Futura_Std_Book.otf') format('opentype');
+			}
+
+			.col, .row, .container-fluid, .container {
+				font-family: 'Futura Std Book', sans-serif;
+				font-weight: 400;
+			}
+		</style>
 	</head>
 	<body>
 

@@ -1,3 +1,20 @@
+<style>
+    @font-face {
+        font-family: 'Sackers Gothic Light AT Regular';
+        src: url('../../vendor/fonts/Sackers_Gothic_Light_AT_Regular.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Futura Std Book';
+        src: url('../../vendor/fonts/Futura_Std_Book.otf') format('opentype');
+    }
+
+    .col, .row, .container-fluid, .container {
+        font-family: 'Futura Std Book', sans-serif;
+        font-weight: 400;
+    }
+</style>
+
 <link rel="stylesheet" href="{{ asset('css/front/footer.css') }}">
 
 <footer>
@@ -91,13 +108,13 @@
                                                                 <div class="col-md-9 col-12 text-xxl-start text-xl-start text-lg-start text-md-start text-sm-start text-center">
                                                                     <div class="row">
                                                                         <div class="col-9">
-                                                                            <a href="{{ url('login') }}" class="link-header2">
+                                                                            <a href="{{ url('login') }}" class="link-header2" style="font-family: 'Futura Std Book', sans-serif;">
                                                                                 {{ auth()->user()->name }}
                                                                             </a> /
                                                                         </div>
                                                                         <div class="col-3">
                                                                             <form action="{{ route('logout') }}" method="POST" class="m-0 p-0" style="white-space: nowrap;">
-                                                                                <button type="submit" class="btn m-0 p-0 btn-outline link-contacto" style="white-space: nowrap;">
+                                                                                <button type="submit" class="btn m-0 p-0 btn-outline link-contacto" style="white-space: nowrap; font-family: 'Futura Std Book', sans-serif;">
                                                                                     Cerrar sesión
                                                                                 </button>
                                                                             </form>
@@ -106,7 +123,7 @@
                                                                 </div>
                                                             @else
                                                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 text-xxl-end text-xl-end text-lg-end text-md-end text-sm-end text-center">
-                                                                    <a href="{{ route('login') }}" class="link-contacto">Iniciar sesión</a>
+                                                                    <a href="{{ route('login') }}" class="link-contacto" style="font-family: 'Futura Std Book', sans-serif;">Iniciar sesión</a>
                                                                 </div>
                                                             @endif
                                                             
@@ -117,7 +134,7 @@
                                                             <div class="row">
                                                                 <div class="col position-relative">
                                                                     <img src="{{ asset('img/photos/carrito/logo2.png') }}" alt="" class="img-fluid text-start">
-                                                                    <div class="col-4 position-absolute top-0 start-100 translate-middle bg-white text-center text-dark rounded-circle">
+                                                                    <div class="col-3 position-absolute top-0 start-100 translate-middle bg-white text-center text-dark rounded-circle" style="font-family: 'Futura Std Book', sans-serif;">
                                                                         
                                                                         @if(session('carrito'))
                                                                             @php
@@ -129,7 +146,7 @@
                                                                                 {{ $cuenta }}
                                                                             @endif
                                                                         @else
-                                                                            <small>+9</small>
+                                                                            <small style="font-family: 'Futura Std Book', sans-serif;">+9</small>
                                                                         @endif
                                                                     </div>
                                                                 </div>
@@ -164,7 +181,7 @@
                                             <div class="col-xxl-6 col-xl-6 col-lg-6">
                                                 <div class="row mt-5">
                                                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"></div>
-                                                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-6 col-12 text-secondary text-end mt-5 py-2">
+                                                    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-6 col-12 text-secondary text-end mt-5 py-2" style="font-family: 'Futura Std Book', sans-serif;">
                                                         Avenida Lapizlazuli 2074 int3 Residencial Victoria, Guadalajara, Jalisco, México contacto@rfc.com 3338096501.
                                                     </div>
                                                 </div>
@@ -239,7 +256,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col py-2 fs-5 text-center text-secondary">
+            <div class="col py-2 fs-5 text-center text-secondary" style="font-family: 'Futura Std Book', sans-serif;">
                 Valeria Bazante 2023 todos los derechos reservados diseño por Wozial
             </div>
         </div>

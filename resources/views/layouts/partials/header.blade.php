@@ -1,3 +1,20 @@
+<style>
+    @font-face {
+        font-family: 'Sackers Gothic Light AT Regular';
+        src: url('../../vendor/fonts/Sackers_Gothic_Light_AT_Regular.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Futura Std Book';
+        src: url('../../vendor/fonts/Futura_Std_Book.otf') format('opentype');
+    }
+
+    .col, .row, .container-fluid, .container {
+        font-family: 'Futura Std Book', sans-serif;
+        font-weight: 400;
+    }
+</style>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -10,36 +27,41 @@
                 <div class="row header-sec_1">
                     <div class="col-11 mx-auto py-3">
                         <div class="row">
-                            <div class="col-xxl-8 col-xl-8 col-lg-6"></div>
-                            <div class="col-xxl-4 col-xl-4 col-lg-6">
+                            <div class="col-xxl-7 col-xl-8 col-lg-6"></div>
+                            <div class="col-xxl-5 col-xl-4 col-lg-6">
                                 <div class="row">
-                                    <div class="col-4 text-center header-sec_1--texto">
-                                        <a href="#/" id="link-buscar" class="link-header">Buscar</a>
-                                        <div class="row" id="barra-busqueda" style="display: none;">
-                                            <div class="col-10 position-relative">
-                                                <form action="" method="POST">
-                                                    @csrf
-                                                    <input type="text" class="form-control shadow-none w-100" placeholder="Buscar...">
-                                                    <div class="col-3 position-absolute top-50 start-100 translate-middle">
-                                                        <button type="submit" class="btn btn-outline shadow-none form-control w-100 text-white bg-dark rounded-0">
-                                                            <i class="bi bi-search"></i>
-                                                        </button>
+                                    <div class="col-6 text-end header-sec_1--texto">
+                                        <div class="row">
+                                            <div class="col-9 mx-auto">
+                                                <a href="#/" id="link-buscar" class="link-header" style="font-family: 'Futura Std Book', sans-serif;">Buscar</a>
+                                                <div class="row" id="barra-busqueda" style="display: none;">
+                                                    <div class="col-10 position-relative">
+                                                        <form action="" method="POST">
+                                                            @csrf
+                                                            <input type="text" class="form-control shadow-none w-100" placeholder="Buscar...">
+                                                            <div class="col-3 position-absolute top-50 start-100 translate-middle">
+                                                                <button type="submit" class="btn btn-outline shadow-none form-control w-100 text-white bg-dark rounded-0">
+                                                                    <i class="bi bi-search"></i>
+                                                                </button>
+                                                            </div>
+                                                        </form>
                                                     </div>
-                                                </form>
+                                                </div>
+                                                <script>
+                                                    $('#link-buscar').click(function() {
+                                                        $('#barra-busqueda').show();
+                                                        $('#link-buscar').hide();
+                                                    });
+                                                </script>
                                             </div>
                                         </div>
-                                        <script>
-                                            $('#link-buscar').click(function() {
-                                                $('#barra-busqueda').show();
-                                                $('#link-buscar').hide();
-                                            });
-                                        </script>
+                                        
                                     </div>
-                                    <div class="col-4 text-center header-sec_1--texto border-start border-end border-dark">
-                                        <a href="ayuda.php" class="link-header">Ayuda</a>
+                                    <div class="col-3 text-center header-sec_1--texto border-start border-end border-dark">
+                                        <a href="ayuda.php" class="link-header" style="font-family: 'Futura Std Book', sans-serif;">Ayuda</a>
                                     </div>
-                                    <div class="col-4 text-center header-sec_1--texto">
-                                        <a href="{{ url('login') }}" class="link-header">
+                                    <div class="col-3 text-center header-sec_1--texto">
+                                        <a href="{{ url('login') }}" class="link-header" style="font-family: 'Futura Std Book', sans-serif;">
                                             @if(auth()->check())
                                                 {{ auth()->user()->name }}
                                             @else
@@ -79,7 +101,7 @@
                                             <div class="row">
                                                 <div class="col position-relative">
                                                     <img src="{{ asset('img/photos/carrito/002-008.png') }}" alt="" class="img-fluid text-start">
-                                                    <div class="col-6 position-absolute top-0 start-100 translate-middle text-white text-center bg-dark rounded-circle">
+                                                    <div class="col-6 position-absolute top-0 start-100 translate-middle text-white text-center bg-dark rounded-circle" style="font-family: 'Futura Std Book', sans-serif;">
                                                         @if(session('carrito'))
                                                             @php
                                                                 $cuenta = count(session('carrito'));
@@ -90,7 +112,7 @@
                                                                 {{ $cuenta }}
                                                             @endif
                                                         @else
-                                                            <small>+9</small>
+                                                            <small style="font-family: 'Futura Std Book', sans-serif;">+9</small>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -591,12 +613,12 @@
         </div>
         <div class="row">
             <div class="col px-0" data-aos="zoom-out">
-                <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert">
+                <div class="alert alert-dismissible fs-5 fade show alerta-descuentos alert-custom" role="alert" >
                     <div class="row">
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5" style="font-family: 'Futura Std Book', sans-serif;">
                             30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
                         </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center fs-5" style="font-family: 'Futura Std Book', sans-serif;">
                             30 % DE DESCUENTO CUPÓN: VERANO45 + ENVIO GRATIS
                         </div>
                     </div>
