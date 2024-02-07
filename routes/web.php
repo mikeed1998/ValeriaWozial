@@ -184,6 +184,17 @@ Route::prefix('admin')->group(function(){
 
 			Route::post('/mapac','SeccionController@mapac')->name('mapac');
 
+			Route::post('agregarCategoria','SeccionController@agregarCategoria')->name('agregarCategoria');
+			Route::post('eliminarCategoria','SeccionController@eliminarCategoria')->name('eliminarCategoria');
+			Route::post('agregarSubcategoria','SeccionController@agregarSubcategoria')->name('agregarSubcategoria');
+			Route::post('eliminarSubcategoria','SeccionController@eliminarSubcategoria')->name('eliminarSubcategoria');
+			Route::post('agregarProducto','SeccionController@agregarProducto')->name('agregarProducto');
+			Route::post('eliminarProducto','SeccionController@eliminarProducto')->name('eliminarProducto');
+			Route::post('agregarProductoGaleria','SeccionController@agregarProductoGaleria')->name('agregarProductoGaleria');
+			Route::post('eliminarProductoGaleria','SeccionController@eliminarProductoGaleria')->name('eliminarProductoGaleria');
+			Route::post('agregarLanzamientoProducto','SeccionController@agregarLanzamientoProducto')->name('agregarLanzamientoProducto');
+			Route::post('eliminarLanzamientoProducto','SeccionController@eliminarLanzamientoProducto')->name('eliminarLanzamientoProducto');
+
 			///////////////////////////////////////////////// rutas de productos /////////////////////////////////////////////////
 			// Route::post('/nuevoprod','ProductoController@nuevoprod')->name('nuevoprod');
 			

@@ -22,6 +22,8 @@ class CreateValeriaProductosTable extends Migration
             $table->integer('descuento')->nullable();
             $table->boolean('descuento_activo')->default(0);
             $table->text('descripcion')->nullable();
+            $table->string('lanzamiento')->nullable();
+            $table->boolean('cupon')->default(0);
             $table->foreign('subcategoria')->references('id')->on('valeria_subcategoria_productos')->onDelete('cascade');
             $table->timestamps();
         });

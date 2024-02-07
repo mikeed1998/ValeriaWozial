@@ -9,5 +9,5 @@ class ValeriaTallaProducto extends Model
     protected $fillable = [
         'producto',
         'talla',
-    ]
+    ];
 }

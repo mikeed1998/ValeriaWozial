@@ -21,6 +21,9 @@ class CreateValeriaCuponsTable extends Migration
             $table->boolean('envio_gratis')->default(0);
             $table->boolean('cupon_general')->default(0);
             $table->boolean('cupon_producto')->default(0);
+            $table->boolean('cupon_categoria')->default(0);
+            $table->boolean('cupon_subcategoria')->default(0);
+            $table->boolean('cupon_lanzamiento')->default(0);
             $table->foreign('producto')->references('id')->on('valeria_productos')->onDelete('cascade');
             $table->timestamps();
         });

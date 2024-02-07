@@ -9,5 +9,5 @@ class ValeriaLanzamientoProducto extends Model
     protected $fillable = [
         'producto',
         'lanzamiento',
-    ]
+    ];
 }

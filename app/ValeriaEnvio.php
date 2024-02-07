@@ -11,5 +11,5 @@ class ValeriaEnvio extends Model
         'envio_precio',
         'envio_general',
         'envio_producto',
-    ]
+    ];
 }

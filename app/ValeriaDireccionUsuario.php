@@ -23,5 +23,5 @@ class ValeriaDireccionUsuario extends Model
         'pais',
         'direccion',
         'predeterminado',
-    ]
+    ];
 }

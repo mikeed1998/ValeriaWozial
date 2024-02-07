@@ -24,6 +24,15 @@ use App\PFSolucion;
 use App\PFGaleria;
 use App\PFSubdistribuidor;
 use App\PFPresentacionProducto;
+use App\ValeriaCategoriaProducto;
+use App\ValeriaSubcategoriaProducto;
+use App\ValeriaProducto;
+use App\ValeriaLanzamientoProducto;
+use App\ValeriaTallaProducto;
+use App\ValeriaGaleriaProducto;
+use App\ValeriaCupon;
+use App\ValeriaEnvio;
+use App\ValeriaDireccionUsuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -106,54 +115,59 @@ class SeccionController extends Controller
 
     }
 
+    
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Seccion  $seccion
-     * @return \Illuminate\Http\Response
-     */
+
+    // public function show($seccion) {
+    //     $config = Configuracion::all();
+    //     $slider_principal = PFSliderPrincipal::all();
+	// 	$categorias = PFCategoriaProducto::all();
+	// 	$productos = PFProducto::all();
+	// 	$soluciones = PFSolucion::all();
+	// 	$proyectos = PFProyecto::all();
+    //     $puntos_venta = PFPuntoVenta::all();
+    //     $subdistribuidores = PFSubdistribuidor::all();
+    //     $necesidades = PFNecesidades::all();
+    //     $seccion_nom = $seccion;
+	// 	$seccion = Seccion::where('slug',$seccion)->first();
+    //     $elementos = Elemento::where('seccion',$seccion->id)->get();
+    //     $elem_general = Elemento::all();
+    //     // $proyectos = services::all();
+	// 	$elements = $seccion->elementos()->get();    
+    //     $ruta = 'configs.secciones.'.$seccion->seccion;
+            
+    //     if($seccion_nom == 'store'){
+    //         $productos = PFProducto::paginate(8);
+    //         $categorias = PFCategoriaProducto::paginate(4);
+    //         $categorias2 = PFCategoriaProducto::all();
+    //         $colores = colores::all();
+    //         foreach($productos as $p){
+    //             $prod_photos = ProductosPhoto::where('producto',$p->id)->get()->first();
+    //             if(!empty($prod_photos)){
+    //                 $p->photo = $prod_photos->image;
+    //             }        
+    //         }
+    //         return view($ruta,compact('elements','seccion','productos','categorias', 'categorias2', 'colores'));
+    //     }
+	// 	return view($ruta,compact('elements','seccion','proyectos', 'slider_principal', 'categorias', 'productos', 'soluciones', 'productos', 'puntos_venta', 'subdistribuidores', 'necesidades', 'config', 'elem_general'));
+    // }
+
     public function show($seccion) {
-        $config = Configuracion::all();
-        $slider_principal = PFSliderPrincipal::all();
-		$categorias = PFCategoriaProducto::all();
-		$productos = PFProducto::all();
-		$soluciones = PFSolucion::all();
-		$proyectos = PFProyecto::all();
-        $puntos_venta = PFPuntoVenta::all();
-        $subdistribuidores = PFSubdistribuidor::all();
-        $necesidades = PFNecesidades::all();
+        $categorias = ValeriaCategoriaProducto::all();
+        $subcategorias = ValeriaSubcategoriaProducto::all();
+        $productos = ValeriaProducto::all();
+        $lanzamientos_productos = ValeriaLanzamientoProducto::all();
+        $tallas_productos = ValeriaTallaProducto::all();
+        $galeria_productos = ValeriaGaleriaProducto::all();
+        $cupos = ValeriaCupon::all();
+        $envios = ValeriaEnvio::all();
+        $direcciones = ValeriaDireccionUsuario::all();
 
-            $seccion_nom = $seccion;
-            
-			$seccion = Seccion::where('slug',$seccion)->first();
+        $seccion = Seccion::where('slug',$seccion)->first();
+        $elements = $seccion->elementos()->get();
+        $ruta = 'configs.secciones.'.$seccion->seccion;
 
-            $elementos = Elemento::where('seccion',$seccion->id)->get();
-
-            $elem_general = Elemento::all();
-
-            // $proyectos = services::all();
-            
-			$elements = $seccion->elementos()->get();
-            
-            $ruta = 'configs.secciones.'.$seccion->seccion;
-            
-            if($seccion_nom == 'store'){
-                $productos = PFProducto::paginate(8);
-                $categorias = PFCategoriaProducto::paginate(4);
-                $categorias2 = PFCategoriaProducto::all();
-                $colores = colores::all();
-                foreach($productos as $p){
-                    $prod_photos = ProductosPhoto::where('producto',$p->id)->get()->first();
-                    if(!empty($prod_photos)){
-                        $p->photo = $prod_photos->image;
-                    }
-                    
-                }
-                return view($ruta,compact('elements','seccion','productos','categorias', 'categorias2', 'colores'));
-            }
-
-			return view($ruta,compact('elements','seccion','proyectos', 'slider_principal', 'categorias', 'productos', 'soluciones', 'productos', 'puntos_venta', 'subdistribuidores', 'necesidades', 'config', 'elem_general'));
+		return view($ruta, compact('elements', 'categorias', 'subcategorias', 'productos', 'lanzamientos_productos', 'tallas_productos', 'galeria_productos', 'cupos', 'envios', 'direcciones'));
     }
 
     /**
@@ -872,9 +886,9 @@ class SeccionController extends Controller
         }
 
         if($solucion->delete()){
-            \Toastr::success('Soluci¨®n Eliminada');
+            \Toastr::success('Soluciï¿½ï¿½n Eliminada');
         }else{
-            \Toastr::error('Error al eliminar la soluci¨®n');
+            \Toastr::error('Error al eliminar la soluciï¿½ï¿½n');
         }
 
         return redirect()->back();
@@ -1039,6 +1053,276 @@ class SeccionController extends Controller
         \Toastr::success('Mapa Actualizado');
         return redirect()->back();
     }
+
+
+    public function agregarCategoria(Request $request) {
+        if(!empty($request->file('archivo'))){
+            $categoria = new ValeriaCategoriaProducto;
+
+            $categoria->categoria = $request->categoria;
+
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30) . '.' . $extension;
+
+            \Storage::disk('local')->put("/img/photos/valeriabazante_categorias/" . $namefile, \File::get($file));
+
+            $categoria->icono = $namefile;
+
+            if($categoria->save()){
+                \Toastr::success('Categoria creada');
+            }else{
+                \Toastr::error('Error al agregar la categoria');
+            }
+        }else{
+            \Toastr::error('Error al agregar la categoria');
+        }
+        
+        return redirect()->back();
+    } 
+
+	public function eliminarCategoria(Request $request) {
+        $categoria = ValeriaCategoriaProducto::find($request->id_categoria);
+        $imgCategoria = "img/photos/valeriabazante_categorias/".$categoria->icono;
+
+        $subcategoria = ValeriaSubcategoriaProducto::all();
+        foreach($subcategoria as $subcat) {
+            if($subcat->categoria == $categoria->id) {
+                $imgSubCat = "img/photos/valeriabazante_subcategorias/".$subcat->icono;
+
+                $productos = ValeriaProducto::all();
+                foreach($productos as $prod) {
+                    if($prod->subcategoria == $subcat->id) {
+                        $imgProd = "img/photos/valeriabazante_productos/".$prod->imagen;
+        
+                        $galeria = ValeriaGaleriaProducto::all();
+                        foreach($galeria as $gal) {
+                            if($gal->producto == $prod->id) {
+                                $imgGal = "img/photos/valeriabazante_productos_galeria/".$gal->galeria;
+                                unlink($imgGal);
+                                $gal->delete();
+                            }
+                        }
+
+                        // $presentaciones = PFProductoPresentacionPepes::all();
+                        // foreach($presentaciones as $pres) {
+                        //     if($pres->producto == $prod->id) {
+                        //         $pres->delete();
+                        //     }
+                        // }
+
+                        unlink($imgProd);
+                        $prod->delete();
+                    }
+                }
+                unlink($imgSubCat);
+                $subcat->delete();
+            }
+        }
+
+        unlink($imgCategoria);
+        $categoria->delete();
+
+        \Toastr::success('La Categoria, sus subcategorias y sus productos relacionados han sido eliminados');
+        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+    } 
+
+	public function agregarSubcategoria(Request $request) {
+        if(!empty($request->file('archivo'))){
+            $subcategoria = new PFSubcategoriaPepes;
+
+            $subcategoria->categoria = $request->categoria;
+            $subcategoria->subcategoria = $request->subcategoria;
+
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30) . '.' . $extension;
+
+            \Storage::disk('local')->put("/img/photos/valeriabazante_subcategorias/" . $namefile, \File::get($file));
+
+            $subcategoria->icono = $namefile;
+
+            if($subcategoria->save()){
+                \Toastr::success('Subcategoria creada');
+            }else{
+                \Toastr::error('Error al agregar la subcategoria');
+            }
+        }else{
+            \Toastr::error('Error al agregar la subcategoria');
+        }
+        
+        return redirect()->back();
+    }
+
+	public function eliminarSubcategoria(Request $request) {
+        $subcategoria = PFSubcategoriaPepes::find($request->id_subcategoria);
+        $imgSubcategoria = "img/photos/valeriabazante_subcategorias/".$subcategoria->icono;
+
+        $productos = PFProductoPepes::all();
+        foreach($productos as $prod) {
+            if($prod->subcategoria == $subcategoria->id) {
+                $imgProd = "img/photos/valeriabazante_productos/".$prod->imagen;
+
+                $galeria = PFProductoGaleriaPepes::all();
+                foreach($galeria as $gal) {
+                    if($gal->producto == $prod->id) {
+                        $imgGal = "img/photos/valeriabazante_productos_galeria/".$gal->galeria;
+                        unlink($imgGal);
+                        $gal->delete();
+                    }
+                }
+
+                $presentaciones = PFProductoPresentacionPepes::all();
+                foreach($presentaciones as $pres) {
+                    if($pres->producto == $prod->id) {
+                        $pres->delete();
+                    }
+                }
+
+                unlink($imgProd);
+                $prod->delete();
+            }
+        }
+
+        unlink($imgSubcategoria);
+        $subcategoria->delete();
+
+        \Toastr::success('La Subcategoria y sus productos relacionados han sido eliminados');
+        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+    }
+
+	public function agregarProducto(Request $request) {
+        if(!empty($request->file('archivo'))){
+            $producto = new PFProductoPepes;
+
+            $producto->subcategoria = $request->subcategoria;
+            $producto->nombre = $request->nombre;
+            $producto->precio = $request->precio;
+            $producto->descripcion = $request->descripcion;
+            $producto->existencias = $request->cantidad;
+            $producto->presentacion = $request->presentacion;
+
+            $producto->save();
+
+            $presentaciones = $request->input('presentaciones');
+
+            $producto_aux = $producto->id;
+
+            $presentaciones_general = array_map(null, $presentaciones);
+
+            // dd($presentaciones_general);
+
+            foreach($presentaciones_general as $presentacion) {
+                $presentaciones_producto = new PFProductoPresentacionPepes;
+
+                $pres = $presentacion;
+
+                $presentaciones_producto->producto = $producto_aux;
+                $presentaciones_producto->presentacion = $pres;
+
+                $presentaciones_producto->save();
+            }
+
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30) . '.' . $extension;
+
+            \Storage::disk('local')->put("/img/photos/valeriabazante_productos/" . $namefile, \File::get($file));
+
+            $producto->imagen = $namefile;
+
+            if($producto->save()){
+                \Toastr::success('Producto aÃ±anido exitosamente');
+            }else{
+                \Toastr::error('Error al agregar el producto');
+            }
+        }else{
+            \Toastr::error('Error al agregar el producto');
+        }
+        
+        return redirect()->back();
+    } 
+
+	public function eliminarProducto(Request $request) {
+        $producto = PFProductoPepes::find($request->id_producto);
+        $imgProducto = "img/photos/valeriabazante_productos/".$producto->imagen;
+
+        $galeria = PFProductoGaleriaPepes::all();
+        foreach($galeria as $gal) {
+            if($gal->producto == $producto->id) {
+                $imgGal = "img/photos/valeriabazante_productos_galeria/".$gal->galeria;
+                unlink($imgGal);
+                $gal->delete();
+            }
+        }
+
+        $presentaciones = PFProductoPresentacionPepes::all();
+        foreach($presentaciones as $pres) {
+            if($pres->producto == $producto->id) {
+                $pres->delete();
+            }
+        }
+
+        unlink($imgProducto);
+        $producto->delete();
+
+        \Toastr::success('Producto eliminada');
+        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+    }
+
+	public function agregarProductoGaleria(Request $request) {
+        $id_prod = $request->id_prod;
+		if ($request->hasFile('uploadedfile')) {
+			$images = $request->file('uploadedfile');
+			foreach ($images as $image) {
+				$galeria = new ValeriaGaleriaProducto;
+				$extension = $image->getClientOriginalExtension();
+				$namefile = Str::random(30) . '.' . $extension;
+				\Storage::disk('local')->put("/img/photos/valeriabazante_productos_galeria/" . $namefile, \File::get($image));
+				
+				$galeria->producto = $id_prod;
+				$galeria->galeria = $namefile;
+
+				$galeria->save();
+			}
+			\Toastr::success('Guardado');
+			return redirect()->back();
+		} else {
+			\Toastr::error('NingÃºn archivo seleccionado.');
+			return redirect()->back();
+		}
+    } 
+
+	public function eliminarProductoGaleria(Request $request) {
+        $galeria = ValeriaGaleriaProducto::find($request->id_galeria);
+        $imgGaleria = "img/photos/valeriabazante_productos_galeria/".$galeria->galeria;
+        unlink($imgGaleria);
+        $galeria->delete();
+
+        \Toastr::success('ImÃ¡gen eliminada');
+        return redirect()->back();
+    } 
+
+    public function agregarLanzamientoProducto(Request $request) {
+        $lanzamiento = new ValeriaLanzamientoProducto;
+
+        $lanzamiento->lanzamiento = $request->lanzamiento;
+
+		if ($lanzamiento->save()) {
+			\Toastr::success('Guardado');
+			return redirect()->back();
+		} else {
+			\Toastr::error('Error, dato no valido.');
+			return redirect()->back();
+		}
+    } 
+
+	public function eliminarLanzamientoProducto(Request $request) {
+        $galeria->delete();
+
+        \Toastr::success('Lanzamiento eliminado');
+        return redirect()->back();
+    } 
 }
 
 

@@ -14,5 +14,5 @@ class ValeriaProducto extends Model
         'descuento',
         'descuento_activo',
         'descripcion',
-    ]
+    ];
 }

@@ -10,5 +10,5 @@ class ValeriaSubcategoriaProducto extends Model
         'categoria',
         'subcategoria',
         'icono',
-    ]
+    ];
 }

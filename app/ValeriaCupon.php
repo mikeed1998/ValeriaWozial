@@ -13,5 +13,8 @@ class ValeriaCupon extends Model
         'envio_gratis',
         'cupon_general',
         'cupon_producto',
-    ]
+        'cupon_categoria',
+        'cupon_subcategoria',
+        'cupon_lanzamiento',
+    ];
 }
