@@ -73,89 +73,99 @@
                 <div class="row">
                     <div class="slider-lanzamientos">
                         <div class="col-3">
-                            <div class="card bg-transparent border-0 px-2">
-                                <div class="img-lanzamientos" style="
-                                    background-image: url('{{ asset('img/photos/index/01_.png') }}');
-                                "></div>
-                                <div class="card-body border-0">
-                                    <div class="row">
-                                        <div class="col-6 fs-5 text-start">
-                                            Calzado #01
-                                        </div>
-                                        <div class="col-6 fs-5 text-end">
-                                            $2,800
+                            <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                                <div class="card bg-transparent border-0 px-2">
+                                    <div class="img-lanzamientos" style="
+                                        background-image: url('{{ asset('img/photos/index/01_.png') }}');
+                                    "></div>
+                                    <div class="card-body border-0">
+                                        <div class="row">
+                                            <div class="col-6 fs-5 text-start">
+                                                Calzado #01
+                                            </div>
+                                            <div class="col-6 fs-5 text-end">
+                                                $2,800
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-3">
-                            <div class="card bg-transparent border-0 px-2">
-                                <div class="img-lanzamientos" style="
-                                    background-image: url('{{ asset('img/photos/index/02_.png') }}');
-                                "></div>
-                                <div class="card-body border-0">
-                                    <div class="row">
-                                        <div class="col-6 fs-5 text-start">
-                                            Calzado #02
-                                        </div>
-                                        <div class="col-6 fs-5 text-end">
-                                            $2,800
+                            <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                                <div class="card bg-transparent border-0 px-2">
+                                    <div class="img-lanzamientos" style="
+                                        background-image: url('{{ asset('img/photos/index/02_.png') }}');
+                                    "></div>
+                                    <div class="card-body border-0">
+                                        <div class="row">
+                                            <div class="col-6 fs-5 text-start">
+                                                Calzado #01
+                                            </div>
+                                            <div class="col-6 fs-5 text-end">
+                                                $2,800
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-3">
-                            <div class="card bg-transparent border-0 px-2">
-                                <div class="img-lanzamientos" style="
-                                    background-image: url('{{ asset('img/photos/index/03_.png') }}');
-                                "></div>
-                                <div class="card-body border-0">
-                                    <div class="row">
-                                        <div class="col-6 fs-5 text-start">
-                                            Calzado #03
-                                        </div>
-                                        <div class="col-6 fs-5 text-end">
-                                            $2,800
+                            <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                                <div class="card bg-transparent border-0 px-2">
+                                    <div class="img-lanzamientos" style="
+                                        background-image: url('{{ asset('img/photos/index/03_.png') }}');
+                                    "></div>
+                                    <div class="card-body border-0">
+                                        <div class="row">
+                                            <div class="col-6 fs-5 text-start">
+                                                Calzado #01
+                                            </div>
+                                            <div class="col-6 fs-5 text-end">
+                                                $2,800
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-3">
-                            <div class="card bg-transparent border-0 px-2">
-                                <div class="img-lanzamientos" style="
-                                    background-image: url('{{ asset('img/photos/index/04_.png') }}');
-                                "></div>
-                                <div class="card-body border-0">
-                                    <div class="row">
-                                        <div class="col-6 fs-5 text-start">
-                                            Calzado #04
-                                        </div>
-                                        <div class="col-6 fs-5 text-end">
-                                            $2,800
+                            <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                                <div class="card bg-transparent border-0 px-2">
+                                    <div class="img-lanzamientos" style="
+                                        background-image: url('{{ asset('img/photos/index/04_.png') }}');
+                                    "></div>
+                                    <div class="card-body border-0">
+                                        <div class="row">
+                                            <div class="col-6 fs-5 text-start">
+                                                Calzado #01
+                                            </div>
+                                            <div class="col-6 fs-5 text-end">
+                                                $2,800
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-3">
-                            <div class="card bg-transparent border-0 px-2">
-                                <div class="img-lanzamientos" style="
-                                    background-image: url('{{ asset('img/photos/index/logo.png') }}');
-                                "></div>
-                                <div class="card-body border-0">
-                                    <div class="row">
-                                        <div class="col-6 fs-5 text-start">
-                                            Calzado #04
-                                        </div>
-                                        <div class="col-6 fs-5 text-end">
-                                            $2,800
+                            <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                                <div class="card bg-transparent border-0 px-2">
+                                    <div class="img-lanzamientos" style="
+                                        background-image: url('{{ asset('img/photos/index/04_.png') }}');
+                                    "></div>
+                                    <div class="card-body border-0">
+                                        <div class="row">
+                                            <div class="col-6 fs-5 text-start">
+                                                Calzado #01
+                                            </div>
+                                            <div class="col-6 fs-5 text-end">
+                                                $2,800
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -71,13 +71,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-4 text-start fs-4">
+                                <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-4 text-start fs-5">
                                     $4,800
                                 </div>
-                                <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-4 text-start fs-4">
+                                <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-4 text-start fs-5">
                                     $4,320
                                 </div>
-                                <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-start fs-4">
+                                <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-start fs-5">
                                     10% de Descuento
                                 </div>
                             </div>
@@ -167,89 +167,99 @@
             <div class="row">
                 <div class="slider-preferencias">
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                        <div class="card bg-transparent border-0 px-2">
-                            <div class="img-lanzamientos" style="
-                                background-image: url('{{ asset('img/photos/index/01_.png') }}');
-                            "></div>
-                            <div class="card-body border-0">
-                                <div class="row">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
-                                        Calzado #01
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
-                                        $2,800
+                        <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                            <div class="card bg-transparent border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('{{ asset('img/photos/index/01_.png') }}');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #01
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                        <div class="card bg-transparent border-0 px-2">
-                            <div class="img-lanzamientos" style="
-                                background-image: url('{{ asset('img/photos/index/02_.png') }}');
-                            "></div>
-                            <div class="card-body border-0">
-                                <div class="row">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
-                                        Calzado #01
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
-                                        $2,800
+                        <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                            <div class="card bg-transparent border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('{{ asset('img/photos/index/02_.png') }}');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #02
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                        <div class="card bg-transparent border-0 px-2">
-                            <div class="img-lanzamientos" style="
-                                background-image: url('{{ asset('img/photos/index/03_.png') }}');
-                            "></div>
-                            <div class="card-body border-0">
-                                <div class="row">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
-                                        Calzado #01
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
-                                        $2,800
+                        <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                            <div class="card bg-transparent border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('{{ asset('img/photos/index/03_.png') }}');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #03
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                        <div class="card bg-transparent border-0 px-2">
-                            <div class="img-lanzamientos" style="
-                                background-image: url('{{ asset('img/photos/index/04_.png') }}');
-                            "></div>
-                            <div class="card-body border-0">
-                                <div class="row">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
-                                        Calzado #01
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
-                                        $2,800
+                        <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                            <div class="card bg-transparent border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('{{ asset('img/photos/index/04_.png') }}');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #04
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-11 py-4 mx-auto">
-                        <div class="card bg-transparent border-0 px-2">
-                            <div class="img-lanzamientos" style="
-                                background-image: url('{{ asset('img/photos/index/01_.png') }}');
-                            "></div>
-                            <div class="card-body border-0">
-                                <div class="row">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
-                                        Calzado #01
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
-                                        $2,800
+                        <a href="{{ route('front.producto', ['id' => 0]) }}" class="text-decoration-none">
+                            <div class="card bg-transparent border-0 px-2">
+                                <div class="img-lanzamientos" style="
+                                    background-image: url('{{ asset('img/photos/index/04_.png') }}');
+                                "></div>
+                                <div class="card-body border-0">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-start">
+                                            Calzado #05
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto fs-5 text-end">
+                                            $2,800
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

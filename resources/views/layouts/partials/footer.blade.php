@@ -101,7 +101,7 @@
                                             <div class="col-xxl-6 col-xl-6 col-lg-1 col-md-1 col-sm-12 col-12"></div>
                                             <div class="col-6 col-xl-6 col-lg-11 col-md-11 col-sm-12 col-12 mx-auto aling-content-center justify-content-center">      
                                                 <div class="row">
-                                                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12 fs-5 mt-1">
+                                                    <div class="col-xxl-9 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12 fs-5 mt-1">
                                                         <div class="row">
                                                             
                                                             @if(auth()->check())
@@ -129,7 +129,7 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 text-end col-5 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-4 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto">
+                                                    <div class="col-xxl-3 col-xl-2 col-lg-2 col-md-2 col-sm-2 text-end col-5 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0 mt-4 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto">
                                                         <a href="{{url('miCarrito')}}">
                                                             <div class="row">
                                                                 <div class="col position-relative">
