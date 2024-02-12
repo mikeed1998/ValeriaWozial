@@ -8,10 +8,8 @@ class ValeriaDireccionUsuario extends Model
 {
     protected $fillable = [
         'usuario',
-        'name',
-        'lastname',
-        'email',
-        'telefono',
+        'name_principal',
+        'name_recibe',
         'calle',
         'numero_exterior',
         'numero_interior',
@@ -21,6 +19,8 @@ class ValeriaDireccionUsuario extends Model
         'municipio',
         'estado',
         'pais',
+        'correo_loc',
+        'telefono_loc',
         'direccion',
         'predeterminado',
     ];

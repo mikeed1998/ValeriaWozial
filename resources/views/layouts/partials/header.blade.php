@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="{{ asset('css/front/header.css') }}">
 
 <header>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-block d-xl-block d-lg-block d-md-block d-sm-none d-none">
@@ -79,7 +80,7 @@
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 py-1 text-xxl-start text-xl-start text-lg-start text-md-center">
                                 <div class="col-11 mx-auto">
-                                <img src="{{ asset('img/photos/index/logo.png') }}" alt="" class="img-fluid">
+                                    <a href="{{ route('front.index') }}"><img src="{{ asset('img/photos/index/logo.png') }}" alt="" class="img-fluid"></a>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6">

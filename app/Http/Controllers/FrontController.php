@@ -167,6 +167,67 @@ class FrontController extends Controller
 		return view('front.contacto', compact('pagina', 'elements', 'config', 'config'));
 	}
 
+	public function createDireccion(Request $request) {
+		$direccion = new ValeriaDireccionUsuario;
+		$direcciones = ValeriaDireccionUsuario::all();
+
+		// dd($request->nombre_usuario."  ".$request->calles_user);
+
+		$direccion->usuario = $request->usuario;
+		$direccion->name_principal = $request->nombre_usuario;
+		$direccion->name_recibe = $request->nombre_atte;
+		$direccion->calle = $request->calle_user;
+		$direccion->numero_exterior = $request->numext_user;
+		$direccion->numero_interior = $request->numint_user;
+		$direccion->entre_calles = $request->calles_user;
+		$direccion->colonia = $request->colonia_user;
+		$direccion->codigo_postal = $request->codiogp_user;
+		$direccion->municipio = $request->municipio_user;
+		$direccion->estado = $request->estado_user;
+		$direccion->pais = $request->pais_user;
+		$direccion->correo_loc = $request->correo_loc;
+		$direccion->telefono_loc = $request->telefono_loc;
+		$direccion->direccion = $request->calle_user . ", ext:" . $request->numext_user . " int:" . $request->numint_user . ". Entre: " . $request->calles_user . ", " . $request->colonia_user . ", " . $request->codiogp_user;
+		$direccion->predeterminado = $request->chkPred;
+
+		$direccion->save();
+
+		foreach($direcciones as $dirs) {
+			if($dirs->id != $direccion->id) {
+				$dirs->predeterminado = 0;
+				$dirs->save();
+			}
+		}
+
+		return redirect()->back();
+	}
+
+
+    public function updateDireccion(Request $request) {
+        $direccion = ValeriaDireccionUsuario::find($request->id);
+        $direccions_count = count(ValeriaDireccionUsuario::where('predeterminado',1)->get());
+        switch($request->valor){
+            case 1:
+                $aux = ValeriaDireccionUsuario::all();
+                foreach($aux as $a) {
+                    if($a->id != $direccion->id) {
+                        $a->predeterminado = 0;
+                        $a->save();
+                    }
+                }
+                $direccion->predeterminado = 1;
+                $direccion->save();
+                return response()->json(['success'=>true, 'mensaje'=>'Dirección anclado al predeterminado', 'valor'=>1]);
+            break;
+            case 2:
+                $direccion->predeterminado = 0;
+                $direccion->save();
+                return response()->json(['success'=>true, 'mensaje'=>'Dirección desanclado al predeterminado','valor'=>2]);
+            break;
+        }
+    }
+
+
 	public function dashboard() {
 		return view('front.dashboard');
 	}
@@ -183,7 +244,7 @@ class FrontController extends Controller
 		return view('front.projects',compact('user','proyectos','elements', 'config'));
 	}
 
-	
+
 
 	public function products(Request $request){
 		$user=null;
@@ -199,7 +260,7 @@ class FrontController extends Controller
 			$productos = Producto::where('categoria',$request->Categoria)->get();
 			$nom_cat =  Categoria::find($request->Categoria);
 		}
-		
+
 		return view('front.productos',compact('user','productos','categorias','nom_cat', 'config'));
 	}
 
@@ -269,18 +330,18 @@ class FrontController extends Controller
 
 	public function invitado(Request $request) {
 		$correo = $request->input('emailInvitado');
-	
+
 		if (!preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $correo)) {
 			return redirect()->route('login');
 		}
-	
+
 		return redirect()->route('front.index');
 	}
 
 	// public function tienda(Request $request){
 	// 	$elements = Elemento::where('seccion',2)->get();
 		// $categoria = $request->get('categoria');
-		
+
 		// if(!empty($categoria)){
 		// 	$categoria_b = Categoria::find($categoria);
 		// 	$busqueda = $request->get('busqueda');
@@ -317,19 +378,19 @@ class FrontController extends Controller
 	// }
 
 	// public function details($id){
-		
+
 	// 	$producto = Producto::find($id);
 
 
 	// 	$productosr = Producto::where('categoria',$producto->categoria)->get();
 
-		
+
 
 	// 	$producto->categoria = Categoria::find($producto->categoria);
 
 	// 	$productos_photos =  ProductosPhoto::where('producto',$producto->id)->get();
 
-		
+
 
 		// $variantes = ProductoVariante::where('producto', $product->id)->get();
 		// $medidas = ProductoMedida::where('producto',$product->id)->orderBy('orden', 'asc')->get();
@@ -346,8 +407,8 @@ class FrontController extends Controller
 
 	// correo de contacto normal
 	public function mailcontact(Request $request){
-	
-		
+
+
 		$validate = Validator::make($request->all(),[
 			"tipoForm" => "required",
 			'nombre' => 'required',
@@ -379,7 +440,7 @@ class FrontController extends Controller
 		$config = Configuracion::first();
 
 		$mail = new PHPMailer;
-		
+
 		try {
 			$mail->isSMTP();
 			// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -398,13 +459,13 @@ class FrontController extends Controller
 			if (!empty($config->destinatario2)) {
 				$mail->AddBCC($config->destinatario2,'PepeFester Contacto');
 			}
-			
+
 			if($data['tipoForm'] == 'contacto') {
 				$mail->Subject = $data['asunto'];
 			} else {
 				$mail->Subject = 'Mensaje';
 			}
-			
+
 			$mail->msgHTML($html);
 			// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -427,10 +488,10 @@ class FrontController extends Controller
 			\Toastr::error($e->getMessage());//Boring error messages from anything else!
 			return redirect()->back();
 		}
-		
+
 
 	}
 
-	
+
 
 }

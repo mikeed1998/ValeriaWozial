@@ -548,7 +548,7 @@ body {
                         <div class="col-xxl-6 col-xl-6 col-lg-11 mx-auto">
                             <div class="row mt-5">
                                 <div class="col card-nav_titulo text-center py-2">
-                                    ¡Hola AnaPAU!
+                                    ¡Hola {{ $user->name }}!
                                 </div>
                             </div>
                             <div class="row mt-3">

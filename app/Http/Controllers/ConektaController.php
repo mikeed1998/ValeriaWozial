@@ -31,7 +31,6 @@ class ConektaController extends Controller
 
         $totalPrice = $request->total_price;
 
-
         // Formatear el número a formato de moneda con separadores de miles y decimales
         $formattedTotalPrice = number_format($totalPrice, 2, '', '');
 

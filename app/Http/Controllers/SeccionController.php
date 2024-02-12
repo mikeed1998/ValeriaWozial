@@ -395,6 +395,7 @@ class SeccionController extends Controller
                 \Toastr::success('Guardado');
                 return redirect()->back();
             }else{
+                session()->flash('success', 'Cambio Exitoso');
                 return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
             }
             

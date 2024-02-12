@@ -37,15 +37,18 @@ Route::name('front.')->group(function(){
 	Route::get('devoluciones', 'FrontController@devoluciones')->name('devoluciones');
 	Route::get('metodos_pago', 'FrontController@metodos_pago')->name('metodos_pago');
 	Route::post('invitado', 'FrontController@invitado')->name('invitado');
+	Route::post('createDireccion', 'FrontController@createDireccion')->name('createDireccion');
+    Route::post('updateDireccion', 'FrontController@updateDireccion')->name('updateDireccion');
 	// Route::get('politicas', 'FrontController@politicas')->name('politicas');
 
 	// Route::get('productos/{product?}', 'FrontController@details')->name('details');
 
 });
 
+
 // rutas al admin
 Route::namespace("Admin")->prefix('admin')->group(function(){
-	
+
 	Route::name('admin.')->group(function(){
 		Route::get('/', 'HomeController@index')->name('home');
 		Route::get('/nuevo', 'HomeController@create')->name('create');
@@ -58,7 +61,7 @@ Route::namespace("Admin")->prefix('admin')->group(function(){
 			Route::post('/login', 'LoginController@login');
 			Route::post('/logout', 'LoginController@logout')->name('logout');
 		});
-		 
+
 	});
 
 
@@ -80,9 +83,9 @@ Route::namespace("Admin")->prefix('admin')->group(function(){
 // rutas al admin configuraciones
 // controllers dentro de Controllers/
 Route::prefix('admin')->group(function(){
-	
+
 	Route::prefix('config')->name('config.')->group(function(){
-		
+
 		Route::prefix('colores')->name('color.')->group(function(){
 			Route::get('/','ColorController@index')->name('index');
 			Route::post('/','ColorController@store')->name('store');
@@ -127,24 +130,24 @@ Route::prefix('admin')->group(function(){
 			Route::post('elimCat','SeccionController@elimCat')->name('elimCat');
 			///////////////////////////////////////////////// categoria /////////////////////////////////////////////////
 
-			
+
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 			Route::post('agproyect','SeccionController@agproyect')->name('agproyect');
 			Route::post('elimProy','SeccionController@elimProy')->name('elimProy');
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Puntos de Venta /////////////////////////////////////////////////
-			Route::post('agpunto','SeccionController@agpunto')->name('agpunto'); 
+			Route::post('agpunto','SeccionController@agpunto')->name('agpunto');
 			Route::post('elimpunto/{punto}','SeccionController@elimpunto')->name('elimpunto');
 			///////////////////////////////////////////////// Puntos de Venta /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Beneficios de ser subdistribuidor /////////////////////////////////////////////////
-			Route::post('agsubdistribuidor','SeccionController@agsubdistribuidor')->name('agsubdistribuidor'); 
+			Route::post('agsubdistribuidor','SeccionController@agsubdistribuidor')->name('agsubdistribuidor');
 			Route::post('elimsubdistribuidor/{sub}','SeccionController@elimsubdistribuidor')->name('elimsubdistribuidor');
 			///////////////////////////////////////////////// Beneficios de ser subdistribuidor /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Necesidades /////////////////////////////////////////////////
-			Route::post('agnecesidades','SeccionController@agnecesidades')->name('agnecesidades'); 
+			Route::post('agnecesidades','SeccionController@agnecesidades')->name('agnecesidades');
 			Route::post('elimnecesidades/{nec}','SeccionController@elimnecesidades')->name('elimnecesidades');
 			///////////////////////////////////////////////// Necesidades /////////////////////////////////////////////////
 
@@ -197,7 +200,7 @@ Route::prefix('admin')->group(function(){
 
 			///////////////////////////////////////////////// rutas de productos /////////////////////////////////////////////////
 			// Route::post('/nuevoprod','ProductoController@nuevoprod')->name('nuevoprod');
-			
+
 			// Route::post('portada_prod/{id}','ProductoController@portada_prod')->name('portada_prod');
 			// Route::post('prodtext','ProductoController@prodtext')->name('prodtext');
 			// Route::post('selectcat','ProductoController@selectcat')->name('selectcat');
@@ -262,9 +265,9 @@ Route::prefix('admin')->group(function(){
 	Route::prefix('pedidios')->name('pedidios.')->group(function () {
 		Route::get('show','PedidoController@show')->name('show');
 	});
-	
+
 	// Route::prefix('servicios')->name('productos.')->group(function () {
-		
+
 	// 	Route::get('/', 'ProductoController@index')->name('index');
 	// 	Route::get('nuevo', 'ProductoController@create')->name('create');
 	// 	Route::post('nuevo', 'ProductoController@store')->name('store');
@@ -280,7 +283,7 @@ Route::prefix('admin')->group(function(){
 	// 	});
 
 	// 	Route::name('version.')->group(function () {
-			
+
 	// 		Route::post('newvar/', 'ProductoVarianteController@store')->name('store');
 	// 		Route::get('variante/{id_var}', 'ProductoVarianteController@show')->name('show');
 	// 		Route::get('variante/edit/{id_var}', 'ProductoVarianteController@edit')->name('edit');
@@ -288,15 +291,15 @@ Route::prefix('admin')->group(function(){
 	// 	// 	Route::delete('pv/', 'ProductoVersionPhotoController@destroy')->name('delete');
 	// 	});
 
-		
+
 	// 	Route::name('rel.')->group(function(){
-			
+
 	// 		Route::put('rel/{id}','ProductoRelacionController@update')->name('update');
 	// 		// Route::delete('rel/','ProductoRelacionController@destroy')->name('delete');
 	// 	});
 
 	// 	Route::name('categoria' )->group(function () {
-			
+
 	// 		Route::get('categoria/{id}', 'ProductosPhotoController@store')->name('store');
 	// 	});
 

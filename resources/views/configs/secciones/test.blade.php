@@ -391,7 +391,7 @@
 						
 							<div class="col-3 px-3 mb-3">
 								<div class="card position-relative" style=" height: 330px; position: relative;">
-									<img src="{{asset('img/photos/pepe_categorias/'.$c->icono)}}" style=" height: 100%;" alt="">
+									<img src="{{asset('img/photos/valeriabazante_categorias/'.$c->icono)}}" style=" height: 100%;" alt="">
 									<div class="card d-flex justify-content-center align-items-center w-100 position-absolute bottom-0 start-50 translate-middle bg-transparent border-0">
 										<form id="form_aux-{{ $c->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
 											@csrf
@@ -459,7 +459,7 @@
 				@foreach($subcategorias as $sc)
 					<div class="col-3 px-3 mb-3">
 						<div class="card position-relative" style=" height: 330px; position: relative;">
-							<img src="{{asset('img/photos/pepe_subcategorias/'.$sc->icono)}}" style=" height: 100%;" alt="">
+							<img src="{{asset('img/photos/valeriabazante_subcategorias/'.$sc->icono)}}" style=" height: 100%;" alt="">
 							<div class="card d-flex justify-content-center align-items-center w-100 position-absolute bottom-0 start-50 translate-middle bg-transparent border-0">
 								<form id="form_auxsc-{{ $sc->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
 									@csrf
@@ -535,7 +535,7 @@
         <div class="col-3 p-4">
             <a href="{{route('config.seccion.viewProduct',$p->id)}}" class="col-12" style="text-decoration: none; color: black;">
             <div class="card position-relative p-3 d-flex justify-content-center align-items-center" style="height: 300px; position: relative;">
-                <img src="{{asset('img/photos/pepe_productos/'.$p->imagen)}}" style="max-width: 217px; max-height: 241px;"alt="">
+                <img src="{{asset('img/photos/valeriabazante_productos/'.$p->imagen)}}" style="max-width: 217px; max-height: 241px;"alt="">
 				<div class="card d-flex justify-content-center align-items-center w-100 position-absolute bottom-0 start-50 translate-middle bg-transparent border-0">
 					<form id="form_aux-{{ $p->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
 						@csrf

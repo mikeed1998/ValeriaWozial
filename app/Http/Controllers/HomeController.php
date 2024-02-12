@@ -29,6 +29,15 @@ use App\PFSolucion;
 use App\PFSubdistribuidor;
 use App\PFPresentacionProducto;
 use App\PFGaleria;
+use App\ValeriaCategoriaProducto;
+use App\ValeriaSubcategoriaProducto;
+use App\ValeriaProducto;
+use App\ValeriaLanzamientoProducto;
+use App\ValeriaTallaProducto;
+use App\ValeriaGaleriaProducto;
+use App\ValeriaCupon;
+use App\ValeriaEnvio;
+use App\ValeriaDireccionUsuario;
 use Carbon\Carbon;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\DB;
@@ -56,7 +65,8 @@ class HomeController extends Controller
     {
 		$userId = Auth::id();
 		$usuario = User::find($userId);
-        return view('dashboard.home',compact('usuario'));
+		$direcciones = ValeriaDireccionUsuario::where('usuario', $userId)->get();
+        return view('dashboard.home',compact('usuario', 'direcciones'));
     }
 
 	public function miPerfil()

@@ -1,5 +1,7 @@
 @extends('layouts.front')
 
+@section('title', 'Dashboard')
+
 @section('cssExtras')
     <link rel="stylesheet" href="{{ asset('css/front/dashboard.css') }}">
 @endsection
@@ -20,7 +22,7 @@
     .volverg {
         display: none;
     }
-    
+
     .switchpreg {
         display: none;
     }
@@ -84,18 +86,18 @@ div {
         font-size: 1rem;
         height: 24rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 6rem; 
+        margin-top: 6rem;
         font-weight: 500;
     }
 
@@ -104,7 +106,7 @@ div {
     }
 
     .card-nav {
-        height: 22rem; 
+        height: 22rem;
         background-color: #F5F5F5;
     }
 
@@ -131,18 +133,18 @@ div {
         font-size: 0.9rem;
         height: 22rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 5.8rem; 
+        margin-top: 5.8rem;
         font-weight: 500;
     }
 
@@ -151,7 +153,7 @@ div {
     }
 
     .card-nav {
-        height: 22rem; 
+        height: 22rem;
         background-color: #F5F5F5;
     }
 
@@ -178,18 +180,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -198,7 +200,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -225,18 +227,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -245,7 +247,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -272,18 +274,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -292,7 +294,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -319,18 +321,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -339,7 +341,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -366,18 +368,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -386,7 +388,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -413,18 +415,18 @@ div {
         font-size: 0.9rem;
         height: 21rem;
     }
-    
+
     .card-prederteminada {
         font-weight: 500;
         height: 3.6rem;
     }
-    
+
     .card-nombre {
         font-weight: 500;
     }
-    
+
     .card-acciones {
-        margin-top: 4.8rem; 
+        margin-top: 4.8rem;
         font-weight: 500;
     }
 
@@ -433,7 +435,7 @@ div {
     }
 
     .card-nav {
-        height: 21rem; 
+        height: 21rem;
         background-color: #F5F5F5;
     }
 
@@ -454,13 +456,13 @@ div {
         text-align: justify;
     }
 }
-    
+
     @media (min-width: 1800px) {
         .miniatura-producto {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 5rem; 
+            width: 5rem;
             height: 2rem;
         }
     }
@@ -470,7 +472,7 @@ div {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 5rem; 
+            width: 5rem;
             height: 2rem;
         }
     }
@@ -480,7 +482,7 @@ div {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 5rem; 
+            width: 5rem;
             height: 2rem;
         }
     }
@@ -490,7 +492,7 @@ div {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 5rem; 
+            width: 5rem;
             height: 2rem;
         }
     }
@@ -500,7 +502,7 @@ div {
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            width: 5rem; 
+            width: 5rem;
             height: 2rem;
         }
     }
@@ -512,7 +514,7 @@ div {
             background-position: center center;
             background-repeat: no-repeat;
             border-radius: 100%;
-            width: 20rem; 
+            width: 20rem;
             height: 10rem;
         }
     }
@@ -524,7 +526,7 @@ div {
             background-position: center center;
             background-repeat: no-repeat;
             border-radius: 100%;
-            width: 12rem; 
+            width: 12rem;
             height: 6rem;
         }
     }
@@ -536,11 +538,12 @@ div {
             background-position: center center;
             background-repeat: no-repeat;
             border-radius: 100%;
-            width: 7rem; 
+            width: 7rem;
             height: 3.5rem;
         }
     }
 </style>
+
 <div class="container-fluid my-5">
     <div class="row">
         <div class="col">
@@ -550,8 +553,8 @@ div {
                         <div class="col-xxl-3 col-xl-3 col-lg-12"></div>
                         <div class="col-xxl-6 col-xl-6 col-lg-11 mx-auto">
                             <div class="row mt-5">
-                                <div class="col card-nav_titulo text-center py-2">
-                                    ¡Hola AnaPAU!
+                                <div class="col card-nav_titulo text-center py-2" style="overflow: hidden;">
+                                    Hola {{ $usuario->name }}!
                                 </div>
                             </div>
                             <div class="row mt-3">
@@ -812,17 +815,17 @@ div {
                                                 <div class="row">
                                                     <div class="col-md-6 col-12">
                                                         <label for="nombre" class="form-control-label">Nombre(s)</label>
-                                                        <input type="text" id="nombre" class="form-control shadow-none">
+                                                        <input type="text" id="nombres" class="form-control shadow-none editar_text_seccion_global editarajax" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $usuario->id }}" data-table="User" data-campo="name" value="{{ $usuario->name }}">
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <label for="apellido" class="form-control-label">Apellido(s)</label>
-                                                        <input type="text" id="apellido" class="form-control shadow-none">
+                                                        <input type="text" id="apellido" class="form-control shadow-none editar_text_seccion_global editarajax" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $usuario->id }}" data-table="User" data-campo="lastname" value="{{ $usuario->lastname }}">
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
                                                     <div class="col-md-6 col-12">
                                                         <label for="telefono" class="form-control-label">Telefono</label>
-                                                        <input type="text" id="telefono" class="form-control shadow-none">
+                                                        <input type="text" id="telefono" class="form-control shadow-none editar_text_seccion_global editarajax" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $usuario->id }}" data-table="User" data-campo="telefono" value="{{ $usuario->telefono }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -844,122 +847,115 @@ div {
                                         </div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-3 px-lg-3 mb-4">
-                                            <div class="card card-direccion p-3 rounded-0">
-                                                <div class="row">
-                                                    <div class="col card-prederteminada text-end" id="pre-1">
-                                                        Predeterminada
-                                                    </div>
-                                                    <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-1">
-                                                        <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Dejar como predeterminada</label>
-                                                            <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+
+                                        @foreach ($direcciones as $direccion)
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-3 px-lg-3 mb-4">
+                                                <div class="card card-direccion p-3 rounded-0">
+                                                    <div class="row">
+                                                        <div class="col card-prederteminada text-end" id="pre-{{ $direccion->id }}">
+                                                            @if ($direccion->predeterminado == 1)
+                                                                Predeterminada
+                                                            @endif
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col card-nombre text-start">
-                                                        Ana Paula Covarrubias
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2 card-direccion_direccion" id="textod-1">
-                                                        Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
-                                                    </div>
-                                                    <div class="col py-1 card-direccion_direccion editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputd-1">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2" id="textot-1">
-                                                        +52 3338096501
-                                                    </div>
-                                                    <div class="col py-1 editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputt-1">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2" id="textoc-1">
-                                                        anapaula@wozial.com
-                                                    </div>
-                                                    <div class="col py-1 editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputc-1">
-                                                    </div>
-                                                </div>
-                                                <div class="row card-acciones">
-                                                    <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"></div>
-                                                    <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
-                                                        <div class="row">
-                                                            <div class="col-6 text-end">
-                                                                <a href="#/" class="card-acciones_link editarg" onclick="editar(1)" id="editarl-1">editar</a>
-                                                                <a href="#/" class="card-acciones_link volverg" onclick="terminar(1)" id="volverl-1">Volver</a>
-                                                            </div>
-                                                            <div class="col-6 card-acciones_link">
-                                                                <a href="#/" class="card-acciones_link">eliminar</a>
+                                                        <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-{{ $direccion->id }}">
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault">Dejar como predeterminada</label>
+                                                                <input class="form-check-input fs-5" role="switch" id="checkIni_{{$direccion->id}}" data-id="{{$direccion->id}}" data-campo="predeterminado" type="checkbox" @if($direccion->predeterminado == 1) checked @endif>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-auto px-xxl-4 px-xl-3 px-lg-3 mb-4">
-                                            <div class="card card-direccion p-3 rounded-0">
-                                                <div class="row">
-                                                    <div class="col card-prederteminada text-end" id="pre-2">
-                                                        
-                                                    </div>
-                                                    <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-2">
-                                                        <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="flexSwitchCheckDefault2">Dejar como predeterminada</label>
-                                                            <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+                                                    <div class="row">
+                                                        <div class="col card-nombre text-start">
+                                                            {{ $usuario->name }} {{ $usuario->lastname }}
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col card-nombre text-start">
-                                                        Ana Paula Covarrubias
+                                                    <div class="row">
+                                                        <div class="col py-2 card-direccion_direccion" id="textod-{{ $direccion->id }}">
+                                                            {{ $direccion->direccion }}
+                                                        </div>
+                                                        <div class="col py-1 card-direccion_direccion editart">
+                                                            <input type="text" class="form-control shadow-none editar_text_seccion_global editarajax" id="inputd-{{ $direccion->id }}" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $direccion->id }}" data-table="ValeriaDireccionUsuario" data-campo="direccion" value="{{ $direccion->direccion }}">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2 card-direccion_direccion" id="textod-2">
-                                                        Real acueducto 335 piso 6, Puerta de Hierro, Zapopan, Jalisco 45116
+                                                    <div class="row">
+                                                        <div class="col py-2" id="textot-{{ $direccion->id }}">
+                                                            {{ $direccion->telefono_loc }}
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none editar_text_seccion_global editarajax" id="inputt-{{ $direccion->id }}" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $direccion->id }}" data-table="ValeriaDireccionUsuario" data-campo="telefono_loc" value="{{ $direccion->telefono_loc }}">
+                                                        </div>
                                                     </div>
-                                                    <div class="col py-1 card-direccion_direccion editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputd-2">
+                                                    <div class="row">
+                                                        <div class="col py-2" id="textoc-{{ $direccion->id }}">
+                                                            {{ $direccion->correo_loc }}
+                                                        </div>
+                                                        <div class="col py-1 editart">
+                                                            <input type="text" class="form-control shadow-none editar_text_seccion_global editarajax" id="inputc-{{ $direccion->id }}" data-url="{{ route('config.seccion.textglobalseccion') }}" data-id="{{ $direccion->id }}" data-table="ValeriaDireccionUsuario" data-campo="correo_loc" value="{{ $direccion->correo_loc }}">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2" id="textot-2">
-                                                        +52 3338096501
-                                                    </div>
-                                                    <div class="col py-1 editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputt-2">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col py-2" id="textoc-2">
-                                                        anapaula@wozial.com
-                                                    </div>
-                                                    <div class="col py-1 editart">
-                                                        <input type="text" class="form-control shadow-none" id="inputc-2">
-                                                    </div>
-                                                </div>
-                                                <div class="row card-acciones">
-                                                    <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"></div>
-                                                    <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
-                                                        <div class="row">
-                                                            <div class="col-6 text-end">
-                                                                <a href="#/" class="card-acciones_link editarg" onclick="editar(2)" id="editarl-2">editar</a>
-                                                                <a href="#/" class="card-acciones_link volverg" onclick="terminar(2)" id="volverl-2">Volver</a>
-                                                            </div>
-                                                            <div class="col-6 card-acciones_link">
-                                                                <a href="#/" class="card-acciones_link">eliminar</a>
+                                                    <div class="row card-acciones">
+                                                        <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"></div>
+                                                        <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
+                                                            <div class="row">
+                                                                <div class="col-6 text-end">
+                                                                    <a href="#/" class="card-acciones_link editarg" onclick="editar({{ $direccion->id }})" id="editarl-{{ $direccion->id }}">editar</a>
+                                                                    <a href="#/" class="card-acciones_link volverg" onclick="terminar({{ $direccion->id }})" id="volverl-{{ $direccion->id }}">Volver</a>
+                                                                </div>
+                                                                <div class="col-6 card-acciones_link">
+                                                                    <a href="#/" class="card-acciones_link">eliminar</a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <script>
+                                                $('#checkIni_'+{{$direccion->id}}).change(function (e){
+                                                    var checkbox = $(this); // Almacenar una referencia al elemento
+                                                    console.log('checkIni_'+{{$direccion->id}});
+                                                    var check = 0;
+                                                    if (checkbox.prop('checked')) {
+                                                        check = 1;
+                                                    } else {
+                                                        check = 2;
+                                                    }
+                                                    console.log(check);
+                                                    var id = checkbox.attr("data-id");
+                                                    var tcsrf = $('meta[name="csrf-token"]').attr('content');
+                                                    var valor = check;
+                                                    var URL = "{{route('front.updateDireccion')}}";
+
+                                                    $.ajax({
+                                                        url: URL,
+                                                        type: 'post',
+                                                        dataType: 'json',
+                                                        data: {
+                                                            "_method": 'post',
+                                                            "_token": tcsrf,
+                                                            "id": id,
+                                                            "valor": valor
+                                                        }
+                                                    })
+                                                    .done(function(msg) {
+                                                        console.log(msg);
+                                                        if (msg.success) {
+                                                            toastr["success"](msg.mensaje);
+                                                            if (msg.mensaje.valor == 1) {
+                                                                checkbox.prop('checked', true);
+                                                            } else if (msg.mensaje.valor == 2) {
+                                                                checkbox.prop('checked', false);
+                                                            }
+                                                        } else {
+                                                            toastr["error"](msg.mensaje);
+                                                        }
+                                                    })
+                                                    .fail(function(msg) {
+                                                        toastr["error"]('Error al agregar el producto al inicio');
+                                                    });
+                                                });
+                                            </script>
+                                        @endforeach
+
                                     </div>
                                     <div class="row mt-1">
                                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-1 px-lg-3">
@@ -995,74 +991,88 @@ div {
     <div class="modal fade" id="staticBackdrop-direccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-direccion" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-4" id="staticBackdropLabel-direccion">Nueva dirección de envio</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-11 mx-auto">
-                            <div class="row">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="nombre_user">Nombre de quien recibe</label>
-                                    <input required type="text" id="nombre_user" value="Nombre de Usuario" class="form-control shadow-none" disabled>
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="calle_user">Calle</label>
-                                    <input required type="text" id="calle_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="numext_user">Número exterior</label>
-                                    <input required type="number" id="numext_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="numint_user">Número interior</label>
-                                    <input required type="number" id="numint_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="calles_user">Entre calles</label>
-                                    <input required type="text" id="calles_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="colonia_user">Colonia</label>
-                                    <input required type="text" id="colonia_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="codiogp_user">Código Postal</label>
-                                    <input required type="number" id="codiogp_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="municipio_user">Municipio</label>
-                                    <input required type="text" id="municipio_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="estado_user">Estado</label>
-                                    <input required type="text" id="estado_user" class="form-control shadow-none">
-                                </div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 py-2">
-                                    <label for="pais_user">País</label>
-                                    <input required type="text" id="estado_user" class="form-control shadow-none" value="México" disabled>
-                                </div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 d-flex align-items-center py-2">
-                                    <div class="row mt-3">
-                                        <div class="col-3 text-end">
-                                            <input class="form-check-input" type="checkbox" value="" id="chkPred">
-                                        </div>
-                                        <div class="col-9 text-start">
-                                            <label class="form-check-label " for="chkPred">
-                                                Dejar como mi dirección prederteminada
-                                            </label>
+                <form action="{{ route('front.createDireccion') }}" method="POST" id="formu-direccion">
+                    @csrf
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-4" id="staticBackdropLabel-direccion">Nueva dirección de envio</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-11 mx-auto">
+                                <div class="row">
+                                    <input type="hidden" name="usuario" value="{{ $usuario->id }}">
+                                    <input type="hidden" name="nombre_usuario" value="{{ $usuario->name }} {{ $usuario->lastname }}">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="nombre_atte">Tu nombre o quien recibirá a tu nombre</label>
+                                        <input required type="text" id="nombre_atte" name="nombre_atte" class="form-control shadow-none" value="{{ $usuario->name }} {{ $usuario->lastname }}">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="calle_user">Calle</label>
+                                        <input required type="text" id="calle_user" name="calle_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="numext_user">Número exterior</label>
+                                        <input required type="number" id="numext_user" name="numext_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="numint_user">Número interior</label>
+                                        <input required type="number" id="numint_user" name="numint_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="calles_user">Entre calles</label>
+                                        <input required type="text" id="calles_user" name="calles_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="colonia_user">Colonia</label>
+                                        <input required type="text" id="colonia_user" name="colonia_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="codiogp_user">Código Postal</label>
+                                        <input required type="number" id="codiogp_user" name="codiogp_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="municipio_user">Municipio</label>
+                                        <input required type="text" id="municipio_user" name="municipio_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="telefono_loc">Telefono (o usar el de tu cuenta por defecto)</label>
+                                        <input required type="text" id="telefono_loc" name="telefono_loc" class="form-control shadow-none" value="{{ $usuario->telefono }}">
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="correo_loc">Correo (o usar el de tu cuenta por defecto)</label>
+                                        <input required type="email" id="correo_loc" name="correo_loc" class="form-control shadow-none" value="{{ $usuario->email }}">
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="estado_user">Estado</label>
+                                        <input required type="text" id="estado_user" name="estado_user" class="form-control shadow-none">
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 py-2">
+                                        <label for="pais_user">País</label>
+                                        <input required type="text" id="pais_user" name="pais_user" class="form-control shadow-none" value="México">
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 d-flex align-items-center py-2">
+                                        <div class="row mt-3">
+                                            <div class="col-3 text-end">
+                                                <input type="hidden" name="chkPred" value="0"> <!-- Campo oculto -->
+                                                <input class="form-check-input" type="checkbox" id="chkPred" name="chkPred" value="1">
+                                            </div>
+                                            <div class="col-9 text-start">
+                                                <label class="form-check-label" for="chkPred">
+                                                    Dejar como mi dirección predeterminada
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary w-100">Agregar nueva dirección</button>
-                   <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Cancelar</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary w-100">Agregar nueva dirección</button>
+                    <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -1071,14 +1081,14 @@ div {
 @section('jsLibExtras2')
 
 <script>
-        
+
         function editar(indice) {
             document.getElementById(`pre-${indice}`).style.display = 'none';
             document.getElementById(`switchpre-${indice}`).style.display = 'block';
 
             document.getElementById(`editarl-${indice}`).style.display = 'none';
             document.getElementById(`volverl-${indice}`).style.display = 'block';
-            
+
             document.getElementById(`textod-${indice}`).style.display = 'none';
             document.getElementById(`textot-${indice}`).style.display = 'none';
             document.getElementById(`textoc-${indice}`).style.display = 'none';
@@ -1157,7 +1167,7 @@ div {
         });
     </script>
     <script>
-        
+
         var modal = document.querySelector('.menu-modal');
         modal.style.display = "none";
         var inputCupon = document.querySelector('.input-cupon');
@@ -1187,7 +1197,7 @@ div {
 
     </script>
     <script>
-        
+
         var modal_sm = document.querySelector('.menu-modal-sm');
         modal_sm.style.display = "none";
         var inputCuponsm = document.querySelector('.input-cupon-sm');

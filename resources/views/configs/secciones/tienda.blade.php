@@ -2,7 +2,7 @@
 @section('cssExtras')
 	<link rel="stylesheet" href="{{asset('css/dropify.css')}}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	
+
 <!-- One of the following themes -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/> <!-- 'classic' theme -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/> <!-- 'monolith' theme -->
@@ -21,7 +21,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
-		/* mas estilisado */	
+		/* mas estilisado */
 			body{
 				background-color: #e5e8eb  !important;
 			}
@@ -44,7 +44,7 @@
 			transition: all 0.5s;
 		}
 		.card-slick:hover{
-			
+
 			background: #9bb938;
 			color: white;
 			margin-top: -60px;
@@ -60,7 +60,7 @@
 		}
 
 		.camp_img_cont:hover{
-			
+
 		}
 		.camp_img_cont:hover .camp_img{
 			opacity: 100%;
@@ -92,12 +92,12 @@
 		width: 60px;
 		height: 34px;
 		}
-		
+
 		/* Ocultamos el checkbox html */
 		.switch input {
 		display:none;
 		}
-		
+
 		/* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
 		.slider {
 		position: absolute;
@@ -110,7 +110,7 @@
 		-webkit-transition: .4s;
 		transition: .4s;
 		}
-		
+
 		/* Pintamos la perilla de control o slider usando el selector before */
 		.slider:before {
 		position: absolute;
@@ -123,24 +123,24 @@
 		-webkit-transition: .4s;
 		transition: .4s;
 		}
-		
+
 		/* Cambiamos el color de fondo cuando el checkbox esta activado */
 		input:checked + .slider {
 		background-color: #7aa2e2;
 		}
-		
-		/* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+
+		/* Deslizamos el slider a la derecha cuando el checkbox esta activado */
 		input:checked + .slider:before {
 		-webkit-transform: translateX(26px);
 		-ms-transform: translateX(26px);
 		transform: translateX(26px);
 		}
-		
+
 		/* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
 		.slider.round {
 		border-radius: 34px;
 		}
-		
+
 		.slider.round:before {
 		border-radius: 50%;
 		}
@@ -210,7 +210,7 @@
 				transition: all 0.5s;
 			}
 
-						
+
 
 			.file-upload input[type="file"]:focus + label,
 			.file-upload input[type="file"] + label:hover {
@@ -229,27 +229,27 @@
 <style>
 
 	.card{
-		
+
 	}
 
-	@media only screen and (max-width: 768px){  
+	@media only screen and (max-width: 768px){
 		.cont_circle{
 			bottom: -150px !important;
 		}
 		.circle_slider{
-			width: 300px !important; 
+			width: 300px !important;
 			height: 300px !important;
 		}
 		.img_circle{
 			margin-top: -120px !important;
 		}
-	}  
-	@media only screen and (max-width: 390px){  
+	}
+	@media only screen and (max-width: 390px){
 		.cont_circle{
 			bottom: -100px !important;
 		}
 		.circle_slider{
-			width: 200px !important; 
+			width: 200px !important;
 			height: 200px !important;
 		}
 		.img_circle{
@@ -336,7 +336,7 @@
         	<p class="mt-5" style="font-size: 3.5rem; font-family:'Neusharp Bold'; color: #909986;">CATEGORIA / SUBCATEGORIA</p>
     	</div>
 	</div>
-	
+
 	<div action="" method="POST" class="col-12 text-center d-flex justify-content-center flex-column">
 		@csrf
 		<input type="text" name="ver_si_llego" id="" value="1" hidden>
@@ -367,7 +367,7 @@
 								});
 							</script>
 						</div>
-					
+
 						{{-- html del input file estilizado --}}
 		{{-- <form id="form_image_element{{$c->id}}" action="" method="POST" class="file-upload col-12 p-0 m-0" style="position: absolute; top: 0; bottom: 0; background: ; height: 100%;" enctype="multipart/form-data">
 			@csrf
@@ -385,7 +385,7 @@
 							<input type="text" name="id_cat" value="{{$c->id}}" hidden>
 							<button type="submit" style="background: none; border:none;">
 								<i class="fa-solid fa-trash" style="font-size: 20px;"></i>
-							</button>		
+							</button>
 						</form>
 					{{-- html del input file estilizado --}}
 						<script>
@@ -501,7 +501,7 @@
 				var tcsrf = $('meta[name="csrf-token"]').attr('content');
 				var valor = check;
 				var URL = "{{route('config.seccion.updateIni')}}";
-				
+
 				$.ajax({
 					url: URL,
 					type: 'post',
@@ -746,7 +746,7 @@
         // Aquí puedes enviar el formulario al servidor
     });
 </script>
-	
+
 <script type="text/javascript">
 
 // Simple example, see optional options for more configuration.
@@ -795,7 +795,7 @@ const pickr = Pickr.create({
 pickr.on('change', (...args) => {
 	var color = args[0].toHEXA();
     console.log('Event: "change"', color);
-	
+
 	$('#inputColor').val('#'+color[0]+color[1]+color[2]);
 	$('#inputColoren').val('#'+color[0]+color[1]+color[2]);
 });
@@ -885,7 +885,7 @@ pickr.on('change', (...args) => {
         ]
             });
 
-	
+
 	$('.multiple-itemss').slick({
             dots:false,
             infinite: true,
@@ -1174,7 +1174,7 @@ $('.select_icon').change(function(e) {
 		});
 
 });
-	
+
 function agrserv(){
 
 		var tcsrf = $('meta[name="csrf-token"]').attr('content');
@@ -1196,7 +1196,7 @@ function agrserv(){
 					setTimeout(function () { location.reload(); }, 1000);
 				}else {
 					toastr["error"]("Error al agregar");
-					
+
 				}
 			})
 
@@ -1253,7 +1253,7 @@ $('.checkB').change(function(e) {
 $('.fa-trash-alt').parent().click(function(e) {
 				var id = $(this).attr('data-id');
 				$("#idser").val(id);
-				
+
 			});
 			$('.dels').click(function(e) {
 				$('#deletserv').submit();
