@@ -205,9 +205,11 @@ class FrontController extends Controller
 
     public function updateDireccion(Request $request) {
         $direccion = ValeriaDireccionUsuario::find($request->id);
-        $direccions_count = count(ValeriaDireccionUsuario::where('predeterminado',1)->get());
         switch($request->valor){
             case 1:
+                $direccion->predeterminado = 1;
+                $direccion->save();
+
                 $aux = ValeriaDireccionUsuario::all();
                 foreach($aux as $a) {
                     if($a->id != $direccion->id) {
@@ -215,8 +217,7 @@ class FrontController extends Controller
                         $a->save();
                     }
                 }
-                $direccion->predeterminado = 1;
-                $direccion->save();
+
                 return response()->json(['success'=>true, 'mensaje'=>'Dirección anclado al predeterminado', 'valor'=>1]);
             break;
             case 2:

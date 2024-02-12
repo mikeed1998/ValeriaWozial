@@ -859,7 +859,7 @@ div {
                                                         </div>
                                                         <div class="col-9 mx-auto card-prederteminada text-center switchpreg" id="switchpre-{{ $direccion->id }}">
                                                             <div class="form-check form-switch">
-                                                                <label class="form-check-label" for="flexSwitchCheckDefault">Dejar como predeterminada</label>
+                                                                <label class="form-check-label" for="checkIni_{{$direccion->id}}">Dejar como predeterminada</label>
                                                                 <input class="form-check-input fs-5" role="switch" id="checkIni_{{$direccion->id}}" data-id="{{$direccion->id}}" data-campo="predeterminado" type="checkbox" @if($direccion->predeterminado == 1) checked @endif>
                                                             </div>
                                                         </div>
@@ -912,36 +912,36 @@ div {
                                             <script>
                                                 $('#checkIni_'+{{$direccion->id}}).change(function (e){
                                                     var checkbox = $(this); // Almacenar una referencia al elemento
-                                                    console.log('checkIni_'+{{$direccion->id}});
                                                     var check = 0;
                                                     if (checkbox.prop('checked')) {
                                                         check = 1;
                                                     } else {
                                                         check = 2;
                                                     }
-                                                    console.log(check);
                                                     var id = checkbox.attr("data-id");
+                                                    var campo = checkbox.attr("data-campo");
+                                                    var URL = "{{route('front.updateDireccion')}}";
                                                     var tcsrf = $('meta[name="csrf-token"]').attr('content');
                                                     var valor = check;
-                                                    var URL = "{{route('front.updateDireccion')}}";
-
+                                                    var data = {
+                                                        "_method": 'post',
+                                                        "_token": tcsrf,
+                                                        "id": id,
+                                                        "campo": campo,
+                                                        "valor": valor
+                                                    };
                                                     $.ajax({
                                                         url: URL,
                                                         type: 'post',
                                                         dataType: 'json',
-                                                        data: {
-                                                            "_method": 'post',
-                                                            "_token": tcsrf,
-                                                            "id": id,
-                                                            "valor": valor
-                                                        }
+                                                        data: data
                                                     })
                                                     .done(function(msg) {
-                                                        console.log(msg);
                                                         if (msg.success) {
                                                             toastr["success"](msg.mensaje);
                                                             if (msg.mensaje.valor == 1) {
                                                                 checkbox.prop('checked', true);
+                                                                // Actualizar otras direcciones
                                                             } else if (msg.mensaje.valor == 2) {
                                                                 checkbox.prop('checked', false);
                                                             }
@@ -950,12 +950,11 @@ div {
                                                         }
                                                     })
                                                     .fail(function(msg) {
-                                                        toastr["error"]('Error al agregar el producto al inicio');
+                                                        toastr["error"]('Error al actualizar la información');
                                                     });
                                                 });
-                                            </script>
+                                              </script>
                                         @endforeach
-
                                     </div>
                                     <div class="row mt-1">
                                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-1 px-lg-3">
@@ -987,7 +986,7 @@ div {
     </div>
 </div>
 
-<!-- Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="staticBackdrop-direccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-direccion" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
