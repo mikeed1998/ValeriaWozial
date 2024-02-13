@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePFGaleriasTable extends Migration
+class CreateValeriaColaboracionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePFGaleriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('p_f_galerias', function (Blueprint $table) {
+        Schema::create('valeria_colaboraciones', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('producto');
-            $table->text("galeria")->nullable();
-            $table->foreign('producto')->references('id')->on('p_f_productos')->onDelete('cascade');
+            $table->text('imagen')->nullable();
+            $table->text('texto')->nullable();
+            $table->integer('orden')->default(0);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePFGaleriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('p_f_galerias');
+        Schema::dropIfExists('valeria_colaboraciones');
     }
 }

@@ -39,6 +39,7 @@ Route::name('front.')->group(function(){
 	Route::post('invitado', 'FrontController@invitado')->name('invitado');
 	Route::post('createDireccion', 'FrontController@createDireccion')->name('createDireccion');
     Route::post('updateDireccion', 'FrontController@updateDireccion')->name('updateDireccion');
+    Route::delete('deleteDireccion/{direccion}', 'FrontController@deleteDireccion')->name('deleteDireccion');
 	// Route::get('politicas', 'FrontController@politicas')->name('politicas');
 
 	// Route::get('productos/{product?}', 'FrontController@details')->name('details');

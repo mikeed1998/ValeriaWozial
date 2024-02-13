@@ -199,7 +199,8 @@ class FrontController extends Controller
 			}
 		}
 
-		return redirect()->back();
+		// return redirect()->back();
+        return redirect()->back()->with('toast_success', 'Dirección creada con éxito.');
 	}
 
 
@@ -226,6 +227,17 @@ class FrontController extends Controller
                 return response()->json(['success'=>true, 'mensaje'=>'Dirección desanclado al predeterminado','valor'=>2]);
             break;
         }
+    }
+
+    public function deleteDireccion(Request $request, ValeriaDireccionUsuario $direccion) {
+        $direccion->delete();
+
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Dirección eliminada']);
+        }
+
+        \Toastr::success('Dirección eliminada');
+        return redirect()->back();
     }
 
 

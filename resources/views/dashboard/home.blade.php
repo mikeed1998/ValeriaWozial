@@ -4,6 +4,13 @@
 
 @section('cssExtras')
     <link rel="stylesheet" href="{{ asset('css/front/dashboard.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+
+
 @endsection
 
 
@@ -11,6 +18,15 @@
 
 @section('content')
 <style>
+
+    /* Estilo personalizado para Toastr */
+.toast {
+    background-color: #1e571e; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    font-weight: 700;
+    font-size: 1rem;
+}
+
     .textog {
         display: block;
     }
@@ -849,7 +865,7 @@ div {
                                     <div class="row mt-3">
 
                                         @foreach ($direcciones as $direccion)
-                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-3 px-lg-3 mb-4">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-9 col-11 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto px-xxl-4 px-xl-3 px-lg-3 mb-4"  id="tarjeta-{{ $direccion->id }}">
                                                 <div class="card card-direccion p-3 rounded-0">
                                                     <div class="row">
                                                         <div class="col card-prederteminada text-end" id="pre-{{ $direccion->id }}">
@@ -902,7 +918,12 @@ div {
                                                                     <a href="#/" class="card-acciones_link volverg" onclick="terminar({{ $direccion->id }})" id="volverl-{{ $direccion->id }}">Volver</a>
                                                                 </div>
                                                                 <div class="col-6 card-acciones_link">
-                                                                    <a href="#/" class="card-acciones_link">eliminar</a>
+                                                                    <a href="#/" class="eliminar-btn btn btn-outline m-0 p-0 text-dark" data-direccion-id="{{ $direccion->id }}">eliminar</a>
+                                                                    {{-- <form action="{{ route('front.deleteDireccion', ['direccion' => $direccion->id]) }}" method="POST" id="formudelete-{{ $direccion->id }}">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit" class="btn btn-outline m-0 p-0 text-dark">eliminar</button>
+                                                                    </form> --}}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -992,6 +1013,7 @@ div {
             <div class="modal-content">
                 <form action="{{ route('front.createDireccion') }}" method="POST" id="formu-direccion">
                     @csrf
+                    <input type="hidden" name="direccionCreada" value="{{ session('direccionCreada') ? 1 : 0 }}">
                     <div class="modal-header">
                         <h1 class="modal-title fs-4" id="staticBackdropLabel-direccion">Nueva dirección de envio</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1069,16 +1091,88 @@ div {
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary w-100">Agregar nueva dirección</button>
-                    <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Modal de confirmación de eliminación -->
+<div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmarEliminarModalLabel">Confirmar eliminación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que deseas eliminar esta dirección?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" id="confirmarEliminarBtn">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 @endsection
 
 @section('jsLibExtras2')
 
+    @if(session('toast_success'))
+        <script>
+            $(document).ready(function() {
+                toastr.success('{{ session('toast_success') }}');
+            });
+        </script>
+    @endif
+
+
+    <script>
+        // Supongamos que tienes un botón o enlace con un identificador "eliminar-btn"
+        $('.eliminar-btn').on('click', function (e) {
+            e.preventDefault();
+
+            var direccionId = $(this).data('direccion-id');
+
+            // Muestra el modal de confirmación
+            $('#confirmarEliminarModal').modal('show');
+
+            // Captura el clic en el botón de confirmación dentro del modal
+            $('#confirmarEliminarBtn').on('click', function () {
+                // Cierra el modal de confirmación
+                $('#confirmarEliminarModal').modal('hide');
+
+                // Utiliza AJAX para realizar la solicitud DELETE
+                $.ajax({
+                    url: `/deleteDireccion/${direccionId}`,
+                    type: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (data) {
+                        // Maneja la respuesta exitosa
+                        console.log(data.message);
+
+                        // Muestra una notificación Toastr para el éxito
+                        toastr.success('Dirección eliminada');
+
+                        // Elimina la tarjeta de dirección del DOM
+                        $(`#tarjeta-${direccionId}`).remove();
+                    },
+                    error: function (error) {
+                        // Maneja el error
+                        console.error('Error al eliminar la dirección:', error.responseText);
+
+                        // Muestra una notificación Toastr para el error
+                        toastr.error('Error al eliminar la dirección');
+                    }
+                });
+            });
+        });
+    </script>
 <script>
 
         function editar(indice) {
