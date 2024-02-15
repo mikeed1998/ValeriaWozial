@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{ asset('css/front/header.css') }}">
 
 <header>
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xxl-block d-xl-block d-lg-block d-md-block d-sm-none d-none">
@@ -56,7 +56,7 @@
                                                 </script>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="col-3 text-center header-sec_1--texto border-start border-end border-dark">
                                         <a href="ayuda.php" class="link-header" style="font-family: 'Futura Std Book', sans-serif;">Ayuda</a>
@@ -220,13 +220,13 @@
                                                     </div>
                                                     <div class="row fs-5">
                                                         <div class="col-xxl-3 col-xl-3 col-lg-3 text-center text-decoration-line-through">
-                                                            $4,800 
+                                                            $4,800
                                                         </div>
                                                         <div class="col-xxl-3 col-xl-3 col-lg-3 text-center">
-                                                            $4,320 
+                                                            $4,320
                                                         </div>
                                                         <div class="col-xxl-6 col-xl-6 col-lg-9">
-                                                            %10 de descuento 
+                                                            %10 de descuento
                                                         </div>
                                                     </div>
                                                 </div>
@@ -289,13 +289,13 @@
                                                     </div>
                                                     <div class="row fs-5">
                                                         <div class="col-xxl-3 col-xl-3 col-lg-3 text-decoration-line-through">
-                                                            $4,800 
+                                                            $4,800
                                                         </div>
                                                         <div class="col-xxl-3 col-xl-3 col-lg-3">
-                                                            $4,320 
+                                                            $4,320
                                                         </div>
                                                         <div class="col-xxl-6 col-xl-6 col-lg-9">
-                                                            %10 de descuento 
+                                                            %10 de descuento
                                                         </div>
                                                     </div>
                                                 </div>
@@ -314,21 +314,21 @@
                                                     <button class="btn btn-outline border-none" onclick="cancelarCupon()">
                                                         <i class="bi bi-x-circle fs-4"></i>
                                                     </button>
-                                                </div>    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row py-1">
                                         <div class="col input-black">
                                             <label class="form-control border border-dark shadow-none fs-4 text-white bg-black">
-                                                subtotal: $8,640 
+                                                subtotal: $8,640
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row py-1">
                                         <div class="col">
                                             <label class="form-control border border-dark shadow-none fs-4 text-dark bg-white">
-                                                envio: 
+                                                envio:
                                             </label>
                                         </div>
                                     </div>
@@ -424,13 +424,13 @@
                                                     </div>
                                                     <div class="row fs-5">
                                                         <div class="col-md-2 col-sm-2 col-12 text-decoration-line-through">
-                                                            $4,800 
+                                                            $4,800
                                                         </div>
                                                         <div class="col-md-2 col-sm-2 col-12">
-                                                            $4,320 
+                                                            $4,320
                                                         </div>
                                                         <div class="col-md-8 col-sm-8 col-12">
-                                                            %10 de descuento 
+                                                            %10 de descuento
                                                         </div>
                                                     </div>
                                                 </div>
@@ -492,13 +492,13 @@
                                                     </div>
                                                     <div class="row fs-5">
                                                         <div class="col-md-2 col-sm-2 col-12 text-decoration-line-through">
-                                                            $4,800 
+                                                            $4,800
                                                         </div>
                                                         <div class="col-md-2 col-sm-2 col-12">
-                                                            $4,320 
+                                                            $4,320
                                                         </div>
                                                         <div class="col-md-8 col-sm-8 col-12">
-                                                            %10 de descuento 
+                                                            %10 de descuento
                                                         </div>
                                                     </div>
                                                 </div>
@@ -517,21 +517,21 @@
                                                     <button class="btn btn-outline border-none" onclick="cancelarCuponsm()">
                                                         <i class="bi bi-x-circle fs-4"></i>
                                                     </button>
-                                                </div>    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row py-1">
                                         <div class="col input-black">
                                             <label class="form-control border border-dark shadow-none fs-4 text-white bg-black">
-                                                subtotal: $8,640 
+                                                subtotal: $8,640
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row py-1">
                                         <div class="col">
                                             <label class="form-control border border-dark shadow-none fs-4 text-dark bg-white">
-                                                envio: 
+                                                envio:
                                             </label>
                                         </div>
                                     </div>
@@ -644,7 +644,7 @@
 
 
 
-{{-- 
+{{--
         @if ($pagina == 'tienda')
             <header class="menu-grande py-3" data-aos="fade-left" style="background-color: #E7E7E7;">
         @elseif ($pagina == 'home' || $pagina == 'subdistribuidor' || $pagina == 'contacto' || $pagina == 'nosotros')
@@ -724,18 +724,18 @@
                                           @endif
                                         @endif
                                     </div>
-                                        
-                                        
-                                      
+
+
+
                                 </div>
                             </div>
                             </a>
-                            
+
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
-        </header>   
+        </header>
 
         <header class="menu-movil">
             <div class="row">
@@ -823,11 +823,11 @@
                                       @endif
                                     @endif
                                   </a>
-                                
+
                             </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

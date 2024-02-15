@@ -436,3 +436,5 @@ Route::prefix('clear')->group(function(){
 		return '<h1>Clear Config cleared</h1>';
 	});
 });
+
+
