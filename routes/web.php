@@ -192,6 +192,10 @@ Route::prefix('admin')->group(function(){
 			Route::post('eliminarCategoria','SeccionController@eliminarCategoria')->name('eliminarCategoria');
 			Route::post('agregarSubcategoria','SeccionController@agregarSubcategoria')->name('agregarSubcategoria');
 			Route::post('eliminarSubcategoria','SeccionController@eliminarSubcategoria')->name('eliminarSubcategoria');
+            Route::post('agregarLanzamiento','SeccionController@agregarLanzamiento')->name('agregarLanzamiento');
+            Route::post('eliminarLanzamiento','SeccionController@eliminarLanzamiento')->name('eliminarLanzamiento');
+            Route::post('agregarCupon','SeccionController@agregarCupon')->name('agregarCupon');
+            Route::post('eliminarCupon','SeccionController@eliminarCupon')->name('eliminarCupon');
 			Route::post('agregarProducto','SeccionController@agregarProducto')->name('agregarProducto');
 			Route::post('eliminarProducto','SeccionController@eliminarProducto')->name('eliminarProducto');
 			Route::post('agregarProductoGaleria','SeccionController@agregarProductoGaleria')->name('agregarProductoGaleria');
