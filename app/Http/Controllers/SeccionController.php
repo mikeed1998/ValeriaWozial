@@ -635,40 +635,22 @@ class SeccionController extends Controller
 
     }
 
+
     public function checkb(Request $request){
+        $servicio = ValeriaProducto::find($request->id);
+        $servicios_des = ValeriaProducto::where('inicio',1)->count();
 
-
-        $servicio = services::find($request->id);
-
-        $servicios_des = services::where('inicio',1)->count();
-
-        if($servicios_des == 4){
-            if($request->valor == 'true'){
-                return response()->json(['success'=>false, 'mensaje'=>'No puedes agregar mas de 4 servicios destacados']);
-            }
-
-        }
-
-        if($request->valor == "true"){
+        if($request->valor == 1){
             $servicio->inicio = 1;
-            if($servicio->save()){
-                return response()->json(['success'=>true, 'mensaje'=>'Se agrego a destacados']);
-            }else{
-                return response()->json(['success'=>false, 'mensaje'=>'Error al agregar']);
-            }
+            $servicio->save();
+            return response()->json(['success'=>true, 'mensaje'=>'Se agrego a destacados']);
         }else{
             $servicio->inicio = 0;
-            if($servicio->save()){
-                return response()->json(['success'=>true, 'mensaje'=>'Se removio de destacados']);
-            }else{
-                return response()->json(['success'=>false, 'mensaje'=>'Error al remover']);
-            }
+            $servicio->save();
+            return response()->json(['success'=>true, 'mensaje'=>'Se removio de destacados']);
         }
-
-
-
-
     }
+
 
     public function selecticon(Request $request){
 
@@ -1195,16 +1177,18 @@ class SeccionController extends Controller
     }
 
 	public function agregarProducto(Request $request) {
-        dd($request);
+
         if(!empty($request->file('archivo'))){
+            // dd($request);
             $producto = new ValeriaProducto;
 
-            $producto->subcategoria = $request->subcategoria;
-            $producto->titulo = $request->nombre;
-            $producto->precio_original = $request->precio;
-            $producto->descripcion = $request->descripcion;
-            $producto->existencias = $request->cantidad;
-            $producto->lanzamiento = $request->lanamiento_prod;
+            $producto->subcategoria = $request->subcategoria_producto;
+            $producto->titulo = $request->nombre_producto;
+            $producto->precio_original = $request->precio_producto;
+            $producto->descripcion = $request->descripcion_producto;
+            $producto->existencias = $request->cantidad_producto;
+            $producto->lanzamiento = $request->lanamiento_producto;
+            $producto->inicio = 0;
 
             $producto->save();
 

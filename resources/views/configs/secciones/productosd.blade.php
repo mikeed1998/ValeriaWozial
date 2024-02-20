@@ -17,7 +17,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
-			/* mas estilisado */	
+			/* mas estilisado */
 				body{
 					background-color: #e5e8eb  !important;
 				}
@@ -40,7 +40,7 @@
 				transition: all 0.5s;
 			}
 			.card-slick:hover{
-				
+
 				background: #9bb938;
 				color: white;
 				margin-top: -60px;
@@ -56,7 +56,7 @@
 			}
 
 			.camp_img_cont:hover{
-				
+
 			}
 			.camp_img_cont:hover .camp_img{
 				opacity: 100%;
@@ -88,12 +88,12 @@
 			width: 60px;
 			height: 34px;
 			}
-			
+
 			/* Ocultamos el checkbox html */
 			.switch input {
 			display:none;
 			}
-			
+
 			/* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
 			.slider {
 			position: absolute;
@@ -106,7 +106,7 @@
 			-webkit-transition: .4s;
 			transition: .4s;
 			}
-			
+
 			/* Pintamos la perilla de control o slider usando el selector before */
 			.slider:before {
 			position: absolute;
@@ -119,24 +119,24 @@
 			-webkit-transition: .4s;
 			transition: .4s;
 			}
-			
+
 			/* Cambiamos el color de fondo cuando el checkbox esta activado */
 			input:checked + .slider {
 			background-color: #7aa2e2;
 			}
-			
-			/* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+
+			/* Deslizamos el slider a la derecha cuando el checkbox esta activado */
 			input:checked + .slider:before {
 			-webkit-transform: translateX(26px);
 			-ms-transform: translateX(26px);
 			transform: translateX(26px);
 			}
-			
+
 			/* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
 			.slider.round {
 			border-radius: 34px;
 			}
-			
+
 			.slider.round:before {
 			border-radius: 50%;
 			}
@@ -206,7 +206,7 @@
 					transition: all 0.5s;
 				}
 
-							
+
 
 				.file-upload input[type="file"]:focus + label,
 				.file-upload input[type="file"] + label:hover {
@@ -225,27 +225,27 @@
 	<style>
 
 		.card{
-			
+
 		}
 
-		@media only screen and (max-width: 768px){  
+		@media only screen and (max-width: 768px){
 			.cont_circle{
 				bottom: -150px !important;
 			}
 			.circle_slider{
-				width: 300px !important; 
+				width: 300px !important;
 				height: 300px !important;
 			}
 			.img_circle{
 				margin-top: -120px !important;
 			}
-		}  
-		@media only screen and (max-width: 390px){  
+		}
+		@media only screen and (max-width: 390px){
 			.cont_circle{
 				bottom: -100px !important;
 			}
 			.circle_slider{
-				width: 200px !important; 
+				width: 200px !important;
 				height: 200px !important;
 			}
 			.img_circle{
@@ -285,12 +285,12 @@
 			<input type="text" name="id_p" value="{{$producto->id}}" hidden>
 			<button type="submit" style="background: none; border:none;" ><i class="fa-solid fa-trash trash" style="position: absolute; top: 30px; right: 30px; font-size:30px;"></i></button>
 		</form>
-		
 
-	
+
+
     <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
         <div class="card p-4 galImg" style="position: ; border-radius: 10px; width: 500px; height: 600px;">
-			<img src="{{asset('img/photos/productos/'.$producto->imagen)}}" style="width: 100%; height: 100%; border-radius: 5px;"  alt="">
+			<img src="{{asset('img/photos/valeriabazante_productos/'.$producto->imagen)}}" style="width: 100%; height: 100%; border-radius: 5px;"  alt="">
 			{{-- @foreach($prodGaleria as $imgp)
 
 			<img src="{{asset('img/photos/productos/'.$imgp->image)}}" style=" width: 100%; height: 100%; border-radius: 5px;"  alt="">
@@ -306,7 +306,7 @@
 		</div>
     </div>
     <div class="col-12 col-md-6 col-lg-6 pb-4 pt-0 px-0 px-md-5 px-lg-5 d-flex justify-content-start">
-		
+
         <div class="col-12" style="border-radius: 5px; ">
 			<form id="Form_portada" action="{{route('config.seccion.adPortada')}}" method="POST" class="col-12 mb-3 d-flex justify-content-center flex-column" style="height: 120px;" enctype="multipart/form-data">
 				@csrf
@@ -317,10 +317,10 @@
 				<input type="file" name="uploadedfile" id="up_file_portada" class="dropify" style="border-radius:10px !important;" data-allowed-file-extensions="jpg png jpeg">
 			</form>
             <div class="col-12 text-start" style="background: ;">
-				
-                <h4 class="" style="background: ;"><textarea class="card col-12 editar_text_seccion_global editarajax" style="box-shadow:none; outline: none; border-radius: 13px;" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="PFProducto" data-campo="nombre" name="" id="" cols="" rows="1">{{$producto->nombre}}</textarea></h4>
+
+                <h4 class="" style="background: ;"><textarea class="card col-12 editar_text_seccion_global editarajax" style="box-shadow:none; outline: none; border-radius: 13px;" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="ValeriaProducto" data-campo="titulo" name="" id="" cols="" rows="1">{{$producto->titulo}}</textarea></h4>
                 <hr>
-                <p class="col-12 px-0" style="font-size: 12px; height: 150px;"><textarea class="card col-12 editar_text_seccion_global editarajax" style="outline: none; box-shadow:none; border-radius: 13px;" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="PFProducto" data-campo="descripcion" name="" id="" cols="" rows="8">{{$producto->descripcion}}</textarea></p>
+                <p class="col-12 px-0" style="font-size: 12px; height: 150px;"><textarea class="card col-12 editar_text_seccion_global editarajax" style="outline: none; box-shadow:none; border-radius: 13px;" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="ValeriaProducto" data-campo="descripcion" name="" id="" cols="" rows="8">{{$producto->descripcion}}</textarea></p>
                 <div class="col-12 d-flex px-0">
                     {{-- <div class="col-6">
                         <h4>Color</h4>
@@ -339,19 +339,19 @@
                     <div class="col-6">
                         <h4>Cantidad</h4>
                         <div class="col-auto px-1 mx-0 py-1 d-flex align-items-center" style="background: #d0d0d0; border-radius: 26px;">
-                            <textarea class="form-control col-12 my-auto editar_text_seccion_global editarajax" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="PFProducto" data-campo="existencias" name="" id=""  rows="1" style="border-radius: 16px;">{{$producto->existencias}}</textarea>
+                            <textarea class="form-control col-12 my-auto editar_text_seccion_global editarajax" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="ValeriaProducto" data-campo="existencias" name="" id=""  rows="1" style="border-radius: 16px;">{{$producto->existencias}}</textarea>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-3" >
 					<div class="col-6 d-flex py-1 px-1" style="background: #d0d0d0; border-radius: 26px;">
 						<h4 class="my-auto mx-2">$</h4>
-						<textarea class="form-control editar_text_seccion_global" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="PFProducto" data-campo="precio" style="border-radius: 16px;" name="" id=""  rows="1">{{$producto->precio}}</textarea>
+						<textarea class="form-control editar_text_seccion_global" data-id="{{$producto->id}}" data-url="{{route('config.seccion.textglobalseccion')}}" data-table="ValeriaProducto" data-campo="precio_original" style="border-radius: 16px;" name="" id=""  rows="1">{{$producto->precio_original}}</textarea>
 					</div>
 
                 </div>
                 {{-- <div class="col-12 mt-5 d-flex">
-                    <button class="px-5 py-3 btn btn-primary me-3 col-12" style="background: #868f99 !important; border:none;"><h4 class="my-auto">Cambiar	portada</h4></button> 
+                    <button class="px-5 py-3 btn btn-primary me-3 col-12" style="background: #868f99 !important; border:none;"><h4 class="my-auto">Cambiar	portada</h4></button>
                 </div> --}}
 
 				{{-- <div class="col-12 my-4 d-flex justify-content-center align-items-center text-center flex-column">
@@ -449,7 +449,7 @@
 	function addidprod(id){
 		$('#id_prod_input').val(id);
 	}
-	
+
 
 	$('#select-color').change(function(e) {
 		var color = $(this).find(":selected").data("color");
@@ -476,6 +476,6 @@
             autoplay: false,
             autoplaySpeed: 2000,
             });
-	
+
 </script>
 @endsection

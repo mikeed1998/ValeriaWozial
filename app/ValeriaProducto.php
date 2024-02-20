@@ -14,6 +14,10 @@ class ValeriaProducto extends Model
         'descuento',
         'descuento_activo',
         'descripcion',
+        'lanzamiento',
+        'imagen',
         'existencias',
+        'cupon',
+        'inicio',
     ];
 }

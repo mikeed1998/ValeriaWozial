@@ -586,15 +586,15 @@
                                     </script>
                                 </div>
                                     <label class="switch" style="position: absolute; top:10px; right: 10px;">
-                                        <input id="checkIni_{{$p->id}}" data-id="{{$p->id}}" data-campo="inicio" type="checkbox" @if($p->inicio == 1) checked @endif >
+                                        <input id="checkIni_{{$p->id}}" data-id="{{$p->id}}" data-table="ValeriaProducto" data-campo="inicio" type="checkbox" @if($p->inicio == 1) checked @endif >
                                         <span class="slider round"></span>
                                     </label>
 
                             </div>
                             <hr>
                             <div class="col-12 d-flex flex-column" style="text-align: justify;">
-                                <h5 style="">{{$p->nombre}}</h5>
-                                <p>${{ number_format($p->precio, 2, '.', ',') }}</p>
+                                <h5 style="">{{$p->titulo}}</h5>
+                                <p>${{ number_format($p->precio_original, 2, '.', ',') }}</p>
                             </div>
                         </a>
                         </div>
@@ -612,7 +612,7 @@
                                 var id = checkbox.attr("data-id");
                                 var tcsrf = $('meta[name="csrf-token"]').attr('content');
                                 var valor = check;
-                                var URL = "{{route('config.seccion.updateIni')}}";
+                                var URL = "{{route('config.seccion.checkb')}}";
 
                                 $.ajax({
                                     url: URL,
@@ -649,12 +649,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 
 	<form action="{{route('config.seccion.agregarCategoria')}}" method="POST" class="modal fade" id="modal-categorias" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
@@ -856,13 +850,13 @@
 		</div>
 	</form>
 
-	<div  class="modal fade" id="modalproductos" data-bs-backdrop="static"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal fade" id="modalproductos" data-bs-backdrop="static"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div  class="modal-dialog modal-dialog-centered modal-xl">
 			<form action="{{route('config.seccion.agregarProducto')}}" method="POST" class="modal-content" id="form-productos" style="border-radius: 16px;" enctype="multipart/form-data">
 				@csrf
 				<div class="modal-header">
-				<h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar producto</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				    <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar producto</h1>
+				    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<style>
@@ -885,13 +879,13 @@
 					<div class="col-12 d-flex flex-column">
                         <div class="row py-2">
                             <div class="col">
-                                <input class="form-control mb-2" type="text" name="nombre" id="" placeholder="Nombre producto" required>
+                                <input class="form-control mb-2" type="text" name="nombre_producto" id="" placeholder="Nombre producto" required>
                             </div>
                         </div>
                         <div class="row py-2">
                             <div class="col-6">
                                 <label for="subcategoria_form">Subcategoría a la que pertenece el producto</label>
-                                <select class="form-select mb-2" id="subcategoria_form" name="subcategoria" aria-label="Default select example" required>
+                                <select class="form-select mb-2" id="subcategoria_form" name="subcategoria_producto" aria-label="Default select example" required>
                                     @foreach($categorias as $c)
                                         @foreach ($subcategorias as $scat)
                                             @if ($scat->categoria == $c->id)
@@ -903,7 +897,7 @@
                             </div>
                             <div class="col-6">
                                 <label for="lanzamiento_form">Lanzamiento al que pertenece</label>
-                                <select class="form-select mb-2" id="lanzamiento_form" name="lanamiento_prod" aria-label="Default select example" required>
+                                <select class="form-select mb-2" id="lanzamiento_form" name="lanamiento_producto" aria-label="Default select example" required>
                                     @foreach ($lanzamientos as $lanzam)
                                         <option value="{{$lanzam->id}}">{{ $lanzam->lanzamiento }}</option>
                                     @endforeach
@@ -917,7 +911,7 @@
                             <div class="col-9 mb-2 text-center mx-auto">
                                 <div class="inputsContainer">
                                     <div class="input-group mb-2">
-                                        <input type="text" name="tallas_lista[]" class="presentacion form-control py-2" required>
+                                        <input type="text" name="tallas_lista[]" class="tallas_producto form-control py-2">
                                     </div>
                                 </div>
                                 <button type="button" id="addInputButton" class="addInputButton btn btn-cerr-mdar col-12 border">Agregar otra talla</button>
@@ -925,16 +919,16 @@
                         </div>
                         <div class="row py-2">
                             <div class="col-6">
-                                <input class="form-control mb-2" type="number" name="cantidad" id="" placeholder="Cantidad en stock" required>
+                                <input class="form-control mb-2" type="number" name="cantidad_producto" id="" placeholder="Cantidad en stock" required>
                             </div>
                             <div class="col-6">
-                                <input class="form-control mb-2" type="text" name="precio" id="" placeholder="Precio" required>
+                                <input class="form-control mb-2" type="text" name="precio_producto" id="" placeholder="Precio" required>
                             </div>
                         </div>
                         <div class="row py-2">
                             <div class="col">
-                                <label for="descripcion">Descripción del producto</label>
-                                <textarea class="form-control mb-2 editartexto editardesc" name="descripcion" id="descripcion" cols="30" rows="30" placeholder="Descripcion producto" required></textarea>
+                                <label for="descripcion_producto">Descripción del producto</label>
+                                <textarea class="form-control mb-2" name="descripcion_producto" id="descripcion_producto" cols="30" rows="10" placeholder="Descripcion del producto" required></textarea>
                             </div>
                         </div>
 					</div>
@@ -946,7 +940,6 @@
 			</form>
 		</div>
 	</div>
-
 
 @endsection
 @section('jsLibExtras2')
@@ -1069,34 +1062,6 @@
         $('#form-general input[name="radio_envio"]').prop('checked', true);
     });
 </script>
-<script>
-    tinymce.init({
-      selector: 'textarea.editardesc',
-      menubar: false,
-      plugins: [
-        'advlist autolink lists link image charmap print preview anchor',
-        'searchreplace visualblocks code fullscreen',
-        'insertdatetime media table paste code help wordcount',
-        'advlist autolink lists link image charmap print preview anchor wordcount',
-        'searchreplace visualblocks code fullscreen table visualblocks',
-        'insertdatetime media table contextmenu paste code imagetools',
-        'textcolor colorpicker',
-        'codesample'  // Agregar el plugin de código fuente
-      ],
-      toolbar: 'forecolor backcolor | insert table | undo redo | removeformat styleselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent | link | visualblocks',
-      resize: false,
-      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-
-      // Deshabilitar la opción de código fuente
-      setup: function (editor) {
-        editor.on('init', function () {
-          // Eliminar el botón de código fuente de la barra de herramientas
-          editor.buttons.code.remove();
-        });
-      }
-    });
-  </script>
-
 
 <script>
 	$('.slider-categorias').slick({
@@ -1255,7 +1220,7 @@
         const newInput1 = document.createElement('input');
         newInput1.type = 'text';
         newInput1.name = 'tallas_lista[]';
-        newInput1.classList.add('form-control', 'presentacion');
+        newInput1.classList.add('form-control', 'tallas_producto');
         inputDiv.appendChild(newInput1);
 
         const deleteInputButton = document.createElement('button');
@@ -1278,7 +1243,7 @@
     myForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const tallas_lista = document.querySelectorAll('.presentacion');
+        const tallas_lista = document.querySelectorAll('.tallas_producto');
         const caracteristicaValues = Array.from(tallas_lista).map(input => input.value);
 
         // Realizar acciones con los arrays de valores (caracteristicaValues y caracteristica2Values)

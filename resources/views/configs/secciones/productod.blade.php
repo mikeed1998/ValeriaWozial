@@ -14,7 +14,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
-	/* mas estilisado */	
+	/* mas estilisado */
 		body{
 			background-color: #e5e8eb  !important;
 		}
@@ -37,7 +37,7 @@
 		transition: all 0.5s;
 	}
 	.card-slick:hover{
-		
+
 		background: #9bb938;
 		color: white;
 		margin-top: -60px;
@@ -52,7 +52,7 @@
 		transition: all 0.5s;
 	}
 	.camp_img_cont:hover{
-		
+
 	}
 	.camp_img_cont:hover .camp_img{
 		opacity: 100%;
@@ -84,12 +84,12 @@
 	width: 60px;
 	height: 34px;
 	}
-	
+
 	/* Ocultamos el checkbox html */
 	.switch input {
 	display:none;
 	}
-	
+
 	/* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
 	.slider {
 	position: absolute;
@@ -102,7 +102,7 @@
 	-webkit-transition: .4s;
 	transition: .4s;
 	}
-	
+
 	/* Pintamos la perilla de control o slider usando el selector before */
 	.slider:before {
 	position: absolute;
@@ -115,24 +115,24 @@
 	-webkit-transition: .4s;
 	transition: .4s;
 	}
-	
+
 	/* Cambiamos el color de fondo cuando el checkbox esta activado */
 	input:checked + .slider {
 	background-color: #7aa2e2;
 	}
-	
-	/* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+
+	/* Deslizamos el slider a la derecha cuando el checkbox esta activado */
 	input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
 	}
-	
+
 	/* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
 	.slider.round {
 	border-radius: 34px;
 	}
-	
+
 	.slider.round:before {
 	border-radius: 50%;
 	}
@@ -182,7 +182,7 @@
 	<div class="row mb-4 px-2">
 		<a href="{{ route('config.seccion.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
 	</div>
-	
+
 	<div class="col-12 p-2" style="background: white; border-radius: 26px;">
 
 		<div class="col-12 mt-0 mb-5 d-flex justify-content-center align-items-center" style="background: rgba(0, 0, 0, 0.75); border-top-left-radius: 16px; border-top-right-radius: 16px;">
@@ -191,8 +191,8 @@
             </p>
         </div>
 
-		
-		
+
+
 	<div class="col-12 my-5 p-0 p-md-5 d-flex justify-content-center align-items-center" style="position: ; z-index: 1000; ">
 		<div class="cont_c col-12 mx-5 px-1 px-md-4 py-3 d-flex align-items-center row flex-column flex-sm-row" style="background: ; border-radius: 26px; position: ; height: 100%; background: rgb(255, 255, 255);  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.19) ;">
 			{{-- <div class="col-4" style="height: 55%; position: absolute; background: #d89d8f;">
@@ -202,7 +202,7 @@
 				<div class="multiple-itemss col-12 col-md-10 p-2 p-md-5 d-flex justify-content-center align-items-center" style="background: white; height: 100%;  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.112) ; border-radius: 26px; min-height: ;">
 					@foreach($productos_photos as $prodf)
                         <div class="d-flex justify-content-center align-items-center" style="">
-                            <img src="{{asset('img/photos/productos/'.$prodf->image)}}" width="100%;" alt="">
+                            <img src="{{asset('img/photos/valeriabazante_productos/'.$prodf->imagen)}}" width="100%;" alt="">
                             {{-- <div class="justify-content-center align-items-center flex-column" style="position: absolute; width: 100%; background: #3a3a3a3e; color: white; backdrop-filter: blur(5px);">
                                 <h5>Eliminar imagen</h5><i class="fas fa-trash"></i>
                             </div> --}}
@@ -229,7 +229,7 @@
 			</div>
 			<div class="col-12 col-md-12 col-lg-7 d-flex justify-content-center align-items-center" style="height: 100%; background: ;">
 				<div class="cont_text_c col-12 d-flex justify-content-center row flex" style="background: rgb(255, 255, 255); height: 80%;  border-radius: 26px;">
-					<div class="col-12 mt-5 my-md-4 text-center text-md-start"><textarea class="titulo_p text-input-prod col-12 mx-1 mx-md-2" data-id="{{$producto->id}}" data-campo="nombre" rows="1" style="font-size: 35px; color: #d89d8f; font-weight: bold; border:none; outline: none !important; border-radius: 13px; background: #3a3a3a0e;">{{$producto->nombre}}</textarea></div>
+					<div class="col-12 mt-5 my-md-4 text-center text-md-start"><textarea class="titulo_p text-input-prod col-12 mx-1 mx-md-2" data-id="{{$producto->id}}" data-campo="nombre" rows="1" style="font-size: 35px; color: #d89d8f; font-weight: bold; border:none; outline: none !important; border-radius: 13px; background: #3a3a3a0e;">{{$producto->titulo}}</textarea></div>
 					<div class="col-12 my-4"><textarea class="text-input-prod col-12 mx-1 mx-md-2" data-id="{{$producto->id}}" data-campo="descripcion"  rows="8" style="font-size: 15px;  font-weight: bold; text-align: justify; border:none !important; outline: none !important; border-radius: 13px; background: #3a3a3a0e;">{{$producto->descripcion}}</textarea></div>
 					<div class="col-12 my-2 text-center text-md-start"><textarea class="text-input-prod col-3 mx-1 mx-md-2" data-id="{{$producto->id}}" data-campo="precio"  rows="1" style="font-size: 20px; color: #d89d8f; font-weight: bold; border:none !important; outline: none !important; border-radius: 13px; background: #3a3a3a0e;">{{$producto->precio}}</textarea></div>
 					{{-- <div class="col-12 ms-0 ms-md-4 ms-lg-0 my-2 d-flex row align-items-center justify-content-center justify-content-md-start"><p class="mx-3 my-auto col-1 d-flex align-items-center justify-content-center" style="font-size: 15px; color: ; font-weight: bold;">Cantidad</p> <textarea name="" id="" class="col-2 text-center" data-id="" data-campo="cantidad" rows="1" style="border:none !important; outline: none !important; border-radius: 13px; background: #3a3a3a0e;">1</textarea></div> --}}
@@ -298,7 +298,7 @@
 	</div>
 
 
-	
+
 @endsection
 @section('jsLibExtras2')
 <script src="{{asset('js/dropify.js')}}" charset="utf-8"></script>
@@ -365,7 +365,7 @@
             // instead of a settings object
         ]
             });
-	
+
 
     // Al hacer click en el botón de lista
     $('#btn_list').click(function() {
@@ -629,7 +629,7 @@ $('.select_icon').change(function(e) {
 		});
 
 });
-	
+
 function agrserv(){
 
 		var tcsrf = $('meta[name="csrf-token"]').attr('content');
@@ -651,7 +651,7 @@ function agrserv(){
 					setTimeout(function () { location.reload(); }, 1000);
 				}else {
 					toastr["error"]("Error al agregar");
-					
+
 				}
 			})
 
@@ -708,7 +708,7 @@ $('.checkB').change(function(e) {
 $('.fa-trash-alt').parent().click(function(e) {
 				var id = $(this).attr('data-id');
 				$("#idser").val(id);
-				
+
 			});
 			$('.dels').click(function(e) {
 				$('#deletserv').submit();

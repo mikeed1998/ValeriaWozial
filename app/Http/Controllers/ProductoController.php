@@ -20,6 +20,15 @@ use App\PFSliderPrincipal;
 use App\PFSolucion;
 use App\PFSubdistribuidor;
 use App\PFPresentacionProducto;
+use App\ValeriaCategoriaProducto;
+use App\ValeriaSubcategoriaProducto;
+use App\ValeriaProducto;
+use App\ValeriaLanzamientoProducto;
+use App\ValeriaTallaProducto;
+use App\ValeriaGaleriaProducto;
+use App\ValeriaCupon;
+use App\ValeriaEnvio;
+use App\ValeriaDireccionUsuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -68,15 +77,15 @@ class ProductoController extends Controller
 
 				$producto_photo = new ProductosPhoto;
 				$producto_photo->producto = $product->id;
-	
+
 				$file = $request->file('archivo');
 				$extension = $file->getClientOriginalExtension();
 				$namefile = Str::random(30) . '.' . $extension;
-	
+
 				\Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($file));
-	
+
 				$producto_photo->image =  $namefile;
-	
+
 				if($producto_photo->save()){
 					\Toastr::success('Guardado');
 					return redirect()->back();
@@ -84,7 +93,7 @@ class ProductoController extends Controller
 					\Toastr::error('Error al subir imagen');
 					return redirect()->back();
 				}
-	
+
 			}else{
 				\Toastr::success('Guardado');
 				return redirect()->back();
@@ -170,11 +179,11 @@ class ProductoController extends Controller
 
 	public function cambImgProd(Request $request){
 
-		
+
 
 		$producto_photo = ProductosPhoto::where('producto',$request->id_p)->get()->first();
 
-				
+
 		if(!empty($producto_photo) && $producto_photo->image != 'producto_01.png'){
 			\Storage::disk('local')->delete("/img/photos/productos/" .$producto_photo->image);
 		}
@@ -194,7 +203,7 @@ class ProductoController extends Controller
             \Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($file));
 
             $producto_photo->image =  $namefile;
-            
+
 			if($producto_photo->save()){
 				\Toastr::success('Guardado');
 				return redirect()->back();
@@ -258,14 +267,14 @@ class ProductoController extends Controller
 			return redirect()->back();
 		}
 
-		
+
 
 	}
 
 	public function del_prod(Request $request){
 			dd("aca");
 		 $producto = PFProducto::find($request->id_prod);
-		
+
 		 $photos_p = ProductosPhoto::where('producto',$producto)->get();
 
 		 foreach($photos_p as $photo_p){
@@ -287,7 +296,7 @@ class ProductoController extends Controller
 
 		$producto = PFProducto::find($id);
 
-		
+
 		if($producto->portada != 'producto_01.png'){
 			\Storage::disk('local')->delete("/img/photos/productos/" .$producto->portada);
 		}
@@ -302,7 +311,7 @@ class ProductoController extends Controller
             \Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($file));
 
             $producto->imagen =  $namefile;
-            
+
 			if($producto->save()){
 				\Toastr::success('Guardado');
 				return redirect()->back();
@@ -325,11 +334,11 @@ class ProductoController extends Controller
         $producto->$campo = $request->valor;
 
         if($producto->save()){
-            
+
             return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
 
         }else{
-            
+
             return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar']);
         }
 
@@ -343,18 +352,18 @@ class ProductoController extends Controller
 		$producto->categoria = $categoria->nombre;
 
         if($producto->save()){
-            
+
             return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
 
         }else{
-            
+
             return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar']);
         }
 	}
 
 	public function prodDetalle($id){
 
-		$producto = PFProducto::find($id);		
+		$producto = PFProducto::find($id);
 		$productos_photos =  ProductosPhoto::where('producto',$producto->id)->get();
 		$categorias = PFCategoriaProducto::all();
 
@@ -380,7 +389,7 @@ class ProductoController extends Controller
 			$productof->producto = $id;
 
             $productof->image =  $namefile;
-            
+
 			if($productof->save()){
 				\Toastr::success('Guardado');
 				return redirect()->back();
@@ -399,7 +408,7 @@ class ProductoController extends Controller
 		$producto = new PFProducto;
         $producto->categoria = $request->categoria;
         $producto->save();
-		
+
 		$presentaciones = $request->input('presentaciones');
 
 		$producto_aux = $producto->id;
@@ -436,9 +445,9 @@ class ProductoController extends Controller
 			$file = $request->file('archivo');
 			//creamos una variable llamada $extencion que sera igual a la extencian sacada del $file
             $extension = $file->getClientOriginalExtension();
-			//creamos una variable llamada $namefile que almacenara un 
+			//creamos una variable llamada $namefile que almacenara un
             $namefile = Str::random(30) . '.' . $extension;
-			
+
 			\Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($file));
 
 			$producto->imagen = $namefile;
@@ -450,7 +459,7 @@ class ProductoController extends Controller
 				\Toastr::error('Error al guardar');
 				return redirect()->back();
 			}
-			
+
 		}else{
 			if($producto->update()){
 				\Toastr::success('Guardado');
@@ -464,10 +473,10 @@ class ProductoController extends Controller
 	}
 
 	public function viewProduct($id){
-		$producto = PFProducto::find($id);
+		$producto = ValeriaProducto::find($id);
 		// $prodGaleria = ProductosPhoto::where('producto',$producto->id)->get();
-		$categoria = Categoria::find($producto->categoria);
-		$categorias = Categoria::all();
+		$categoria = ValeriaSubcategoriaProducto::find($producto->subcategoria);
+		$categorias = ValeriaSubcategoriaProducto::all();
 		// $color = colores::find($producto->color);
 		// $colores = colores::all();
 		return view('configs.secciones.productosd',compact('producto','categoria','categorias'));
@@ -482,7 +491,7 @@ class ProductoController extends Controller
 				$extension = $image->getClientOriginalExtension();
 				$namefile = Str::random(30) . '.' . $extension;
 				\Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($image));
-				
+
 				$newprodphoto->producto = $id_prod;
 				$newprodphoto->galeria = $namefile;
 
@@ -509,27 +518,27 @@ class ProductoController extends Controller
 		}
 	}
 
-	public function adPortada(Request $request){				
-				$producto = PFProducto::find($request->id_prod);
-		
+	public function adPortada(Request $request){
+				$producto = ValeriaProducto::find($request->id_prod);
+
 				//si $request->file('archivo') que es  (el archivo de la imagen) es diferente de vacio
 				if(!empty($request->file('uploadedfile'))){
 
 					if(!empty($producto->portada)){
-						\Storage::disk('local')->delete("/img/photos/productos/" .$producto->portada);
+						\Storage::disk('local')->delete("/img/photos/valeriabazante_productos/" .$producto->portada);
 					}
-		
+
 					//guardamos el archivo en una variable llamada $file
 					$file = $request->file('uploadedfile');
 					//creamos una variable llamada $extencion que sera igual a la extencian sacada del $file
 					$extension = $file->getClientOriginalExtension();
-					//creamos una variable llamada $namefile que almacenara un 
+					//creamos una variable llamada $namefile que almacenara un
 					$namefile = Str::random(30) . '.' . $extension;
-					
-					\Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($file));
-		
+
+					\Storage::disk('local')->put("/img/photos/valeriabazante_productos/" . $namefile, \File::get($file));
+
 					$producto->imagen = $namefile;
-		
+
 					if($producto->save()){
 						\Toastr::success('Guardado');
 						return redirect()->back();
@@ -537,7 +546,7 @@ class ProductoController extends Controller
 						\Toastr::error('Error al guardar');
 						return redirect()->back();
 					}
-					
+
 				}else{
 					if($producto->save()){
 						\Toastr::success('Guardado');
@@ -550,30 +559,24 @@ class ProductoController extends Controller
 	}
 
 	public function updateIni(Request $request){
-		$producto = PFProducto::find($request->id);
-		$productos_count = count(PFProducto::where('inicio',1)->get());
+		$producto = ValeriaProducto::find($request->id);
+		$productos_count = count(ValeriaProducto::where('inicio',1)->get());
 		switch($request->valor){
 			case 1:
-				if($productos_count <= 5){
+				if($productos_count <= 5) {
 					$producto->inicio = 1;
 					$producto->save();
 					return response()->json(['success'=>true, 'mensaje'=>'Producto anclado al inicio', 'valor'=>1]);
-				}else{
+				} else {
 					return response()->json(['success'=>false, 'mensaje'=>'No se pueden agregar mas de 5 productos en el inicio']);
 				}
-				
-			
-			break;
-
+			    break;
 			case 2:
 				$producto->inicio = 0;
 				$producto->save();
 				return response()->json(['success'=>true, 'mensaje'=>'Producto desanclado al inicio','valor'=>2]);
-			break;
+			    break;
 		}
-
-		
-
 	}
 
 	public function elimp(Request $request){
