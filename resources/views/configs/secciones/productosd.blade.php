@@ -280,9 +280,9 @@
 			}
 		</style>
 
-		<form action="{{route('config.seccion.elimp')}}" method="POST">
+		<form action="{{route('config.seccion.eliminarProducto')}}" method="POST">
 			@csrf
-			<input type="text" name="id_p" value="{{$producto->id}}" hidden>
+			<input type="text" name="id_producto" value="{{$producto->id}}" hidden>
 			<button type="submit" style="background: none; border:none;" ><i class="fa-solid fa-trash trash" style="position: absolute; top: 30px; right: 30px; font-size:30px;"></i></button>
 		</form>
 

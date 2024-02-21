@@ -273,14 +273,14 @@ class SeccionController extends Controller
                     \Toastr::success('Guardado');
                     return redirect()->back();
                 } else if($request->tipo == 'producto') {
-                    $uproducto = PFProducto::find($request->id_elemento);
+                    $uproducto = ValeriaProducto::find($request->id_elemento);
 
                     $file_producto = $request->file('archivo');
-                    $oldFileProducto = 'img/photos/productos/'.$uproducto->imagen;
+                    $oldFileProducto = 'img/photos/valeriabazante_productos/'.$uproducto->imagen;
                     $extension_producto = $file_producto->getClientOriginalExtension();
                     $namefile_producto = Str::random(30) . '.' . $extension_producto;
 
-                    \Storage::disk('local')->put("/img/photos/productos/" . $namefile_producto, \File::get($file_producto));
+                    \Storage::disk('local')->put("/img/photos/valeriabazante_productos/" . $namefile_producto, \File::get($file_producto));
                     unlink($oldFileProducto);
 
                     $uproducto->imagen = $namefile_producto;
@@ -324,19 +324,36 @@ class SeccionController extends Controller
                     \Toastr::success('Guardado');
                     return redirect()->back();
                 } else if($request->tipo == 'categoria') {
-                    $ucategoria = PFCategoriaProducto::find($request->id_elemento);
+                    $ucategoria = ValeriaCategoriaProducto::find($request->id_elemento);
 
                     $file_categoria = $request->file('archivo');
-                    $oldFileCategoria = 'img/photos/categorias/'.$ucategoria->icono;
+                    $oldFileCategoria = 'img/photos/valeriabazante_categorias/'.$ucategoria->icono;
                     $extension_categoria = $file_categoria->getClientOriginalExtension();
                     $namefile_categoria = Str::random(30) . '.' . $extension_categoria;
 
-                    \Storage::disk('local')->put("/img/photos/categorias/" . $namefile_categoria, \File::get($file_categoria));
+                    \Storage::disk('local')->put("/img/photos/valeriabazante_categorias/" . $namefile_categoria, \File::get($file_categoria));
                     unlink($oldFileCategoria);
 
                     $ucategoria->icono = $namefile_categoria;
 
                     $ucategoria->update();
+
+                    \Toastr::success('Guardado');
+                    return redirect()->back();
+                } else if($request->tipo == 'subcategoria') {
+                    $usubcategoria = ValeriaSubcategoriaProducto::find($request->id_elemento);
+
+                    $file_subcategoria = $request->file('archivo');
+                    $oldFileSubCategoria = 'img/photos/valeriabazante_subcategorias/'.$usubcategoria->icono;
+                    $extension_subcategoria = $file_subcategoria->getClientOriginalExtension();
+                    $namefile_subcategoria = Str::random(30) . '.' . $extension_subcategoria;
+
+                    \Storage::disk('local')->put("/img/photos/valeriabazante_subcategorias/" . $namefile_subcategoria, \File::get($file_subcategoria));
+                    unlink($oldFileSubCategoria);
+
+                    $usubcategoria->icono = $namefile_subcategoria;
+
+                    $usubcategoria->update();
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
@@ -369,9 +386,6 @@ class SeccionController extends Controller
                     return redirect()->back();
                 }
             }
-
-
-
         }else{
             \Toastr::error('Error al subir imagen');
             return redirect()->back();
@@ -1089,12 +1103,12 @@ class SeccionController extends Controller
                             }
                         }
 
-                        // $presentaciones = PFProductoPresentacionPepes::all();
-                        // foreach($presentaciones as $pres) {
-                        //     if($pres->producto == $prod->id) {
-                        //         $pres->delete();
-                        //     }
-                        // }
+                        $tallas = ValeriaTallaProducto::all();
+                        foreach($tallas as $tall) {
+                            if($tall->producto == $prod->id) {
+                                $tall->delete();
+                            }
+                        }
 
                         unlink($imgProd);
                         $prod->delete();
@@ -1109,7 +1123,7 @@ class SeccionController extends Controller
         $categoria->delete();
 
         \Toastr::success('La Categoria, sus subcategorias y sus productos relacionados han sido eliminados');
-        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+        return redirect()->route('config.seccion.show', ['slug' => 'test']);
     }
 
 	public function agregarSubcategoria(Request $request) {
@@ -1148,7 +1162,7 @@ class SeccionController extends Controller
             if($prod->subcategoria == $subcategoria->id) {
                 $imgProd = "img/photos/valeriabazante_productos/".$prod->imagen;
 
-                $galeria = PFProductoGaleriaPepes::all();
+                $galeria = ValeriaGaleriaProducto::all();
                 foreach($galeria as $gal) {
                     if($gal->producto == $prod->id) {
                         $imgGal = "img/photos/valeriabazante_productos_galeria/".$gal->galeria;
@@ -1157,10 +1171,10 @@ class SeccionController extends Controller
                     }
                 }
 
-                $presentaciones = PFProductoPresentacionPepes::all();
-                foreach($presentaciones as $pres) {
-                    if($pres->producto == $prod->id) {
-                        $pres->delete();
+                $tallas = ValeriaTallaProducto::all();
+                foreach($tallas as $tall) {
+                    if($tall->producto == $prod->id) {
+                        $tall->delete();
                     }
                 }
 
@@ -1173,7 +1187,7 @@ class SeccionController extends Controller
         $subcategoria->delete();
 
         \Toastr::success('La Subcategoria y sus productos relacionados han sido eliminados');
-        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+        return redirect()->route('config.seccion.show', ['slug' => 'test']);
     }
 
 	public function agregarProducto(Request $request) {
@@ -1232,10 +1246,10 @@ class SeccionController extends Controller
     }
 
 	public function eliminarProducto(Request $request) {
-        $producto = PFProductoPepes::find($request->id_producto);
+        $producto = ValeriaProducto::find($request->id_producto);
         $imgProducto = "img/photos/valeriabazante_productos/".$producto->imagen;
 
-        $galeria = PFProductoGaleriaPepes::all();
+        $galeria = ValeriaGaleriaProducto::all();
         foreach($galeria as $gal) {
             if($gal->producto == $producto->id) {
                 $imgGal = "img/photos/valeriabazante_productos_galeria/".$gal->galeria;
@@ -1244,18 +1258,18 @@ class SeccionController extends Controller
             }
         }
 
-        $presentaciones = PFProductoPresentacionPepes::all();
-        foreach($presentaciones as $pres) {
-            if($pres->producto == $producto->id) {
-                $pres->delete();
+        $tallas = ValeriaTallaProducto::all();
+        foreach($tallas as $tall) {
+            if($tall->producto == $producto->id) {
+                $tall->delete();
             }
         }
 
         unlink($imgProducto);
         $producto->delete();
 
-        \Toastr::success('Producto eliminada');
-        return redirect()->route('config.seccion.show', ['slug' => 'store']);
+        \Toastr::success('Producto eliminado');
+        return redirect()->route('config.seccion.show', ['slug' => 'test']);
     }
 
 	public function agregarProductoGaleria(Request $request) {

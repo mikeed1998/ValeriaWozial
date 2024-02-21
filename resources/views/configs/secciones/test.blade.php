@@ -420,7 +420,7 @@
                                             @csrf
                                             <input type="text" name="id_categoria" value="{{$c->id}}" hidden>
                                             <button type="submit" style="background: none; border:none;">
-                                                <i class="fa-solid fa-trash" style="font-size: 20px;"></i>
+                                                <i class="fa-solid fa-trash text-danger" style="font-size: 32px;"></i>
                                             </button>
                                         </form>
                                         <script>
@@ -484,7 +484,7 @@
                                             @csrf
                                             <input type="text" name="id_subcategoria" value="{{$sc->id}}" hidden>
                                             <button type="submit" style="background: none; border:none;">
-                                                <i class="fa-solid fa-trash" style="font-size: 20px;"></i>
+                                                <i class="fa-solid fa-trash text-danger" style="font-size: 32px;"></i>
                                             </button>
                                         </form>
                                         <script>

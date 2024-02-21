@@ -487,10 +487,10 @@ class ProductoController extends Controller
 		if ($request->hasFile('uploadedfile')) {
 			$images = $request->file('uploadedfile');
 			foreach ($images as $image) {
-				$newprodphoto = new PFGaleria;
+				$newprodphoto = new ValeriaGaleriaProducto;
 				$extension = $image->getClientOriginalExtension();
 				$namefile = Str::random(30) . '.' . $extension;
-				\Storage::disk('local')->put("/img/photos/productos/" . $namefile, \File::get($image));
+				\Storage::disk('local')->put("/img/photos/valeriabazante_productos_galeria/" . $namefile, \File::get($image));
 
 				$newprodphoto->producto = $id_prod;
 				$newprodphoto->galeria = $namefile;
